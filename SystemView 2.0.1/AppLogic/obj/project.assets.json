@@ -5738,11 +5738,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+      "projectUniqueName": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
       "projectName": "AppLogic",
-      "projectPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+      "projectPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
       "packagesPath": "C:\\Users\\z00433tp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0.1\\AppLogic\\obj\\",
+      "outputPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\AppLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -5763,8 +5763,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0.1\\Transport\\Transport.csproj": {
-              "projectPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0.1\\Transport\\Transport.csproj"
+            "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+              "projectPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj"
             }
           }
         }

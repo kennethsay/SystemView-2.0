@@ -8,10 +8,4 @@
     <PackageReference Include="OfficeOpenXml.Core.ExcelPackage" Version="1.0.0" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="Microsoft.Office.Interop.Excel">
-      <HintPath>..\..\..\..\..\Program Files (x86)\Workshare\Modules\Microsoft.Office.Interop.Excel.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
 </Project>

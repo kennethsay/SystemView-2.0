@@ -73,3 +73,27 @@ C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\App
 C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
 C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
 C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
