@@ -68,19 +68,19 @@ namespace AppLogic
             try
             {
                 OpenDATFile = new OpenFileDialog();
-                if (OpenDATFile.Filter == "dat files | *.dat")
+                OpenDATFile.ShowDialog();
+                DATFileName = OpenDATFile.FileName;
+
+                string extension = Path.GetExtension(DATFileName);
+
+                if (extension == ".dat" || extension == ".DAT")
                 {
-                    OpenDATFile.ShowDialog();
-                    DATFileName = OpenDATFile.FileName;
                     datFile = File.ReadAllBytes(DATFileName);
 
                     return true;
                 }
-                else if (OpenDATFile.Filter == "sdf files | *.SDF")
+                else if (extension == ".sdf" || extension == ".SDF")
                 {
-                    OpenDATFile.ShowDialog();
-                    DATFileName = OpenDATFile.FileName;
-
                     sdfFile = File.ReadAllLines(DATFileName);
 
                     return true;
@@ -122,7 +122,7 @@ namespace AppLogic
 
             foreach (string line in sdfFile)
             {
-                if(line == "Data:")
+                if (line == "Data:")
                 {
                     break;
                 }
@@ -278,7 +278,7 @@ namespace AppLogic
                     }
                     Thread.Sleep(20);
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     StringBuilder sb = new StringBuilder();
                     sb.Append(String.Format("DataPlayback::33333333333-threw exception {0}", ex.ToString()));

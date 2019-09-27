@@ -49,7 +49,6 @@ C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Tr
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.deps.json
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.dll
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.pdb
-C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
