@@ -1,0 +1,438 @@
+﻿<Window         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" 
+                x:Class="SystemView.MainWindow"
+                xmlns:diag2="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+                xmlns:diag="clr-namespace:System;assembly=mscorlib"
+                xmlns:local="clr-namespace:SystemView"
+                Title="MainWindow" Height="651" Width="868" Icon="Icons/sie-logo-favicon.ico" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem">
+            <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
+        </Style>
+    </Window.Resources>
+    
+
+    <DockPanel x:Name="Main_Dock">
+        <telerik:RadMenu x:Name="MasterMenu" DockPanel.Dock="Top" HorizontalAlignment="Stretch" >
+            <telerik:RadMenuItem x:Name="File" Header="_File">
+                <telerik:RadMenuItem x:Name="nSession" Header="New Session" Click="TabControl_AddSession"/>
+                <telerik:RadMenuItem x:Name="sSession" Header="Save Session" Click="TabControl_SaveSession"/>
+                <telerik:RadMenuItem x:Name="oSession" Header="Open Session" Click="TabControl_OpenSession"/>
+                <telerik:RadMenuItem x:Name="Download" Header="Download" Click="DisplayControl_AddDatalogDownloadDisplay"/>
+                <telerik:RadMenuItem x:Name="Playback" Header="Playback" Click="DisplayControl_AddPlaybackPresentation"/>
+                <telerik:RadMenuItem x:Name="Exit" Header="Exit"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="Edit" Header="_Edit">
+                <telerik:RadMenuItem x:Name="Cut" Header="Cut"/>
+                <telerik:RadMenuItem x:Name="Copy" Header="Copy"/>
+                <telerik:RadMenuItem x:Name="Paste" Header="Paste"/>
+                <telerik:RadMenuItem x:Name="Select" Header="Select All"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="View" Header="_View">
+                <telerik:RadMenuItem x:Name="BatLvl" Header="RTC Battery Level" Click="DisplayControl_AddBatLvlDisplay"/>
+                <telerik:RadMenuItem x:Name="Config" Header="Config" Click="DisplayControl_AddConfigDisplay"/>
+                <telerik:RadMenuItem x:Name="DPW" Header="Data Presentation" Click="DisplayControl_AddDataPresentation"/>
+                <telerik:RadMenuItem x:Name="QView" Header="Quick View"/>
+                <telerik:RadMenuItem x:Name="Revision" Header="Revision" Click="DisplayControl_AddRevision"/>
+                <telerik:RadMenuItem x:Name="RTCSync" Header="Sync RTC" Click="DisplayControl_AddRTCDisplay"/>
+                <telerik:RadMenuItem x:Name="CommTest" Header="Test Communication" Click="DisplayControl_AddCommTestDisplay"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="Interface" Header="_Interface">
+                <telerik:RadMenuItem x:Name="LocalCon" Header="Local Connection"/>
+                <telerik:RadMenuItem x:Name="RemoteCon" Header="Remote Connection"/>
+                <telerik:RadMenuItem x:Name="ConDiscon" Header="Connect" Click="Connect"/>
+            </telerik:RadMenuItem>            
+            <telerik:RadMenuItem x:Name="Monitoring" Header="_Monitoring">
+                <telerik:RadMenuItem x:Name="Enable" Header="Enable"/>
+                <telerik:RadMenuItem x:Name="Show" Header="Show Data Monitoring Window"/>
+                <telerik:RadMenuItem x:Name="MonitoringSettings" Header="Settings"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="Analytics" Header="_Analytics">
+                <telerik:RadMenuItem x:Name="EnableAnalytics" Header="Enable Analytics"/>
+                <telerik:RadMenuItem x:Name="AnalyticsSettigns" Header="Settings"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="AutoTest" Header="Automated _Testing">
+                <telerik:RadMenuItem x:Name="Behvior" Header="Behavioral Analytics"/>
+                <telerik:RadMenuItem x:Name="BehaviorSettings" Header="Settings"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="Themes" Header="Themes">
+                <telerik:RadMenuItem x:Name="VS_Light" Header="Standard Light" Click="LightTheme_Click"/>
+                <telerik:RadMenuItem x:Name="VS_Dark" Header="Standard Dark" Click="DarkTheme_Click"/>
+                <telerik:RadMenuItem x:Name="VS_Blue" Header="Standard Blue" Click="BlueTheme_Click"/>
+                <telerik:RadMenuItem x:Name="Siemens_Light" Header="Siemens Light" Click="SiemensLightTheme_Click"/>
+                <telerik:RadMenuItem x:Name="Siemens_Dark" Header="Siemens Dark" Click="SiemensDarkTheme_Click"/>
+            </telerik:RadMenuItem>
+            <telerik:RadMenuItem x:Name="Help" Header="_Help">
+                <telerik:RadMenuItem x:Name="About" Header="About"/>
+                <telerik:RadMenuItem x:Name="SVHelp" Header="SystemView Help"/>
+            </telerik:RadMenuItem>
+        </telerik:RadMenu>
+
+        <telerik:RadToolBarTray Name="MasterTray" HorizontalAlignment="Stretch" BorderThickness="0" DockPanel.Dock="Top" Margin="-1 -2 -1 0" IsLocked="False">
+            <telerik:RadToolBar Band="0" BandIndex="0">
+                <telerik:RadButton ToolTip="New Session" Click="TabControl_AddSession" Margin="2,0,2,0" Padding="4,4,4,4">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Image Source="Icons/icons8-add-file-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+
+                <telerik:RadButton ToolTip="Open Session" Click="TabControl_OpenSession" Margin="2,0,2,0">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="Icons/icons8-opened-folder-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+                <telerik:RadButton ToolTip="Save Session" Click="TabControl_SaveSession" Margin="2,0,2,0">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="Icons/icons8-save-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+                <telerik:RadButton ToolTip="Save Session As" Click="TabControl_SaveSessionAs" Margin="2,0,2,0">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="Icons/icons8-save-as-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+                <telerik:RadButton ToolTip="Cut">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0,2,0">
+                        <Image Source="Icons/icons8-scissors-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+                <telerik:RadButton ToolTip="Copy">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0,2,0">
+                        <Image Source="Icons/icons8-copy-100.png"
+                                   Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+                <telerik:RadButton ToolTip="Paste">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2,0,2,0">
+                        <Image Source="Icons/icons8-paste-100.png"
+                            Width="25" Height="25"/>
+                    </Border>
+                </telerik:RadButton>
+
+            </telerik:RadToolBar>
+            <telerik:RadToolBar Band="0" BandIndex="1">
+                <telerik:RadToggleButton ToolTip="View I/O" Click="ToggleIOView" Margin="2,0,2,0" Padding="4,4,4,4">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <StackPanel Orientation="Horizontal">                            
+                            <TextBlock Text="View I/O" VerticalAlignment="Center" FontSize="10"/>
+                        </StackPanel>                        
+                    </Border>
+                </telerik:RadToggleButton>
+            </telerik:RadToolBar>
+        </telerik:RadToolBarTray>
+
+        <telerik:RadExpander HorizontalAlignment="Stretch" DockPanel.Dock="Top" Name="IODisplayDropdown" Background="#FF00646E" HorizontalHeaderAlignment="Center">
+            <telerik:RadExpander.Content>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Drag I/O Indicators here:" HorizontalAlignment="Center" FontSize="12" FontFamily="Segoe UI Light" Height="27" Foreground="White"/>
+                    <telerik:RadListBox HorizontalAlignment="Stretch" Height="150" ItemContainerStyle="{StaticResource DraggableListBoxItem}" 
+                            Visibility="Visible" Name="DisplayedItems" ItemsSource="{Binding DisplayedIndications}">
+                        <telerik:RadListBox.ItemTemplate>
+                            <DataTemplate>
+                                <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">                                    
+                                    <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                    <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                </DockPanel>
+                            </DataTemplate>
+                        </telerik:RadListBox.ItemTemplate>
+                        <telerik:RadListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <telerik:RadUniformGrid Columns="11" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                            </ItemsPanelTemplate>
+                        </telerik:RadListBox.ItemsPanel>
+                        <telerik:RadListBox.DragVisualProvider>
+                            <telerik:ScreenshotDragVisualProvider/>
+                        </telerik:RadListBox.DragVisualProvider>
+                        <telerik:RadListBox.DragDropBehavior>
+                            <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                        </telerik:RadListBox.DragDropBehavior>
+                    </telerik:RadListBox>
+                </StackPanel>                
+            </telerik:RadExpander.Content>
+        </telerik:RadExpander>
+
+        <telerik:RadExpander Name="IOSelectDropdown" DockPanel.Dock="Left" ExpandDirection="Right" VerticalAlignment="Stretch" Background="#FF00646E" VerticalHeaderAlignment="Center">
+            <telerik:RadExpander.Content>
+                <ScrollViewer>
+                    <StackPanel>
+                        <telerik:RadExpander Header="ACSES Status" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableACSESStatusIndications}"  Visibility="Visible" Name="SelectableItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="ATC Status" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableATCStatusIndications}"  Visibility="Visible" Name="SelectableATCItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="AIU Aspects" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableAIUStatusIndications}"  Visibility="Visible" Name="SelectableAIUItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="Cab Status" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableCabStatusIndications}"  Visibility="Visible" Name="SelectableCabItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="Comm Status" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableCommStatusIndications}"  Visibility="Visible" x:Name="SelectableCommItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="Departure Test" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableDTStatusIndications}"  Visibility="Visible" x:Name="SelectableDTItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="Speed Sensor" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableSSStatusIndications}"  Visibility="Visible" x:Name="SelectableSSItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                        <telerik:RadExpander Header="Other" Foreground="White">
+                            <telerik:RadExpander.Content>
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                            ItemsSource="{Binding SelectableOtherStatusIndications}"  Visibility="Visible" x:Name="SelectableOtherItems">
+                                    <telerik:RadListBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                                <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                            </DockPanel>
+                                        </DataTemplate>
+                                    </telerik:RadListBox.ItemTemplate>
+                                    <telerik:RadListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <telerik:RadUniformGrid Columns="1" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                                        </ItemsPanelTemplate>
+                                    </telerik:RadListBox.ItemsPanel>
+                                    <telerik:RadListBox.DragVisualProvider>
+                                        <telerik:ScreenshotDragVisualProvider/>
+                                    </telerik:RadListBox.DragVisualProvider>
+                                    <telerik:RadListBox.DragDropBehavior>
+                                        <telerik:ListBoxDragDropBehavior AllowReorder="True" telerik:TouchManager.DragStartTrigger="TapHoldAndMove"/>
+                                    </telerik:RadListBox.DragDropBehavior>
+                                </telerik:RadListBox>
+                            </telerik:RadExpander.Content>
+                        </telerik:RadExpander>
+                    </StackPanel>
+                </ScrollViewer>                     
+            </telerik:RadExpander.Content>            
+        </telerik:RadExpander>       
+
+        <Grid >            
+            <telerik:RadDocking x:Name="MainDock" DockPanel.Dock="Top"  AllowDragReorder="True" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                            ActivePaneChanged="TabControl_ChangeSelection" CloseButtonPosition="InPane" Close="MainDock_Close" Margin="0 0 0 25">
+                <telerik:RadDocking.Resources>
+
+                    <Grid x:Key="StartPageContent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="10" Width="Auto" Grid.Column="0" VerticalAlignment="Stretch">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Label Content="New:" FontSize="18" FontFamily="Segoe UI"  Margin="0 0 0 0" Foreground="#009999" Grid.Column="0"/>
+                                <Label Content="Recent:" FontSize="18" FontFamily="Segoe UI"  Margin="0 0 0 0" Foreground="#009999" Grid.Column="1"/>
+                            </Grid>
+                        </Border>
+
+                        <Border BorderThickness="1" BorderBrush="Black" Margin="10" Grid.Column="1" VerticalAlignment="Stretch">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Label Content="PTE Release Notes:" FontSize="18" FontFamily="Segoe UI"  Margin="20 0 0 0" Foreground="#009999" Grid.Column="0" Grid.Row="0"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </telerik:RadDocking.Resources>
+                <telerik:RadDocking.DocumentHost>
+                    <telerik:RadSplitContainer x:Name="DockContainer">
+                        <telerik:RadPaneGroup x:Name="SessionContainer"/>
+                    </telerik:RadSplitContainer>
+                </telerik:RadDocking.DocumentHost>
+            </telerik:RadDocking>
+
+            <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Bottom" >
+                <StatusBar Height="30" >
+                    <TextBlock Text="Connection:" FontSize="12" FontFamily="Segoe UI" Margin="5 0 0 0" VerticalAlignment="Center"/>
+                    <TextBlock Text="{Binding ConnectionStatus}" FontSize="12" FontFamily="Segoe UI" VerticalAlignment="Center"/>
+                </StatusBar>
+            </StackPanel>
+        </Grid>
+    </DockPanel>
+
+
+</Window>

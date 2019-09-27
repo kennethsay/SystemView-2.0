@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="SystemView.ContentDisplays.CommTestDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemView.ContentDisplays"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="400">
+    <Grid>
+        <Grid  Height="300" Width="300" VerticalAlignment="Top" DataContext="CommTestDisplay">
+
+            <Image HorizontalAlignment="Center" Height="80" Margin="-165,-150,0,0"  Width="80" Source="/Icons/icons8-workstation-96.png" />
+            <Image HorizontalAlignment="Center" Height="30" Margin= "-60,-150,0,0" Width="30" Source="/Icons/icons8-ellipsis-50.png" RenderTransformOrigin="3.4,0.783" />
+            <Image HorizontalAlignment="Center" Height="30" Margin="0,-150,0,0"  Width="30" Source="/Icons/icons8-wired-network-96.png" RenderTransformOrigin="2.5,0.6" />
+            <Image HorizontalAlignment="Center" Height="30" Margin="60,-150,0,0"  Width="30" Source="/Icons/icons8-ellipsis-filled-50.png" RenderTransformOrigin="1.55,0.467" />
+            <Image HorizontalAlignment="Center" Height="80" Margin="165,-145,0,0"  Width="80" Source="/Icons/icons8-stack-96.png"/>
+            <Image HorizontalAlignment="Center" Height="20" Margin="0,-100,0,0"  Width="20" Source="/Icons/icons8-synchronize-96.png" RenderTransformOrigin="-0.15,1.65" />
+
+            <Image x:Name="IDMatch" HorizontalAlignment="Center" Height="20" Margin="-120,-40,0,0"  Width="20" />
+            <TextBlock HorizontalAlignment="Center" Margin="10,-40,0,0" TextWrapping="NoWrap" Text="Product ID Match" VerticalAlignment="Center"  Width="98"/>
+
+            <Image x:Name="StableIP" HorizontalAlignment="Center" Height="20" Margin="-120,10,0,0" Width="20"  RenderTransformOrigin="3.375,0.9" />
+            <TextBlock HorizontalAlignment="Center" Margin="85,10,30,0" TextWrapping="NoWrap" Text="Stable IP Connection" VerticalAlignment="Center"  Width="144"/>
+
+
+            <TextBlock HorizontalAlignment="Center" Margin="-60,170,0,0" TextWrapping="NoWrap" Text="Elapsed Time: " VerticalAlignment="Top" />
+            <TextBlock x:Name="TimeDisplay" HorizontalAlignment="Center" Margin="95,58,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" />
+
+            <Button Content="Test Communication" HorizontalAlignment="Center" Margin="0,195,0,60" Width="161" FontSize="16" 
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CommTest_Start"/>
+        </Grid>
+    </Grid>
+</UserControl>

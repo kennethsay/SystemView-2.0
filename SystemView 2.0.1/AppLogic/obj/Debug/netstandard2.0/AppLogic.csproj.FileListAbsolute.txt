@@ -1,0 +1,75 @@
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.deps.json
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\AppLogic.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Microsoft.Office.Interop.Excel.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Windows.Forms.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\office.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Microsoft.Vbe.Interop.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Security.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Configuration.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Accessibility.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Deployment.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Windows.Forms.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Security.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Configuration.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\Accessibility.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Deployment.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\bin\Debug\netstandard2.0\System.Runtime.Serialization.Formatters.Soap.xml
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb

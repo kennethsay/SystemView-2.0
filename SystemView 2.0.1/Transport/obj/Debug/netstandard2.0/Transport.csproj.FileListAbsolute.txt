@@ -1,0 +1,48 @@
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\bin\Debug\netstandard2.0\Transport.deps.json
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\source\repos\SystemView_Telerik_Version\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\bin\Debug\netstandard2.0\Transport.deps.json
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\bin\Debug\netstandard2.0\Transport.deps.json
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\bin\Debug\netstandard2.0\Transport.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\bin\Debug\netstandard2.0\Transport.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.deps.json
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.deps.json
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Transport.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Microsoft.Office.Interop.Excel.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\office.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\bin\Debug\netstandard2.0\Microsoft.Vbe.Interop.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csproj.CopyComplete
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.dll
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.pdb

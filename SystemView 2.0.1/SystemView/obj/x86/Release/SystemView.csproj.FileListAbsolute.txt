@@ -1,0 +1,373 @@
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\SystemView.exe.config
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\SystemView.exe
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\SystemView.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Microsoft.Win32.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\netstandard.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.AppContext.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Collections.Concurrent.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Collections.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Collections.NonGeneric.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Collections.Specialized.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ComponentModel.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ComponentModel.EventBasedAsync.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ComponentModel.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ComponentModel.TypeConverter.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Console.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Data.Common.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.Contracts.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.Debug.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.FileVersionInfo.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.Process.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.StackTrace.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.TextWriterTraceListener.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.Tools.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.TraceSource.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Diagnostics.Tracing.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Drawing.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Dynamic.Runtime.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Globalization.Calendars.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Globalization.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Globalization.Extensions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.Compression.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.Compression.ZipFile.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.FileSystem.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.FileSystem.DriveInfo.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.FileSystem.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.FileSystem.Watcher.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.IsolatedStorage.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.MemoryMappedFiles.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.Pipes.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.IO.UnmanagedMemoryStream.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Linq.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Linq.Expressions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Linq.Parallel.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Linq.Queryable.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Http.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.NameResolution.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.NetworkInformation.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Ping.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Requests.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Security.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.Sockets.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.WebHeaderCollection.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.WebSockets.Client.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Net.WebSockets.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ObjectModel.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Reflection.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Reflection.Extensions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Reflection.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Resources.Reader.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Resources.ResourceManager.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Resources.Writer.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.CompilerServices.VisualC.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Extensions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Handles.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.InteropServices.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Numerics.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Serialization.Formatters.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Serialization.Json.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Serialization.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Runtime.Serialization.Xml.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Claims.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Cryptography.Csp.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.Principal.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Security.SecureString.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Text.Encoding.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Text.Encoding.Extensions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Text.RegularExpressions.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.Overlapped.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.Tasks.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.Tasks.Parallel.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.Thread.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.ThreadPool.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Threading.Timer.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.ValueTuple.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.ReaderWriter.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.XDocument.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.XmlDocument.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.XmlSerializer.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.XPath.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\System.Xml.XPath.XDocument.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\AppLogic.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Data.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Docking.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.GridView.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Input.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Navigation.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Data.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Crystal.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Expression_Dark.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Green.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Material.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Office2013.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Office2016.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Office2016Touch.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Office_Blue.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Office_Silver.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Summer.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Transparent.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Vista.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.VisualStudio2013.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Windows7.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Windows8.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Themes.Windows8Touch.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Transport.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\AppLogic.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Data.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Docking.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.GridView.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Input.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Controls.Navigation.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Telerik.Windows.Data.xml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\Transport.pdb
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\de\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\es\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\fr\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\it\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\nl\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\bin\Release\tr\Telerik.Windows.Controls.resources.dll
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.csprojAssemblyReference.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.exe.config
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\BattLvlDisplay.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\CommTestDisplay.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\ConfigDisplay.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDonwloadBySize.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDownload.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataLogDownloadByTime.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadTimeRange.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataPresentation.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataPresentationTriggers.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DowbloadDatalogAllAvailable.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\RevisionDisplay.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\RTCDisplay.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\MainWindow.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SplashScreen.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\App.g.cs
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView_MarkupCompile.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView_MarkupCompile.lref
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\BattLvlDisplay.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\CommTestDisplay.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\ConfigDisplay.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDonwloadBySize.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDownload.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataLogDownloadByTime.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadTimeRange.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataPresentation.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DataPresentationTriggers.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\DowbloadDatalogAllAvailable.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\RevisionDisplay.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\ContentDisplays\RTCDisplay.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\MainWindow.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SplashScreen.baml
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.g.resources
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.Properties.Resources.resources
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.csproj.GenerateResource.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.exe.licenses
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.csproj.CoreCompileInputs.cache
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.csproj.CopyComplete
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.exe
+C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\obj\x86\Release\SystemView.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\SystemView.exe.config
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\SystemView.exe
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\SystemView.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Microsoft.Win32.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\netstandard.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.AppContext.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Collections.Concurrent.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Collections.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Collections.NonGeneric.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Collections.Specialized.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ComponentModel.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ComponentModel.EventBasedAsync.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ComponentModel.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ComponentModel.TypeConverter.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Console.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Data.Common.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.Contracts.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.Debug.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.FileVersionInfo.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.Process.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.StackTrace.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.TextWriterTraceListener.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.Tools.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.TraceSource.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Diagnostics.Tracing.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Drawing.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Dynamic.Runtime.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Globalization.Calendars.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Globalization.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Globalization.Extensions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.Compression.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.Compression.ZipFile.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.FileSystem.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.FileSystem.DriveInfo.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.FileSystem.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.FileSystem.Watcher.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.IsolatedStorage.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.MemoryMappedFiles.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.Pipes.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.UnmanagedMemoryStream.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Linq.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Linq.Expressions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Linq.Parallel.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Linq.Queryable.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Http.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.NameResolution.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.NetworkInformation.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Ping.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Requests.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Security.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.Sockets.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.WebHeaderCollection.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.WebSockets.Client.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Net.WebSockets.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ObjectModel.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Reflection.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Reflection.Extensions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Reflection.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Resources.Reader.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Resources.ResourceManager.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Resources.Writer.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.CompilerServices.VisualC.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Extensions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Handles.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.InteropServices.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Numerics.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Serialization.Formatters.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Serialization.Json.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Serialization.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Runtime.Serialization.Xml.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Claims.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Cryptography.Csp.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.Principal.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Security.SecureString.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Text.Encoding.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Text.Encoding.Extensions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Text.RegularExpressions.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.Overlapped.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.Tasks.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.Tasks.Parallel.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.Thread.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.ThreadPool.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Threading.Timer.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.ReaderWriter.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.XDocument.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.XmlDocument.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.XmlSerializer.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.XPath.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.Xml.XPath.XDocument.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\AppLogic.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\OfficeOpenXml.Core.ExcelPackage.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Prism.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.IO.Packaging.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ValueTuple.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.FileDialogs.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Input.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Navigation.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Data.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Crystal.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Expression_Dark.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Green.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Material.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Office2013.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Office2016.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Office2016Touch.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Office_Blue.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Office_Silver.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Summer.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Transparent.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Vista.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.VisualStudio2013.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Windows7.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Windows8.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Themes.Windows8Touch.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Transport.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\AppLogic.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\OfficeOpenXml.Core.ExcelPackage.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Prism.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Prism.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\System.ValueTuple.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Data.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Docking.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.FileDialogs.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.GridView.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Input.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Controls.Navigation.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Telerik.Windows.Data.xml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\Transport.pdb
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\de\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\es\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\fr\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\it\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\nl\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\bin\Release\tr\Telerik.Windows.Controls.resources.dll
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.csprojAssemblyReference.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.exe.config
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\App.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\BattLvlDisplay.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\CommTestDisplay.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\ConfigDisplay.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadBySize.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownload.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataLogDownloadByTime.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadTimeRange.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentation.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentationDisplays.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentationTriggers.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DownloadDatalogAllAvailable.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RadioData.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RevisionDisplay.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RTCDisplay.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\TransponderData.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\MainWindow.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SplashScreen.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\App.g.cs
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView_MarkupCompile.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView_MarkupCompile.lref
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\BattLvlDisplay.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\CommTestDisplay.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\ConfigDisplay.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadBySize.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownload.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataLogDownloadByTime.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DatalogDownloadTimeRange.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentation.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentationDisplays.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DataPresentationTriggers.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\DownloadDatalogAllAvailable.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RadioData.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RevisionDisplay.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\RTCDisplay.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\ContentDisplays\TransponderData.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\MainWindow.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SplashScreen.baml
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.g.resources
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.Properties.Resources.resources
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.csproj.GenerateResource.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.exe.licenses
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.csproj.CoreCompileInputs.cache
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.csproj.CopyComplete
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.exe
+C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\SystemView.pdb

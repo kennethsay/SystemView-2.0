@@ -1,0 +1,8141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<TPPackage>
+
+  <BaseInformationPackage>
+    <LengthOfPackage>44</LengthOfPackage>
+    <Description>Base Information Package</Description>
+    <TPEntry>
+      <Name>Transponder Position</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>1</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>4</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Transponder Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>2</Start>
+      <End>3</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>4</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Duplicate Data</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>No Duplicate Data</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Not Supported MTA</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Dispersed Data</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>5</Start>
+      <End>5</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Dispersed</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Dispersed</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exact Linking Distance</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>6</Start>
+      <End>6</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Not Exact</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>Exact</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Linking Data</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>7</Start>
+      <End>8</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Base = 10 yards, Increment = 5 yards</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Base = 1270 yards, Increment = 10 yards</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Base = 3790 yards, Increment = 15 yards</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Base = 7570 yards, Increment = 20 yards</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Linking Distance</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>9</Start>
+      <End>16</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Error</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Error</Value>
+      </Dict>
+      <Dict>
+        <Key>2 to 253</Key>
+        <Value>Increment multiplier, 0-251</Value>
+      </Dict>
+      <Dict>
+        <Key>254</Key>
+        <Value>No Link</Value>
+      </Dict>
+      <Dict>
+        <Key>255</Key>
+        <Value>Error</Value>
+      </Dict>
+      <Equation>(Increment*(X-2)+Base)*3</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Railroad and Line Number</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>17</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Milepost/Chainage Y</Name>
+      <Note>Y</Note>
+      <DataType>UInt16</DataType>
+      <Start>25</Start>
+      <End>32</End>
+      <Dict>
+        <Key>251</Key>
+        <Value>Temporary</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Milepost/Chainage X</Name>
+      <Note>X</Note>
+      <DataType>UInt16</DataType>
+      <Start>33</Start>
+      <End>40</End>
+      <Dict>
+        <Key>251</Key>
+        <Value>Temporary</Value>
+      </Dict>
+      <Equation>(((Y-2)*250+(X-2))*10)*3</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Track Number</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>41</Start>
+      <End>43</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </BaseInformationPackage>
+
+  <Package04>
+    <LengthOfPackage>56</LengthOfPackage>
+    <Description>Pre-Distant Signal Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to PTS Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>19</Start>
+      <End>23</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Radio Channel</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>24</Start>
+      <End>26</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Encoder Assignment</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>27</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>WIU Signal Assignment</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>31</Start>
+      <End>33</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Signal 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Signal 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Signal 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Signal 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Signal 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Signal 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Signal 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Signal 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP# (closest unused milepost)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>34</Start>
+      <End>45</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to radio request information (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>46</Start>
+      <End>55</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package04>
+
+  <Package05>
+    <LengthOfPackage>48</LengthOfPackage>
+    <Description>PTS Distance Signal Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to PTS Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>19</Start>
+      <End>23</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Radio Channel</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>24</Start>
+      <End>26</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Encoder Assignment</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>27</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>WIU Signal Assignment</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>31</Start>
+      <End>33</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Signal 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Signal 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Signal 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Signal 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Signal 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Signal 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Signal 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Signal 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP# (closest unused milepost)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>34</Start>
+      <End>45</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Q bit: Identified increments for distance to home signal encoding</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>46</Start>
+      <End>46</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>10 yard increments</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>1 foot increments</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package05>
+
+  <Package07>
+    <LengthOfPackage>16</LengthOfPackage>
+    <Description>Temporary Speed Package - One Line</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Change Point</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>8</Start>
+      <End>9</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Start Braking Immediately</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Start Speed Restriction</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>End Speed</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Line Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>10</Start>
+      <End>15</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package07>
+
+  <Package08>
+    <LengthOfPackage>48</LengthOfPackage>
+    <Description>Speed Restriction Package - Temporary</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to radio request information (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>30</Start>
+      <End>40</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Is Restriction Temporary?</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>41</Start>
+      <End>41</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Temporary</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Temporary</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Restriction State</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>42</Start>
+      <End>43</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Beginning</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>End</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package08>
+
+  <Package09>
+    <LengthOfPackage>24</LengthOfPackage>
+    <Description>Speed Package - One Line</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to start of Speed Application (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Line Speed Restriction (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>18</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package09>
+
+  <Package10>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Speed Package – Actual and In-Line Speed</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Current Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>13</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to start of Speed Application (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>14</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Line Speed Restriction (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>25</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package10>
+
+  <Package11>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>Speed Restriction Package - Limited Delay</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to start of Speed Application (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Length of Restriction (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>30</Start>
+      <End>39</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package11>
+
+  <Package12>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Route-Specific Speed Restriction Package - All Train Types</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>16</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>17</Start>
+      <End>21</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exit Track Selection</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>22</Start>
+      <End>24</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Exit Track is Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Exit Track is Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Exit Track is Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Exit Track is Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Exit Track is Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Exit Track is Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Exit Track is Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Exit Track is Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>25</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package12>
+
+  <Package13>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>Train-Specific Package for a Defined Route</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>16</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>17</Start>
+      <End>21</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exit Track Selection</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>22</Start>
+      <End>24</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Exit Track is Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Exit Track is Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Exit Track is Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Exit Track is Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Exit Track is Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Exit Track is Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Exit Track is Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Exit Track is Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>25</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Note>ActiveBits</Note>
+      <Start>31</Start>
+      <End>35</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Is Restriction Temporary?</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>36</Start>
+      <End>36</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Temporary</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Temporary</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Restriction State</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>37</Start>
+      <End>38</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Beginning</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>End</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package13>
+
+  <Package14>
+    <LengthOfPackage>56</LengthOfPackage>
+    <Description>Route-Specific Speed Restriction Package - Per Train Type</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>16</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>17</Start>
+      <End>21</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exit Track Selection</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>22</Start>
+      <End>24</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Exit Track is Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Exit Track is Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Exit Track is Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Exit Track is Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Exit Track is Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Exit Track is Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Exit Track is Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Exit Track is Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>25</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>31</Start>
+      <End>36</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>37</Start>
+      <End>42</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>43</Start>
+      <End>48</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>49</Start>
+      <End>54</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package14>
+
+  <Package15>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Train-Specific In-Line Speed Package - One Line</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>ActiveBits</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package15>
+
+  <Package16>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>Actual In-Line Speed Package - Train Specific</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>8</Start>
+      <End>13</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>14</Start>
+      <End>19</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>20</Start>
+      <End>25</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>26</Start>
+      <End>31</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>32</Start>
+      <End>37</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package16>
+
+  <Package17>
+    <LengthOfPackage>48</LengthOfPackage>
+    <Description>Train-Specific In-Line Speed Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>18</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>>
+      <DataType>Uint16</DataType>
+      <Start>24</Start>
+      <End>29</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>30</Start>
+      <End>35</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>36</Start>
+      <End>41</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>42</Start>
+      <End>47</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package17>
+
+  <Package18>
+    <LengthOfPackage>56</LengthOfPackage>
+    <Description>Train-Specific In-Line Speed Package - Two Speed Restrictions with Length</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Restrictions for Group 1 (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>ActiveBits</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Restrictions for Group 2 (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>30</Start>
+      <End>35</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>ActiveBits</Note>
+      <DataType>string</DataType>
+      <Start>36</Start>
+      <End>40</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>41</Start>
+      <End>45</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Length of Restriction (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>46</Start>
+      <End>55</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package18>
+
+  <Package19>
+    <LengthOfPackage>64</LengthOfPackage>
+    <Description>Speed Restriction Package Specific to All Trains - With Length</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>18</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>24</Start>
+      <End>29</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>30</Start>
+      <End>35</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>36</Start>
+      <End>41</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>42</Start>
+      <End>47</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>48</Start>
+      <End>52</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Length of Restriction (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>53</Start>
+      <End>63</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package19>
+
+  <Package20>
+    <LengthOfPackage>72</LengthOfPackage>
+    <Description>Train-Specific Speed Restriction Package (Temporary Restriction Possibility)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Extension</Name>
+      <Note>0</Note>
+      <DataType>byte[]</DataType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>12</Start>
+      <End>22</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>23</Start>
+      <End>28</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>29</Start>
+      <End>34</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>35</Start>
+      <End>40</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>41</Start>
+      <End>46</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>47</Start>
+      <End>52</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>53</Start>
+      <End>57</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Length of Restriction (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>58</Start>
+      <End>67</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Is Restriction Temporary?</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>68</Start>
+      <End>68</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Temporary</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Temporary</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed Restriction State</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>69</Start>
+      <End>70</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>No End</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Beginning</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>End</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Is Transponder Position also for Opposite Direction?</Name>
+      <Note>0</Note>
+      <DateType>bool</DateType>
+      <Start>71</Start>
+      <End>71</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>True</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>False</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package20>
+
+  <Package21>
+    <LengthOfPackage>16</LengthOfPackage>
+    <Description>Start/End ACSES Immediate Application</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Misc. State</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>7</Key>
+        <Value>ACSES Note 2</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>Pre-Cut over/installation area</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>Signal Territory (MTA)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Application State</Name>
+      <Note>if(Function == 7 | Function == 11)</Note>
+      <DataType>string</DataType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin application immediately</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>End application immediately</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Parameter</Name>
+      <Note>if (Function == 14)</Note>
+      <DataType>string</DataType>
+      <Start>12</Start>
+      <End>13</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Invalid</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Both</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Parameter</Name>
+      <Note>if (Function == 14)</Note>
+      <DataType>string</DataType>
+      <Start>14</Start>
+      <End>15</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Spare</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>ABS/CMB</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>MBS</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Spare</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package21>
+
+  <Package22>
+    <LengthOfPackage>24</LengthOfPackage>
+    <Description>Start/End ACSES Application</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Misc. State</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>7</Key>
+        <Value>ACSES Note 2</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>Pre-Cut over/installation area</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Begin/End Application</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>End Application</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin Application</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Start/End Application (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package22>
+
+  <Package23>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Distance Correction (ATSS)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction Change/Delta Distance</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>5</Key>
+        <Value>Direction Change/Delta Distance</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Lines Have Different/Same Direction</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Lines Have Different Direction</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>Lines Have Same Direction</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Signed Delta Distance for Header Direction (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>21</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Signed Delta Distance for Opposite Direction (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>22</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package23>
+
+  <Package24>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>Start/End Ahead with Speed and Grade (ATSS)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Misc. State</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>TSR PreLoad Request</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>Pre-Cutover/Installation Area</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Begin/End Application at Distance</Name>
+      <Note> if (Function == 1)</Note>
+      <DateType>string</DateType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin Application at Distance 13-23</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>End Application at Distance 13-23</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Start of Application (10 yd increment)</Name>
+      <Note>if (Function == 1)</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Radio Channel</Name>
+      <Note>if (Function == 1)</Note>
+      <DataType>UInt16</DataType>
+      <Start>24</Start>
+      <End>26</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP#, Closest Unused Milepost</Name>
+      <Note>if (Function == 1)</Note>
+      <DataType>UInt16</DataType>
+      <Start>27</Start>
+      <End>38</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Begin/End of Area</Name>
+      <Note>if (Function == 11)</Note>
+      <DateType>string</DateType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>End</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Start of Application (10 yd increment)</Name>
+      <Note>if (Function == 11)</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed in Area (5 mph increment)</Name>
+      <Note>if (Function == 11)</Note>
+      <DateType>UInt16</DateType>
+      <Start>24</Start>
+      <End>29</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>if (Function == 11)</Note>
+      <DataType>string</DataType>
+      <Start>30</Start>
+      <End>34</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package24>
+
+  <Package25>
+    <LengthOfPackage>48</LengthOfPackage>
+    <Description>Start/End Ahead with Speed, Grade, and Length (ATSS)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Misc. State</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>11</Key>
+        <Value>Installation Area</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Begin/End of Area</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>End</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Start of Application (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed in Area (5 mph increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>24</Start>
+      <End>29</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>30</Start>
+      <End>34</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Length of Area (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>35</Start>
+      <End>45</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package25>
+
+  <Package26>
+    <LengthOfPackage>24</LengthOfPackage>
+    <Description>End/Error Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction Data</Name>
+      <Note>ActiveBits!</Note>
+      <DataType>string</DataType>
+      <Start>8</Start>
+      <End>15</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Encoder Failure</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>All Data for Up Direction in this Group</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>All Data for Down Direction in this Group</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>EOM</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>16</Start>
+      <End>16</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package26>
+
+  <Package27>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Speed Restriction Package (No Length)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Line Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package27>
+
+  <Package28>
+    <LengthOfPackage>48</LengthOfPackage>
+    <Description>Train-Specific In-Line Speed Package (Two Speed Restriction without Restriction Length)</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>ActiveBits</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>29</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>30</Start>
+      <End>35</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train Types</Name>
+      <Note>ActiveBits</Note>
+      <DataType>string</DataType>
+      <Start>36</Start>
+      <End>40</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Train Type 1 (A)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Train Type 2 (B)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Train Type 3 (C)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Train Type 4 (D)</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Train Type 5 (E)</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <DataType>string</DataType>
+      <Start>41</Start>
+      <End>45</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package28>
+
+  <Package29>
+    <LengthOfPackage>56</LengthOfPackage>
+    <Description>Train-Specific Speed Restriction Package without Restriction Length</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>18</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>24</Start>
+      <End>29</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>30</Start>
+      <End>35</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>36</Start>
+      <End>41</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>42</Start>
+      <End>47</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>48</Start>
+      <End>52</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package29>
+
+  <Package32>
+    <LengthOfPackage>24</LengthOfPackage>
+    <Description>TSR Data Request Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Radio Channel</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>10</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP# (closest unused milepost)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>11</Start>
+      <End>22</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Home Signal</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>23</Start>
+      <End>23</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Home Signal</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Home Signal</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package32>
+
+  <Package33>
+    <LengthOfPackage>16</LengthOfPackage>
+    <Description>Exit Track Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Possible Exit Tracks</Name>
+      <Note>ActiveBits</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>15</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package33>
+
+  <Package34>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>TSR Preload Request Outside ACSES Territory</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Misc. State</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>TSR PreLoad Request</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Begin/End Application at Distance</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>1</Key>
+        <Value>Begin Application at Distance 13-23</Value>
+      </Dict>
+      <Dict>
+        <Key>0</Key>
+        <Value>End Application at Distance 13-23</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Start of Application (10 yd increment)</Name>
+      <Note>0</Note>
+      <DateType>UInt16</DateType>
+      <Start>13</Start>
+      <End>23</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Radio Channel</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>24</Start>
+      <End>26</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP#, Closest Unused Milepost</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>27</Start>
+      <End>38</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package34>
+
+  <Package35>
+    <LengthOfPackage>40</LengthOfPackage>
+    <Description>HS Turnback Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to PTS Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>12</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <DataType>string</DataType>
+      <Start>13</Start>
+      <End>17</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Encoder Assignment</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>21</Start>
+      <End>24</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>WIU Signal Assignment</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>25</Start>
+      <End>27</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Signal 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Signal 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Signal 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Signal 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Signal 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Signal 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Signal 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Signal 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>BCP# (closest unused milepost)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>28</Start>
+      <End>39</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package35>
+
+  <Package36>
+    <LengthOfPackage>24</LengthOfPackage>
+    <Description>PTS Not Released by Signal Status Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to PTS Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>18</Start>
+      <End>22</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Type of PTS</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>23</Start>
+      <End>23</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Normal (Forward PTS)</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Turnback</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package36>
+
+  <Package37>
+    <LengthOfPackage>64</LengthOfPackage>
+    <Description>Route Dependent Speed Restriction Package – By Train Type and Signal Specific</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>8</Start>
+      <End>16</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>17</Start>
+      <End>21</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exit Track Selection</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>22</Start>
+      <End>24</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Exit Track is Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Exit Track is Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Exit Track is Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Exit Track is Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Exit Track is Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Exit Track is Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Exit Track is Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Exit Track is Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 1 (A) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>25</Start>
+      <End>30</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 2 (B) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>31</Start>
+      <End>36</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 3 (C) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>37</Start>
+      <End>42</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 4 (D) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>43</Start>
+      <End>48</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Train 5 (E) Target Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>49</Start>
+      <End>54</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Interlocking Signal Index</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>56</Start>
+      <End>57</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>1st Linked Signal after the HS the Train is Approaching</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>2nd Linked Signal after the HS the Train is Approaching</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>3rd Linked Signal after the HS the Train is Approaching</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>4th Linked Signal after the HS the Train is Approaching</Value>
+      </Dict>
+      <Equation>0</Equation>>
+    </TPEntry>
+  </Package37>
+
+  <Package38>
+    <LengthOfPackage>56</LengthOfPackage>
+    <Description>One LoMA with Route, Longer Target Distance, and Release Speed/Overlap</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note></Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>8</Start>
+      <End>8</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Signal Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>9</Start>
+      <End>14</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Speed Increase Point for Signal Speed at this Signal</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>15</Start>
+      <End>17</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance 1, Only Signal Speed is Supervised from this LoMA</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>18</Start>
+      <End>28</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>29</Start>
+      <End>33</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>34</Start>
+      <End>34</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed (5 mph increments)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>35</Start>
+      <End>40</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Route 1</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>41</Start>
+      <End>43</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Release Speed or Overlap Distance</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>44</Start>
+      <End>44</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Release Speed</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Overlap</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Distance (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>45</Start>
+      <End>50</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package38>
+
+  <Package39>
+    <LengthOfPackage>72</LengthOfPackage>
+    <Description>Two LoMA with Route and Longer Target Distance</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Extension</Name>
+      <Note>0</Note>
+      <DataType>byte[]</DataType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Signal Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>13</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Speed Increase Point for Signal Speed at this Signal</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>21</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance 1, Only Signal Speed is Supervised from this LoMA</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>22</Start>
+      <End>32</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade 1</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>33</Start>
+      <End>37</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>38</Start>
+      <End>38</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed 1 (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>39</Start>
+      <End>44</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Route 1</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>45</Start>
+      <End>47</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance 2, Distance from Target 1 to Target 2</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>48</Start>
+      <End>58</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade 2</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>59</Start>
+      <End>63</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>64</Start>
+      <End>64</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed 2 (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>65</Start>
+      <End>70</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package39>
+
+  <Package40>
+    <LengthOfPackage>80</LengthOfPackage>
+    <Description>Two LoMA with Route, Longer Target Distance and Release Speed/Overlap for 1st LoMA</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Extension</Name>
+      <Note>0</Note>
+      <DataType>byte[]</DataType>
+      <Start>8</Start>
+      <End>11</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>12</Start>
+      <End>12</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Signal Speed (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>13</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Speed Increase Point for Signal Speed at this Signal</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>19</Start>
+      <End>21</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance 1, Only Signal Speed is Supervised from this LoMA</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>22</Start>
+      <End>32</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade 1</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>33</Start>
+      <End>37</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>38</Start>
+      <End>38</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed 1 (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>39</Start>
+      <End>44</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Route 1</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>45</Start>
+      <End>47</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance 2, Distance from Target 1 to Target 2</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>48</Start>
+      <End>58</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade 2</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>59</Start>
+      <End>63</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Special</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>64</Start>
+      <End>64</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Speed Value</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Special Value</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Target Speed 2 (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>Uint16</DataType>
+      <Start>65</Start>
+      <End>70</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Release Speed or Overlap Distance</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>71</Start>
+      <End>71</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Release Speed</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Overlap</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Speed/Distance (5 mph increment)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>72</Start>
+      <End>77</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Speed * 5</Equation>
+    </TPEntry>
+  </Package40>
+
+  <Package42>
+    <LengthOfPackage>32</LengthOfPackage>
+    <Description>Accurate Stop, Tunnel Protection, Route Dependent PTS Package</Description>
+    <TPEntry>
+      <Name>Type of Package</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>0</Start>
+      <End>3</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Direction of Travel</Name>
+      <Note>0</Note>
+      <DateType>string</DateType>
+      <Start>4</Start>
+      <End>4</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Up</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Down</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Size</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>5</Start>
+      <End>7</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Package Function</Name>
+      <Note>0</Note>
+      <DataType>string</DataType>
+      <Start>8</Start>
+      <End>9</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Not Used</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Accurate Stop (MTA)</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Tunnel Protection (MTA)</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Route Dependent PTS</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Home Signal (1 ft increment)</Name>
+      <Note>if (Function == 1)</Note>
+      <DataType>Uint16</DataType>
+      <Start>10</Start>
+      <End>25</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>if (Function == 2)</Note>
+      <DataType>UInt16</DataType>
+      <Start>10</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>if (Function == 2)</Note>
+      <DataType>string</DataType>
+      <Start>19</Start>
+      <End>23</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Possible Exit Tracks</Name>
+      <Note>if (Function == 2) - ActiveBits</Note>
+      <DateType>string</DateType>
+      <Start>24</Start>
+      <End>31</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Distance to Target (10 yard increment)</Name>
+      <Note>if (Function == 11)</Note>
+      <DataType>UInt16</DataType>
+      <Start>10</Start>
+      <End>18</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Controlling Grade</Name>
+      <Note>if (Function == 11)</Note>
+      <DataType>string</DataType>
+      <Start>19</Start>
+      <End>23</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>[-4.0% - -3.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>[-3.75% - -3.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>[-3.50% - -3.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>[-3.25% - -3.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>[-3.0% - -2.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>[-2.75% - -2.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>[-2.50% - -2.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>[-2.25% - -2.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>8</Key>
+        <Value>[-2.0% - -1.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>9</Key>
+        <Value>[-1.75% - -1.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>10</Key>
+        <Value>[-1.50% - -1.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>11</Key>
+        <Value>[-1.25% - -1.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>12</Key>
+        <Value>[-1.0% - -0.76%]</Value>
+      </Dict>
+      <Dict>
+        <Key>13</Key>
+        <Value>[-0.75% - -0.51%]</Value>
+      </Dict>
+      <Dict>
+        <Key>14</Key>
+        <Value>[-0.50% - -0.26%]</Value>
+      </Dict>
+      <Dict>
+        <Key>15</Key>
+        <Value>[-0.25% - -0.1%]</Value>
+      </Dict>
+      <Dict>
+        <Key>16</Key>
+        <Value>[0.0% - 0.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>17</Key>
+        <Value>[0.25% - 0.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>18</Key>
+        <Value>[0.50% - 0.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>19</Key>
+        <Value>[0.75% - 0.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>20</Key>
+        <Value>[1.0% - 1.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>21</Key>
+        <Value>[1.25% - 1.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>22</Key>
+        <Value>[1.50% - 1.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>23</Key>
+        <Value>[1.75% - 1.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>24</Key>
+        <Value>[2.0% - 2.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>25</Key>
+        <Value>[2.25% - 2.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>26</Key>
+        <Value>[2.50% - 2.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>27</Key>
+        <Value>[2.75% - 2.99%]</Value>
+      </Dict>
+      <Dict>
+        <Key>28</Key>
+        <Value>[3.0% - 3.24%]</Value>
+      </Dict>
+      <Dict>
+        <Key>29</Key>
+        <Value>[3.25% - 3.49%]</Value>
+      </Dict>
+      <Dict>
+        <Key>30</Key>
+        <Value>[3.50% - 3.74%]</Value>
+      </Dict>
+      <Dict>
+        <Key>31</Key>
+        <Value>[3.75% - 3.99%]</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+    <TPEntry>
+      <Name>Exit Tracks with LoMA</Name>
+      <Note>if (Function == 11) - ActiveBits</Note>
+      <DateType>string</DateType>
+      <Start>24</Start>
+      <End>31</End>
+      <Dict>
+        <Key>0</Key>
+        <Value>Track 1</Value>
+      </Dict>
+      <Dict>
+        <Key>1</Key>
+        <Value>Track 2</Value>
+      </Dict>
+      <Dict>
+        <Key>2</Key>
+        <Value>Track 3</Value>
+      </Dict>
+      <Dict>
+        <Key>3</Key>
+        <Value>Track 4</Value>
+      </Dict>
+      <Dict>
+        <Key>4</Key>
+        <Value>Track 5</Value>
+      </Dict>
+      <Dict>
+        <Key>5</Key>
+        <Value>Track 6</Value>
+      </Dict>
+      <Dict>
+        <Key>6</Key>
+        <Value>Track 7</Value>
+      </Dict>
+      <Dict>
+        <Key>7</Key>
+        <Value>Track 8</Value>
+      </Dict>
+      <Equation>0</Equation>
+    </TPEntry>
+  </Package42>
+
+  <Package44>
+      <LengthOfPackage>56</LengthOfPackage>
+      <Description>Announced Line Change</Description>
+      <TPEntry>
+        <Name>Type of Package</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>0</Start>
+        <End>3</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Direction of Travel</Name>
+        <Note>0</Note>
+        <DateType>string</DateType>
+        <Start>4</Start>
+        <End>4</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Up</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Down</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Package Size</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>5</Start>
+        <End>7</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Announced Line Number</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>8</Start>
+        <End>15</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+      <Name>Announced Line Chaining (10s of yards)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>16</Start>
+      <End>31</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+        <Name>Approach Tracks</Name>
+        <Note>ActiveBits</Note>
+        <DateType>string</DateType>
+        <Start>32</Start>
+        <End>39</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Track 1</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Track 2</Value>
+        </Dict>
+        <Dict>
+          <Key>2</Key>
+          <Value>Track 3</Value>
+        </Dict>
+        <Dict>
+          <Key>3</Key>
+          <Value>Track 4</Value>
+        </Dict>
+        <Dict>
+          <Key>4</Key>
+          <Value>Track 5</Value>
+        </Dict>
+        <Dict>
+          <Key>5</Key>
+          <Value>Track 6</Value>
+        </Dict>
+        <Dict>
+          <Key>6</Key>
+          <Value>Track 7</Value>
+        </Dict>
+        <Dict>
+          <Key>7</Key>
+          <Value>Track 8</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+    <TPEntry>
+        <Name>New Line Direction</Name>
+        <Note>0</Note>
+        <DateType>string</DateType>
+        <Start>40</Start>
+        <End>40</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Up</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Down</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Associated Interlocking</Name>
+        <Note>0</Note>
+        <DataType>string</DataType>
+        <Start>41</Start>
+       <End>42</End>
+       <Dict>
+         <Key>0</Key>
+         <Value>Current Approach</Value>
+       </Dict>
+       <Dict>
+         <Key>1</Key>
+         <Value>Second Approach</Value>
+       </Dict>
+       <Dict>
+         <Key>2</Key>
+         <Value>Third Approach</Value>
+         </Dict>
+         <Dict>
+           <Key>3</Key>
+           <Value>Fourth Approach</Value>
+         </Dict>
+         <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+      <Name>Distance to Announced Line Boundary (10s of yards)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>45</Start>
+      <End>55</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package44>
+
+</TPPackage>

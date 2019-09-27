@@ -1,0 +1,78 @@
+﻿<Window x:Class="SystemView.SplashScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemView"
+        mc:Ignorable="d"
+        Title="SplashScreen" Height="420" Width="868" ResizeMode="NoResize" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <LinearGradientBrush x:Key="Siemens_Gradient" StartPoint="0,0.5" EndPoint="1,0.5">
+            <GradientStop Offset="0" Color="#50bebe"/>
+            <GradientStop Offset=".50" Color="#009999"/>
+            <GradientStop Offset=".83" Color="#0099b0"/>
+            <GradientStop Offset="1" Color="#0099cb"/>
+        </LinearGradientBrush>
+    </Window.Resources>
+
+    <Grid>
+        <Image Source="/Images/rail-automation-milieu-3_original.tiff" Stretch="Fill"/>
+        <Image Source="/Images/sie-logo-layer-claim-petrol-rgb.png" Margin="52,80,605,238"/>
+        <Rectangle Fill="{StaticResource Siemens_Gradient}" HorizontalAlignment="Left" Margin="431,194,0,80" Width="381"></Rectangle>
+        <Grid Margin="431,194,56,80">
+            <TextBox Text="SystemView" 
+                HorizontalAlignment="Left" 
+                Height="61"
+                Width="381" 
+                TextWrapping="Wrap"                   
+                VerticalAlignment="Top" 
+                FontFamily="Siemens Sans"
+                FontSize="43"
+                Foreground="White"                 
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="5"/>
+
+            <TextBox Text="OBC Performance and Diagnostic Evaluation Tool" 
+                HorizontalAlignment="Left" 
+                Height="58"
+                Width="381" 
+                Margin="0,61,0,0" 
+                TextWrapping="Wrap"                   
+                VerticalAlignment="Top" 
+                FontFamily="Siemens Sans"
+                FontSize="19"
+                Foreground="White"                 
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="5"/>
+            <TextBox Text="Siemens Mobility Inc. © 2019" 
+                HorizontalAlignment="Left" 
+                Height="27"
+                Width="187" 
+                Margin="0,119,0,0" 
+                TextWrapping="Wrap"                   
+                VerticalAlignment="Top" 
+                FontFamily="Siemens Sans"
+                FontSize="12"
+                Foreground="White"                 
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="5"/>
+            <TextBox Text="Revision 0.00.0000 (Preview)" 
+                HorizontalAlignment="Left" 
+                Height="27"
+                Width="194" 
+                Margin="187,119,0,0" 
+                TextWrapping="Wrap" 
+                TextAlignment="Right"
+                VerticalAlignment="Top" 
+                FontFamily="Siemens Sans"
+                FontSize="12"
+                Foreground="White"                 
+                Background="Transparent"
+                BorderBrush="Transparent"
+                Padding="5"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,87 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemView.ContentDisplays"             
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="SystemView.ContentDisplays.RadioData"
+             xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="0 7 0 7"/>
+        </Style>       
+    </UserControl.Resources>
+
+    <DockPanel>
+        <telerik:RadToolBar DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+            <telerik:RadDropDownButton HorizontalAlignment="Center" >
+                <telerik:RadDropDownButton.Content>
+                    <StackPanel Orientation="Horizontal">                        
+                        <Image Source="/Icons/icons8-filter-96 (1).png"
+                        Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Filter"/>
+                    </StackPanel>                    
+                </telerik:RadDropDownButton.Content>
+                <telerik:RadDropDownButton.DropDownContent>
+                    <TreeView Name="MsgTypeSelectionTree">
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <CheckBox Content="Encoder Msgs"/>
+                            </TreeViewItem.Header>
+                            <CheckBox Content="MSG #21"/>                            
+                            <CheckBox Content="MSG #22"/>
+                            <CheckBox Content="MSG #23"/>
+                        </TreeViewItem>              
+                        
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <CheckBox Content="TSR Msgs"/>
+                            </TreeViewItem.Header>
+                            <CheckBox Content="MSG #11"/>
+                            <CheckBox Content="MSG #19"/>
+                        </TreeViewItem>
+
+                        <TreeViewItem>
+                            <TreeViewItem.Header>
+                                <CheckBox Content="MTA Msgs"/>
+                            </TreeViewItem.Header>
+                            <CheckBox Content="MSG #34"/>
+                        </TreeViewItem>
+                    </TreeView>                    
+                </telerik:RadDropDownButton.DropDownContent>                
+            </telerik:RadDropDownButton>
+            
+            <Button ToolTip="Search"  Margin="10 0 2 0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-search-100-2.png"
+                           Width="25" Height="25" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="Search" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
+                <TextBox Height="22" Width="200"/>
+            </Border>
+        </telerik:RadToolBar>
+        
+        <Grid Margin="10 5 10 10" DockPanel.Dock="Right">
+            <telerik:RadGridView ItemsSource="{Binding RadioMessageList}" ScrollViewer.VerticalScrollBarVisibility="Visible"  
+                                 CanUserGroupColumns="False" ShowGroupPanel="False" HorizontalAlignment="Stretch" 
+                                 Margin="0 0 300 0" SelectionMode="Single" SelectionUnit="FullRow" 
+                                 RowIndicatorVisibility="Collapsed" ColumnWidth="*" SelectedItem="{Binding SelectedRadioItem, Mode=TwoWay}"
+                                 IsReadOnly="True" IsFilteringAllowed="False">              
+            </telerik:RadGridView>
+
+            <GroupBox Header="Message Content" HorizontalAlignment="Right" Width="295">
+                <StackPanel HorizontalAlignment="Left" Name ="RadioDetailDisplay">
+                </StackPanel>
+            </GroupBox>
+                       
+        </Grid>          
+    </DockPanel>
+</UserControl>

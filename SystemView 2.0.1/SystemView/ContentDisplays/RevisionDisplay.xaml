@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="SystemView.ContentDisplays.RevisionDisplay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemView.ContentDisplays"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="550">
+
+    <UserControl.Resources>
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        </Style>
+    </UserControl.Resources>
+    
+    <StackPanel Orientation="Vertical">
+        <Label Content="OBC Revision Info:" FontSize="20" Margin="10 30 0 0" HorizontalAlignment="Center"/>
+        <DataGrid x:Name="RevisionGrid" Width="500" HorizontalContentAlignment="Center" Margin="25,10,25,0" ItemsSource="{Binding}" 
+                  IsManipulationEnabled="False" IsReadOnly="True" CanUserResizeRows="False" CanUserResizeColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="App Name" Binding="{Binding AppName}" Width="100" />
+                <DataGridTextColumn Header="Part Number" Binding="{Binding PartNumber}" Width="100" />
+                <DataGridTextColumn Header="Revision" Binding="{Binding AppRev}" Width="100" />
+                <DataGridTextColumn Header="Date Built" Binding="{Binding BuildDate}" Width="100" />
+                <DataGridTextColumn Header="Build Number" Binding="{Binding Build}" Width="100" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </StackPanel>        
+</UserControl>

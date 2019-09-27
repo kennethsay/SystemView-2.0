@@ -1,0 +1,95 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemView.ContentDisplays"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation" x:Class="SystemView.ContentDisplays.DataPlaybackPresentation"
+            xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"         
+            mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <DockPanel>
+        <telerik:RadToolBar Height="40" Margin="0" DockPanel.Dock="Top">
+            <Button ToolTip="Play"  Margin="2 0 2 0" Click="Resume" x:Name="PlayData">
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Image Source="/Icons/icons8-play-100.png"
+                            Width="25" Height="25" VerticalAlignment="Center"/>
+                </Border>
+            </Button>
+            <Button ToolTip="Pause" Margin="2 0 2 0" Click="Pause" x:Name="PauseData">
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Image Source="/Icons/icons8-pause-100.png"
+                            Width="25" Height="25" VerticalAlignment="Center"/>
+                </Border>
+            </Button>
+            <Button ToolTip="Clear Window" Margin="2 0 2 0" Click="ClearPlayback" x:Name="PlaybackCleared">
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Image Source="/Icons/icons8-delete-32.png"
+                            Width="20" Height="20" VerticalAlignment="Center"/>
+                </Border>
+            </Button>
+            <Button ToolTip="Filter" Margin="2 0 2 0" Click="modifyTriggers">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-filter-96 (1).png"
+                            Width="25" Height="25" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="Filter" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Advanced Filter" Margin="2 0 2 0" Click="modifyAdanvancedTriggers">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-filter-96 (1).png"
+                            Width="25" Height="25" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="Advanced Filter" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Add/Remove Column"  Margin="2 0 2 0" Click="modifyDisplay">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-add-column-100.png"
+                            Width="25" Height="25" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="Add/Remove Column" VerticalAlignment="Center"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Display Transponder Data"  Margin="2 0 2 0" Click="displayTP_Window">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-list-50.png"
+                            Width="20" Height="20" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="TP Data Viewer" VerticalAlignment="Center" Margin="2 0 0 0"/>
+                </StackPanel>
+            </Button>
+            <Button ToolTip="Display Radio Data"  Margin="2 0 2 0" Click="displayRadio_Window">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                        <Image Source="/Icons/icons8-radio-waves-50.png"
+                            Width="20" Height="20" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="Radio Data Viewer" VerticalAlignment="Center" Margin="2 0 0 0"/>
+                </StackPanel>
+            </Button>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
+                <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
+                    <Image Source="/Icons/icons8-search-100-2.png"
+                           Width="25" Height="25" VerticalAlignment="Center"/>
+                </Border>
+                <TextBlock Text="Search" VerticalAlignment="Center"/>
+            </StackPanel>
+            <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
+                <TextBox Name="SearchBox" Height="22" Width="200"/>
+            </Border>
+        </telerik:RadToolBar>
+        <telerik:RadGridView Name="PresentationGrid" DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding DataBind}" 
+                             ScrollViewer.VerticalScrollBarVisibility="Visible"  CanUserGroupColumns="False" ShowGroupPanel="False" IsReadOnly="True"
+                             RowIndicatorVisibility="Collapsed" SelectionMode="Single" SelectionUnit="FullRow" CanUserSearch="True"
+                             ShowSearchPanel="True" SearchPanelCloseButtonVisibility="Visible">
+        </telerik:RadGridView>
+
+    </DockPanel>
+</UserControl>

@@ -1,0 +1,4 @@
+D:\Projects\SystemView\AppLogic\obj\Debug\netstandard1.3\AppLogic.csproj.CoreCompileInputs.cache
+D:\Projects\SystemView\AppLogic\obj\Debug\netstandard1.3\AppLogic.AssemblyInfoInputs.cache
+D:\Projects\SystemView\AppLogic\obj\Debug\netstandard1.3\AppLogic.AssemblyInfo.cs
+D:\Projects\SystemView\AppLogic\obj\Debug\netstandard1.3\AppLogic.csprojAssemblyReference.cache

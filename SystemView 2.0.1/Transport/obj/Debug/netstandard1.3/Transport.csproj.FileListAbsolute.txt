@@ -1,0 +1,4 @@
+D:\Projects\SystemView\Transport\obj\Debug\netstandard1.3\Transport.csprojAssemblyReference.cache
+D:\Projects\SystemView\Transport\obj\Debug\netstandard1.3\Transport.csproj.CoreCompileInputs.cache
+D:\Projects\SystemView\Transport\obj\Debug\netstandard1.3\Transport.AssemblyInfoInputs.cache
+D:\Projects\SystemView\Transport\obj\Debug\netstandard1.3\Transport.AssemblyInfo.cs

@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="SystemView.ContentDisplays.DataLogDownloadByTime"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SystemView.ContentDisplays"
+             mc:Ignorable="d" 
+             d:DesignHeight="255" d:DesignWidth="375">
+    <StackPanel Margin="0 75 0 0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
+        <RadioButton Content="48 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" IsChecked="True" Checked="TimeChangeCommand" CommandParameter="48HR"/>
+        <RadioButton Content="24 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="24HR"/>
+        <RadioButton Content="8 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="8HR"/>
+        <RadioButton Content="4 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="4HR"/>
+        <RadioButton Content="1 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="1HR"/>
+        <RadioButton Content="30 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand" CommandParameter="30MIN"/>
+        <RadioButton Content="15 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="15MIN"/>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,20 @@
+﻿SystemView
+
+
+winexe
+C#
+.cs
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\SystemView\obj\x86\Debug\
+SystemView
+none
+false
+DEBUG;TRACE
+C:\Users\z00433tp\Desktop\SystemView 2.0.1\SystemView\App.xaml
+23995642643
+
+45-1394764471
+1561794662210
+ContentDisplays\BattLvlDisplay.xaml;ContentDisplays\CommTestDisplay.xaml;ContentDisplays\ConfigDisplay.xaml;ContentDisplays\DatalogDownloadBySize.xaml;ContentDisplays\DatalogDownload.xaml;ContentDisplays\DataLogDownloadByTime.xaml;ContentDisplays\DatalogDownloadInProgress.xaml;ContentDisplays\DatalogDownloadTimeRange.xaml;ContentDisplays\DataPlaybackPresentation.xaml;ContentDisplays\DataPresentation.xaml;ContentDisplays\DataPresentationAdvancedTriggers.xaml;ContentDisplays\DataPresentationDisplays.xaml;ContentDisplays\DataPresentationTriggers.xaml;ContentDisplays\DownloadDatalogAllAvailable.xaml;ContentDisplays\EmployeeLogin.xaml;ContentDisplays\InNetworkLogin.xaml;ContentDisplays\RadioData.xaml;ContentDisplays\RevisionDisplay.xaml;ContentDisplays\RTCDisplay.xaml;ContentDisplays\TransponderData.xaml;LEDIndicator.xaml;MainWindow.xaml;SplashScreen.xaml;
+
+False
+
