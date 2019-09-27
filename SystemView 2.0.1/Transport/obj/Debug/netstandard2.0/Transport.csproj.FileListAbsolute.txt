@@ -54,3 +54,4 @@ C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transpo
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.dll
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache

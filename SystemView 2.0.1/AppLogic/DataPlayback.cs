@@ -141,7 +141,20 @@ namespace AppLogic
 
         private void readSDFtoTags(object sender, DoWorkEventArgs e)
         {
+            int i = Array.IndexOf(sdfFile, "0,");
+            while(i < sdfFile.Length)
+            {
+                _thisTagList = new TagList();
 
+                for (int k = 0; k < 92; k++)
+                {
+                    _thisTagList.Tags.Find(X => X.TagID == k).AbsoluteDataWrite(Encoding.ASCII.GetBytes(sdfFile[i+k]));
+                }
+
+                TagListQueue.Enqueue(_thisTagList);
+
+                i = i + 93;
+            }
         }
 
 

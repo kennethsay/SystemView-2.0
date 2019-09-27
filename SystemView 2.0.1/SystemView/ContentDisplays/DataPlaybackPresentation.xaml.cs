@@ -281,10 +281,7 @@ namespace SystemView.ContentDisplays
         {
             try
             {
-                List<StringBuilder> HeaderRecords = new List<StringBuilder>();
-                HeaderRecords = _myPlayback.datHeader;
 
-                Console.WriteLine(HeaderRecords);
             }
             catch (Exception ex)
             {
