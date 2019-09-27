@@ -12,9 +12,9 @@ DEBUG;TRACE
 C:\Users\z00433tp\Desktop\SystemView 2.0\SystemView 2.0\SystemView 2.0.1\SystemView\App.xaml
 23995642643
 
-46-935144296
+45-1394764471
 156-672889016
 ContentDisplays\BattLvlDisplay.xaml;ContentDisplays\CommTestDisplay.xaml;ContentDisplays\ConfigDisplay.xaml;ContentDisplays\DatalogDownloadBySize.xaml;ContentDisplays\DatalogDownload.xaml;ContentDisplays\DataLogDownloadByTime.xaml;ContentDisplays\DatalogDownloadInProgress.xaml;ContentDisplays\DatalogDownloadTimeRange.xaml;ContentDisplays\DataPlaybackPresentation.xaml;ContentDisplays\DataPresentation.xaml;ContentDisplays\DataPresentationAdvancedTriggers.xaml;ContentDisplays\DataPresentationDisplays.xaml;ContentDisplays\DataPresentationTriggers.xaml;ContentDisplays\DownloadDatalogAllAvailable.xaml;ContentDisplays\EmployeeLogin.xaml;ContentDisplays\InNetworkLogin.xaml;ContentDisplays\RadioData.xaml;ContentDisplays\RevisionDisplay.xaml;ContentDisplays\RTCDisplay.xaml;ContentDisplays\TransponderData.xaml;LEDIndicator.xaml;MainWindow.xaml;SplashScreen.xaml;
 
-True
+False
 
