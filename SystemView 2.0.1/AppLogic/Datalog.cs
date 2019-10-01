@@ -1215,7 +1215,7 @@ namespace AppLogic
                     string dataArray;
 
                     // Add one for index
-                    dataArray = tagIndex.ToString();
+                    dataArray = tagIndex.ToString() + ", ";
                     tagObjectList.Add(dataArray);
 
                     for (int k = 0; k < 92; k++)    // TODO : Needs changed (all need changed in this file.)
@@ -1226,25 +1226,25 @@ namespace AppLogic
                         if (holder == TAG_VALUE_TYPES.HEX)
                         {
                             int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (byteArrayToStringHex((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString();
+                            dataArray = (byteArrayToStringHex((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
                         }
                         else if (holder == TAG_VALUE_TYPES.BYTES)
                         {
                             int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (byteArryToString((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString();
+                            dataArray = (byteArryToString((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
                         }
                         else if (holder == TAG_VALUE_TYPES.DATE)
                         {
-                            dataArray = (bytesToDateTime(thisTagList[l].Tags.Find(X => X.TagID == k).Data())).ToString();
+                            dataArray = (bytesToDateTime(thisTagList[l].Tags.Find(X => X.TagID == k).Data())).ToString() + ", ";
                         }
                         else if (holder == TAG_VALUE_TYPES.DECIMAL)
                         {
                             int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (bytesToInt((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString();
+                            dataArray = (bytesToInt((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
                         }
                         else
                         {
-                            dataArray = (thisTagList[l].Tags.Find(X => X.TagID == k).Data()).ToString();
+                            dataArray = (thisTagList[l].Tags.Find(X => X.TagID == k).Data()).ToString() + ", ";
                         }
                         
                         tagObjectList.Add(dataArray);

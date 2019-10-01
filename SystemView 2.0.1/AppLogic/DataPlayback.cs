@@ -135,11 +135,29 @@ namespace AppLogic
             BackgroundWorker _worker = new BackgroundWorker();
             _worker.WorkerSupportsCancellation = true;
             _worker.DoWork += readSDFtoTags;
-            _worker.RunWorkerCompleted += getDATfileHeader;
+            _worker.RunWorkerCompleted += endSDFfile;
             _worker.RunWorkerAsync();
         }
 
         private void readSDFtoTags(object sender, DoWorkEventArgs e)
+        {
+            int i = Array.IndexOf(sdfFile, "0,");
+            while(i < sdfFile.Length)
+            {
+                _thisTagList = new TagList();
+
+                for (int k = 0; k < 92; k++)
+                {
+                    _thisTagList.Tags.Find(X => X.TagID == k).AbsoluteDataWrite(Encoding.ASCII.GetBytes(sdfFile[i+k].Trim(',')));
+                }
+
+                TagListQueue.Enqueue(_thisTagList);
+
+                i = i + 93;
+            }
+        }
+
+        private void endSDFfile(object sender, RunWorkerCompletedEventArgs e)
         {
 
         }
