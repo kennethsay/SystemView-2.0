@@ -166,7 +166,7 @@
       <Equation>0</Equation>
     </TPEntry>
     <TPEntry>
-      <Name>Milepost/Chainage Y</Name>
+      <Name>Milepost/Chainage</Name>
       <Note>Y</Note>
       <DataType>UInt16</DataType>
       <Start>25</Start>
@@ -178,7 +178,7 @@
       <Equation>0</Equation>
     </TPEntry>
     <TPEntry>
-      <Name>Milepost/Chainage X</Name>
+      <Name>Milepost/Chainage</Name>
       <Note>X</Note>
       <DataType>UInt16</DataType>
       <Start>33</Start>
@@ -233,7 +233,7 @@
 
   <Package04>
     <LengthOfPackage>56</LengthOfPackage>
-    <Description>Pre-Distant Signal Package</Description>
+    <Description>Package 04: Pre-Distant Signal Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -514,7 +514,7 @@
 
   <Package05>
     <LengthOfPackage>48</LengthOfPackage>
-    <Description>PTS Distance Signal Package</Description>
+    <Description>Package 05: PTS Distance Signal Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -799,7 +799,7 @@
 
   <Package07>
     <LengthOfPackage>16</LengthOfPackage>
-    <Description>Temporary Speed Package - One Line</Description>
+    <Description>Package 07: Temporary Speed Package - One Line</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -876,7 +876,7 @@
 
   <Package08>
     <LengthOfPackage>48</LengthOfPackage>
-    <Description>Speed Restriction Package - Temporary</Description>
+    <Description>Package 08: Speed Restriction Package - Temporary</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -1133,7 +1133,7 @@
 
   <Package09>
     <LengthOfPackage>24</LengthOfPackage>
-    <Description>Speed Package - One Line</Description>
+    <Description>Package 09: Speed Package - One Line</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -1202,7 +1202,7 @@
 
   <Package10>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Speed Package – Actual and In-Line Speed</Description>
+    <Description>Package 10: Speed Package – Actual and In-Line Speed</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -1283,7 +1283,7 @@
 
   <Package11>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>Speed Restriction Package - Limited Delay</Description>
+    <Description>Package 11: Speed Restriction Package - Limited Delay</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -1500,7 +1500,7 @@
 
   <Package12>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Route-Specific Speed Restriction Package - All Train Types</Description>
+    <Description>Package 12: Route-Specific Speed Restriction Package - All Train Types</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -1745,7 +1745,7 @@
 
   <Package13>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>Train-Specific Package for a Defined Route</Description>
+    <Description>Package 13: Train-Specific Package for a Defined Route</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2059,7 +2059,7 @@
 
   <Package14>
     <LengthOfPackage>56</LengthOfPackage>
-    <Description>Route-Specific Speed Restriction Package - Per Train Type</Description>
+    <Description>Package 14: Route-Specific Speed Restriction Package - Per Train Type</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2352,7 +2352,7 @@
 
   <Package15>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Train-Specific In-Line Speed Package - One Line</Description>
+    <Description>Package 15: Train-Specific In-Line Speed Package - One Line</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2449,7 +2449,7 @@
 
   <Package16>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>Actual In-Line Speed Package - Train Specific</Description>
+    <Description>Package 16: Actual In-Line Speed Package - Train Specific</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2554,7 +2554,7 @@
 
   <Package17>
     <LengthOfPackage>48</LengthOfPackage>
-    <Description>Train-Specific In-Line Speed Package</Description>
+    <Description>Package 17: Train-Specific In-Line Speed Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2671,7 +2671,7 @@
 
   <Package18>
     <LengthOfPackage>56</LengthOfPackage>
-    <Description>Train-Specific In-Line Speed Package - Two Speed Restrictions with Length</Description>
+    <Description>Package 18: Train-Specific In-Line Speed Package - Two Speed Restrictions with Length</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -2956,7 +2956,7 @@
 
   <Package19>
     <LengthOfPackage>64</LengthOfPackage>
-    <Description>Speed Restriction Package Specific to All Trains - With Length</Description>
+    <Description>Package 19: Speed Restriction Package Specific to All Trains - With Length</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -3221,7 +3221,7 @@
 
   <Package20>
     <LengthOfPackage>72</LengthOfPackage>
-    <Description>Train-Specific Speed Restriction Package (Temporary Restriction Possibility)</Description>
+    <Description>Package 20: Train-Specific Speed Restriction Package (Temporary Restriction Possibility)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -3554,7 +3554,7 @@
 
   <Package21>
     <LengthOfPackage>16</LengthOfPackage>
-    <Description>Start/End ACSES Immediate Application</Description>
+    <Description>Package 21: Start/End ACSES Immediate Application</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -3683,7 +3683,7 @@
 
   <Package22>
     <LengthOfPackage>24</LengthOfPackage>
-    <Description>Start/End ACSES Application</Description>
+    <Description>Package 22: Start/End ACSES Application</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -3772,7 +3772,7 @@
 
   <Package23>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Distance Correction (ATSS)</Description>
+    <Description>Package 23: Distance Correction (ATSS)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -3869,7 +3869,7 @@
 
   <Package24>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>Start/End Ahead with Speed and Grade (ATSS)</Description>
+    <Description>Package 24: Start/End Ahead with Speed and Grade (ATSS)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -4158,7 +4158,7 @@
 
   <Package25>
     <LengthOfPackage>48</LengthOfPackage>
-    <Description>Start/End Ahead with Speed, Grade, and Length (ATSS)</Description>
+    <Description>Package 25: Start/End Ahead with Speed, Grade, and Length (ATSS)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -4403,7 +4403,7 @@
 
   <Package26>
     <LengthOfPackage>24</LengthOfPackage>
-    <Description>End/Error Package</Description>
+    <Description>Package 26: End/Error Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -4480,7 +4480,7 @@
 
   <Package27>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Speed Restriction Package (No Length)</Description>
+    <Description>Package 27: Speed Restriction Package (No Length)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -4685,7 +4685,7 @@
 
   <Package28>
     <LengthOfPackage>48</LengthOfPackage>
-    <Description>Train-Specific In-Line Speed Package (Two Speed Restriction without Restriction Length)</Description>
+    <Description>Package 28: Train-Specific In-Line Speed Package (Two Speed Restriction without Restriction Length)</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -4957,7 +4957,7 @@
 
   <Package29>
     <LengthOfPackage>56</LengthOfPackage>
-    <Description>Train-Specific Speed Restriction Package without Restriction Length</Description>
+    <Description>Package 29: Train-Specific Speed Restriction Package without Restriction Length</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5210,7 +5210,7 @@
 
   <Package32>
     <LengthOfPackage>24</LengthOfPackage>
-    <Description>TSR Data Request Package</Description>
+    <Description>Package 32: TSR Data Request Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5295,7 +5295,7 @@
 
   <Package33>
     <LengthOfPackage>16</LengthOfPackage>
-    <Description>Exit Track Package</Description>
+    <Description>Package 33: Exit Track Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5380,7 +5380,7 @@
 
   <Package34>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>TSR Preload Request Outside ACSES Territory</Description>
+    <Description>Package 34: TSR Preload Request Outside ACSES Territory</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5489,7 +5489,7 @@
 
   <Package35>
     <LengthOfPackage>40</LengthOfPackage>
-    <Description>HS Turnback Package</Description>
+    <Description>Package 35: HS Turnback Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5745,7 +5745,7 @@
 
   <Package36>
     <LengthOfPackage>24</LengthOfPackage>
-    <Description>PTS Not Released by Signal Status Package</Description>
+    <Description>Package 36: PTS Not Released by Signal Status Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -5954,7 +5954,7 @@
 
   <Package37>
     <LengthOfPackage>64</LengthOfPackage>
-    <Description>Route Dependent Speed Restriction Package – By Train Type and Signal Specific</Description>
+    <Description>Package 37: Route Dependent Speed Restriction Package – By Train Type and Signal Specific</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -6271,7 +6271,7 @@
 
   <Package38>
     <LengthOfPackage>56</LengthOfPackage>
-    <Description>One LoMA with Route, Longer Target Distance, and Release Speed/Overlap</Description>
+    <Description>Package 38: One LoMA with Route, Longer Target Distance, and Release Speed/Overlap</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -6572,7 +6572,7 @@
 
   <Package39>
     <LengthOfPackage>72</LengthOfPackage>
-    <Description>Two LoMA with Route and Longer Target Distance</Description>
+    <Description>Package 39: Two LoMA with Route and Longer Target Distance</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -7033,7 +7033,7 @@
 
   <Package40>
     <LengthOfPackage>80</LengthOfPackage>
-    <Description>Two LoMA with Route, Longer Target Distance and Release Speed/Overlap for 1st LoMA</Description>
+    <Description>Package 40: Two LoMA with Route, Longer Target Distance and Release Speed/Overlap for 1st LoMA</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -7522,7 +7522,7 @@
 
   <Package42>
     <LengthOfPackage>32</LengthOfPackage>
-    <Description>Accurate Stop, Tunnel Protection, Route Dependent PTS Package</Description>
+    <Description>Package 42: Accurate Stop, Tunnel Protection, Route Dependent PTS Package</Description>
     <TPEntry>
       <Name>Type of Package</Name>
       <Note>0</Note>
@@ -7979,7 +7979,7 @@
 
   <Package44>
       <LengthOfPackage>56</LengthOfPackage>
-      <Description>Announced Line Change</Description>
+      <Description>Package 44: Announced Line Change</Description>
       <TPEntry>
         <Name>Type of Package</Name>
         <Note>0</Note>
