@@ -46,6 +46,7 @@ namespace SystemView
             this.LayoutPath = null;
 
             this.SessionPane = new RadPane();
+            this.SessionPane.IsActive = true;
             
             this._itemsDisplayed = new ObservableCollection<DisplayView>();
 
@@ -136,6 +137,9 @@ namespace SystemView
                 CloseButtonPosition = Telerik.Windows.Controls.Docking.CloseButtonPosition.InPane,
                 PanesSource = _itemsDisplayed,                
             };
+
+            InnerDock.Close += RemovePane;
+
             InnerDock.Items.Add(SplitRight);
             InnerDock.Items.Add(SplitLeft);
             InnerDock.Items.Add(SplitBottom);
@@ -175,35 +179,35 @@ namespace SystemView
                             break;
 
                         case DISPLAY_TYPE.COMM_TEST:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(CommTestDisplay)) { Header = "Communication Test", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.BATLEVEL });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(CommTestDisplay)) { Header = "Communication Test", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.COMM_TEST });
                             break;
 
                         case DISPLAY_TYPE.CONFIG:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(ConfigDisplay)) { Header = "Vehicle Configuration", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(ConfigDisplay)) { Header = "Vehicle Configuration", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.CONFIG });
                             break;
 
                         case DISPLAY_TYPE.DATAPRESENT:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(DataPresentation)) { Header = "Data Presentation Window", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(DataPresentation)) { Header = "Data Presentation Window", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.DATAPRESENT });
                             break;
 
                         case DISPLAY_TYPE.DOWNLOAD:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(DatalogDownload)) { Header = "Download OBC Log", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(DatalogDownload)) { Header = "Download OBC Log", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.DOWNLOAD});
                             break;
 
                         case DISPLAY_TYPE.PLAYBACK:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(DataPlaybackPresentation)) { Header = "Playback Download", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(DataPlaybackPresentation)) { Header = "Playback Download", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.PLAYBACK });
                             break;
 
                         case DISPLAY_TYPE.RADIOTP:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(RadioData)) { Header = "Radio Data", InitialPosition = DockState.DockedBottom });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(RadioData)) { Header = "Radio Data", InitialPosition = DockState.DockedBottom, DisplayType = DISPLAY_TYPE.RADIOTP });
                             break;
 
                         case DISPLAY_TYPE.REVISION:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(RevisionDisplay)) { Header = "Revision", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(RevisionDisplay)) { Header = "Revision", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.REVISION});
                             break;
 
                         case DISPLAY_TYPE.REALTIMECLOCK:
-                            this._itemsDisplayed.Add(new DisplayView(typeof(RTCDisplay)) { Header = "Sync Real Time Clock", InitialPosition = DockState.DockedTop });
+                            this._itemsDisplayed.Add(new DisplayView(typeof(RTCDisplay)) { Header = "Sync Real Time Clock", InitialPosition = DockState.DockedTop, DisplayType = DISPLAY_TYPE.REALTIMECLOCK });
                             break;
 
                         default:
@@ -259,13 +263,14 @@ namespace SystemView
         {
             RadPane Pane = e.Panes.First();
 
-            //_mySessionMgr.RemoveSession(Pane);
+            _activeDisplaysByType.Remove((Pane.DataContext as DisplayView).DisplayType);
 
             Pane.DataContext = null;
             Pane.Content = null;
             Pane.ClearValue(RadDocking.SerializationTagProperty);
             Pane.RemoveFromParent();
-        }
+        }        
+
         public override string ToString()
         {
             StringBuilder toString = new StringBuilder();

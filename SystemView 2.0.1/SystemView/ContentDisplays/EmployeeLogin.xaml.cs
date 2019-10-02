@@ -38,6 +38,8 @@ namespace SystemView.ContentDisplays
 
         public EmployeeLogin()
         {
+            UserAuthenticated = false;
+
             InitializeComponent();
 
             Verify_btn.IsEnabled = false;

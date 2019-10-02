@@ -80,6 +80,8 @@ namespace SystemView
                 var _pane = new RadPane();
                 _pane.DataContext = item;
                 _pane.Header = _display.Header;
+                _pane.IsActive = true;
+                //_pane.Height = 500;
                 RadDocking.SetSerializationTag(_pane, _display.Header);
 
                 if(_display.ContentType != null)

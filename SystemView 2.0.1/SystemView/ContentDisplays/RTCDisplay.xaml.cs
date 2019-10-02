@@ -26,6 +26,7 @@ namespace SystemView.ContentDisplays
         private RTC _myRTC;
         private bool _Active;
         private string _pcTime;
+        private bool _cancelRTC;
 
         public string PCTime
         {
@@ -67,6 +68,8 @@ namespace SystemView.ContentDisplays
                 _obcTime = "";
 
                 this.DataContext = this;
+                _cancelRTC = false;
+                this.Unloaded += UnloadedEvent;
                 
                 BackgroundWorker _worker = new BackgroundWorker();
                 _worker.WorkerSupportsCancellation = true;
@@ -79,6 +82,11 @@ namespace SystemView.ContentDisplays
             {
 
             }           
+        }
+
+        private void UnloadedEvent(object sender, RoutedEventArgs e)
+        {
+            _cancelRTC = true;
         }
 
         private void updateRTCUITime()
@@ -133,16 +141,16 @@ namespace SystemView.ContentDisplays
 
                     if (myFlashErase.FlashEraseStarted)
                     {
-                        FlashErase.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\Icons\icons8-checked-16.png"));
+                        FlashErase.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.2\SystemView\Icons\icons8-checked-16.png"));
                     }
                     else
                     {
-                        SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\Icons\icons8-cancel.png"));
+                        SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.2\SystemView\Icons\icons8-cancel-16.png"));
                     }
                 }
                 else
                 {
-                    SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\Icons\icons8-checked-16-grey.png"));
+                    SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.2\SystemView\Icons\icons8-checked-16-grey.png"));
                 }
             }
             catch
@@ -160,12 +168,12 @@ namespace SystemView.ContentDisplays
                 updateRTCValues();
                 updateRTCUITime();
 
-                SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\Icons\icons8-checked-16.png"));
+                SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.2\SystemView\Icons\icons8-checked-16.png"));
 
             }
             catch
             {
-                SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView\SystemView\Icons\icons8-cancel.png"));
+                SyncComplete.Source = new BitmapImage(new Uri(@"C:\Users\WIN10TESTPC\Desktop\SystemView 2.0.2\SystemView\Icons\icons8-cancel-16.png"));
             }
         }
 
@@ -177,6 +185,11 @@ namespace SystemView.ContentDisplays
                 {
 
                     updateRTCValues();
+
+                    if(_cancelRTC)
+                    {
+                        e.Cancel = true;
+                    }
 
                     Thread.Sleep(1000);
                 }

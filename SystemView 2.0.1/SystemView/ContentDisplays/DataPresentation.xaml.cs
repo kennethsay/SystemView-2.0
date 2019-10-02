@@ -57,7 +57,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 this._selectedItem = value;
-                _RadioWin.ProcessDetailDisplayOutput((this._selectedItem.GetMessage() as MTA_RR_Radio_Message).Data);
+                _RadioWin.ProcessDetailDisplayOutput((this._selectedItem.GetMessage()));
                 OnPropertyChanged("SelectedItem");
             }
         }
@@ -72,7 +72,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 this._selectedTPItem = value;
-                _TPWin.ProcessDetailDisplayOutput((this._selectedTPItem as TPDataItem).Message.Data);
+                _TPWin.ProcessDetailDisplayOutput((this._selectedTPItem).GetMessage());
                 OnPropertyChanged("SelectedTPItem");
             }
         }
@@ -166,8 +166,20 @@ namespace SystemView.ContentDisplays
 
             activePresent = this;
 
+            SystemView.MainWindow._appWindow.IOToggle.IsEnabled = true;
+            this.Unloaded += UnloadedEvent;
+
             startRTM();    
         }        
+
+        private void UnloadedEvent(object sender, RoutedEventArgs e)
+        {
+            _cancelRTM = true;
+            byte[] ClearBuffer = new byte[4096];
+
+            PTEConnection.Comm.GetAsyncClient.Receive(ClearBuffer);
+            SystemView.MainWindow._appWindow.IOToggle.IsEnabled = false;
+        }
 
         private void startRTM()
         {
@@ -284,13 +296,21 @@ namespace SystemView.ContentDisplays
             }
         }
 
+        private void updateIO()
+        {
+            foreach(ExtendedTag Tag in Result.Tags)
+            {
+                ExtendedData.fillExtraData(Tag.BaseTag, Tag.Offset, Result);
+            }
+        }
+
         private void updateRadio(List<Byte> Tags)
         {
             try
             {
                 if (Tags.Contains(Globals.RadioMsgTagIndex))                            
                 {
-                    MTA_RR_Radio_Message RR_Radio_Message;
+                    MTA_RR_Radio_Message RR_Radio_Message = new MTA_RR_Radio_Message();
 
                     RR_Radio_Message = myRadioMsgs.ProcessMessage(Result, RTMIndex);
 
@@ -411,7 +431,8 @@ namespace SystemView.ContentDisplays
             {
                 this.PresentationGrid.ShowSearchPanel = false;
                 var searchPanel = this.PresentationGrid.ChildrenOfType<GridViewSearchPanel>().FirstOrDefault();
-                this.SearchBox.SetBinding(TextBox.TextProperty, new Binding("SearchText") { Source = searchPanel.DataContext, Mode = BindingMode.TwoWay });                   
+                //this.SearchBox.SetBinding(TextBox.TextProperty, new Binding("SearchText") { Source = searchPanel.DataContext, Mode = BindingMode.TwoWay });                   
+                
             }
             catch
             {

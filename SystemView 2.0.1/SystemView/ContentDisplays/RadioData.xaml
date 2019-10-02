@@ -17,7 +17,7 @@
     </UserControl.Resources>
 
     <DockPanel>
-        <telerik:RadToolBar DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+        <!--<telerik:RadToolBar DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Stretch">
             <telerik:RadDropDownButton HorizontalAlignment="Center" >
                 <telerik:RadDropDownButton.Content>
                     <StackPanel Orientation="Horizontal">                        
@@ -30,26 +30,28 @@
                     <TreeView Name="MsgTypeSelectionTree">
                         <TreeViewItem>
                             <TreeViewItem.Header>
-                                <CheckBox Content="Encoder Msgs"/>
+                                <CheckBox Content="Encoder Msgs" Click="UpdateFilters"/>
                             </TreeViewItem.Header>
-                            <CheckBox Content="MSG #21"/>                            
-                            <CheckBox Content="MSG #22"/>
-                            <CheckBox Content="MSG #23"/>
+                            <CheckBox Content="MSG #21" Click="UpdateFilters"/>
+                            <CheckBox Content="MSG #22" Click="UpdateFilters"/>
+                            <CheckBox Content="MSG #23" Click="UpdateFilters"/>
                         </TreeViewItem>              
                         
                         <TreeViewItem>
                             <TreeViewItem.Header>
-                                <CheckBox Content="TSR Msgs"/>
+                                <CheckBox Content="TSR Msgs" Click="UpdateFilters"/>
                             </TreeViewItem.Header>
-                            <CheckBox Content="MSG #11"/>
-                            <CheckBox Content="MSG #19"/>
+                            <CheckBox Content="MSG #11" Click="UpdateFilters"/>
+                            <CheckBox Content="MSG #12" Click="UpdateFilters"/>
+                            <CheckBox Content="MSG #19" Click="UpdateFilters"/>
                         </TreeViewItem>
 
                         <TreeViewItem>
                             <TreeViewItem.Header>
-                                <CheckBox Content="MTA Msgs"/>
+                                <CheckBox Content="MTA Msgs" Click="UpdateFilters"/>
                             </TreeViewItem.Header>
-                            <CheckBox Content="MSG #34"/>
+                            <CheckBox Content="MSG #34" Click="UpdateFilters"/>
+                            <CheckBox Content="MSG #35" Click="UpdateFilters"/>
                         </TreeViewItem>
                     </TreeView>                    
                 </telerik:RadDropDownButton.DropDownContent>                
@@ -67,21 +69,22 @@
             <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
                 <TextBox Height="22" Width="200"/>
             </Border>
-        </telerik:RadToolBar>
+        </telerik:RadToolBar>-->
         
         <Grid Margin="10 5 10 10" DockPanel.Dock="Right">
-            <telerik:RadGridView ItemsSource="{Binding RadioMessageList}" ScrollViewer.VerticalScrollBarVisibility="Visible"  
+            <telerik:RadGridView ItemsSource="{Binding RadioMessageList}" ScrollViewer.VerticalScrollBarVisibility="Visible"  ScrollViewer.HorizontalScrollBarVisibility="Visible"
                                  CanUserGroupColumns="False" ShowGroupPanel="False" HorizontalAlignment="Stretch" 
                                  Margin="0 0 300 0" SelectionMode="Single" SelectionUnit="FullRow" 
                                  RowIndicatorVisibility="Collapsed" ColumnWidth="*" SelectedItem="{Binding SelectedRadioItem, Mode=TwoWay}"
-                                 IsReadOnly="True" IsFilteringAllowed="False">              
+                                 IsReadOnly="True" IsFilteringAllowed="True">              
             </telerik:RadGridView>
 
             <GroupBox Header="Message Content" HorizontalAlignment="Right" Width="295">
-                <StackPanel HorizontalAlignment="Left" Name ="RadioDetailDisplay">
-                </StackPanel>
-            </GroupBox>
-                       
+                <ScrollViewer>
+                    <StackPanel HorizontalAlignment="Left" Name ="RadioDetailDisplay">
+                    </StackPanel>
+                </ScrollViewer>                
+            </GroupBox>                       
         </Grid>          
     </DockPanel>
 </UserControl>

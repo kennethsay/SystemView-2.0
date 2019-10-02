@@ -35,6 +35,7 @@ namespace SystemView.ContentDisplays
         object DownloadObject;
         RadSaveFileDialog saveDialog;
         StringBuilder DefaultFileName;
+        bool DLCancel;
 
 
         private string _savePath;
@@ -74,6 +75,8 @@ namespace SystemView.ContentDisplays
             saveDialog = new RadSaveFileDialog();
             saveDialog.Owner = SystemView.MainWindow._appWindow;
 
+            DLCancel = false;
+
             setIntialSavePath();
 
         }
@@ -89,6 +92,44 @@ namespace SystemView.ContentDisplays
         }
 
         public void ChangedDownloadParameter(object sender, SelectionChangedEventArgs e)
+        {
+            try
+            {
+                switch (DatalogDownloadType.SelectedIndex)
+                {
+                    case 0:
+                        this.DownloadObject = new DownloadDatalogAllAvailable();
+                        this._selectedDownloadType = Datalog.DATALOG_TIME_SELECTION.ALL_AVAILABLE;
+                        break;
+
+                    case 1:
+                        this.DownloadObject = new DataLogDownloadByTime();
+                        this._selectedDownloadType = Datalog.DATALOG_TIME_SELECTION.RECENT_BY_TIME;
+                        break;
+
+                    case 2:
+                        this.DownloadObject = new DatalogDownloadBySize();
+                        this._selectedDownloadType = Datalog.DATALOG_TIME_SELECTION.RECENT_BY_SIZE;
+                        break;
+
+                    case 3:
+                        this.DownloadObject = new DatalogDownloadTimeRange();
+                        this._selectedDownloadType = Datalog.DATALOG_TIME_SELECTION.SELECT_RANGE;
+                        break;
+
+                    default:
+                        break;
+                }
+
+                DownloadTypeContent.Content = this.DownloadObject;
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void updateDownloadSelection()
         {
             try
             {
@@ -178,6 +219,8 @@ namespace SystemView.ContentDisplays
 
         private void StartDownload()
         {
+            DLCancel = false;
+
             myDatalogDownload.SetFileName = SavePath;
 
             this.DownloadButton.IsEnabled = false;
@@ -189,8 +232,47 @@ namespace SystemView.ContentDisplays
 
             myDatalogDownload.UserDownloadParameters();
 
-            //this.DownloadObject = new DatalogDownloadCompleted();
+            BackgroundWorker _worker = new BackgroundWorker();
+            _worker.WorkerSupportsCancellation = true;
+            _worker.WorkerReportsProgress = true;
+            _worker.DoWork += datalogWorker_doWork;
+            _worker.RunWorkerCompleted += datalogWorkerComplete;
+            _worker.ProgressChanged += datalogWorkerProgressChanged;
+            _worker.RunWorkerAsync();            
+        }
+
+        private void datalogWorker_doWork(object sender, DoWorkEventArgs e)
+        {
+            while(!e.Cancel)
+            {
+                e.Cancel = myDatalogDownload.writeToDatalogFile(sender as BackgroundWorker);      
+                
+                if (DLCancel)
+                {
+                    e.Cancel = true;
+                }
+            }            
+        }
+
+        public void datalogWorkerProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            (DownloadObject as DatalogDownloadInProgress).DownloadProgress.Value = (int)(e.UserState);
+        }
+
+
+        private void datalogWorkerComplete(object sender, RunWorkerCompletedEventArgs e)
+        {
+            this.DownloadObject = new DatalogDownloadCompleted();
             DownloadTypeContent.Content = this.DownloadObject;
+
+            this.DownloadButton.IsEnabled = true;
+            this.CancelBtn.IsEnabled = false;
+
+            Thread.Sleep(3000);
+
+            DatalogDownloadType.SelectedIndex = 4;
+
+
         }
 
 
@@ -237,5 +319,10 @@ namespace SystemView.ContentDisplays
         }
 
         #endregion
+
+        private void CancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            DLCancel = true;
+        }
     }
 }

@@ -46,11 +46,7 @@ namespace SystemView.ContentDisplays
     /// </summary>
     public partial class RadioData : UserControl
     {
-
-
-        RadioDataItem DataItem;
-        private MainRadioClass RadioParser;
-
+         
         object RR_Radio_Message;
         public object MTAMessage
         {
@@ -70,10 +66,9 @@ namespace SystemView.ContentDisplays
             InitializeComponent();
         }
 
-        public void ProcessDetailDisplayOutput(byte[] HexString)
+        public void ProcessDetailDisplayOutput(string Msg)
         {
-            string Converted = HexToString(HexString);
-            this.RadioParser = new MainRadioClass(Converted);
+            MainRadioClass RadioParser = new MainRadioClass(Msg);
 
             this.RadioDetailDisplay.Children.Clear();
 
@@ -157,6 +152,46 @@ namespace SystemView.ContentDisplays
             }
         }
 
+        private void UpdateFilters(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                CheckBox CB = (e.Source as CheckBox);
+                string SenderCheckBox = CB.Content.ToString();
+
+                switch(SenderCheckBox)
+                {
+                    case "Encoder Msgs":
+                        break;
+                    case "Msg #21":
+                        break;
+                    case "Msg #22":
+                        break;
+                    case "Msg #23":
+                        break;
+                    case "TSR Msgs":
+                        break;
+                    case "Msg #11":
+                        break;
+                    case "Msg #12":
+                        break;
+                    case "Msg #19":
+                        break;
+                    case "MTA Msgs":
+                        break;
+                    case "Msg #34":
+                        break;
+                    case "Msg #35":
+                        break;
+                    default:
+                        break;
+                }
+            }
+            catch
+            {
+
+            }
+        }
     }
 
     public class RadioMessages : RadioData, INotifyPropertyChanged
@@ -166,7 +201,7 @@ namespace SystemView.ContentDisplays
 
 
 
-    public class MTA_RR_Radio_Message : DynamicObject, INotifyPropertyChanged
+    public class MTA_RR_Radio_Message : INotifyPropertyChanged
     {
         #region VariablesAndProperties
 

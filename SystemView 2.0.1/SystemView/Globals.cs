@@ -32,8 +32,8 @@ namespace SystemView
 
         public static readonly List<string> IORIBBONITEMS = new List<string>()
         {
-            "ACSES Status",
-            "ATC Status",
+            "ACSES Status", 
+            "ATC Status", 
             "AIU Aspects",
             "Cab Status",
             "Comm Status",
@@ -44,11 +44,14 @@ namespace SystemView
 
         public static readonly List<string> IORIBBONCABITEMS = new List<string>()
         {
-            "Front Cab Active",
+            "Front Cab Active",            
+            "F CAB Reverser Forward",
+            "F CAB Reverser Neutral",
+            "F CAB Reverser Reverse",
             "Rear Cab Active",
-            "Reverser Forward",
-            "Reverser Neutral",
-            "Reverser Reverse",
+            "R CAB Reverser Forward",
+            "R CAB Reverser Neutral",
+            "R CAB Reverser Reverse",
             "ACK",
             "ACK Pedal",
             "ASB",
@@ -66,9 +69,9 @@ namespace SystemView
 
         public static readonly List<string> IORIBBONATCITEMS = new List<string>()
         {
-            "CUTOUT VIA ADU",
-            "CUTIN VIA ADU",
-            "HARDWIRE CUTOUT"
+            "ATC CUTOUT VIA ADU",
+            "ATC CUTIN VIA ADU",
+            "ATC HARDWIRE CUTOUT"
         };
 
         public static readonly List<string> IORIBBONAIUITEMS = new List<string>()

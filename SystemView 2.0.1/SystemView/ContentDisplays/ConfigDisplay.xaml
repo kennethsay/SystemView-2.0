@@ -28,7 +28,7 @@
                 <StackPanel Orientation="Horizontal" x:Name="WheelDiameterSelector" HorizontalAlignment="Right" >
                     <TextBlock Text="Wheel Diameter (in):" Margin="5"/>
                     <telerik:RadNumericUpDown x:Name="WheelDiameterUpDown" Margin="5" NumberDecimalDigits="2" Minimum="0" Maximum="100" ValueFormat="Numeric" Width="120"
-                                       Value="{Binding WheelDiameter, Mode=TwoWay}" FontSize="14" HorizontalAlignment="Right"/>
+                                       Value="{Binding WheelDiameter, Mode=TwoWay}" FontSize="14" HorizontalAlignment="Right" SmallChange="0.1"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" x:Name="ATCSSelector" HorizontalAlignment="Right"  >
                     <TextBlock Text="ATCS #:" Margin="5"/>
@@ -54,10 +54,10 @@
                     <telerik:RadNumericUpDown x:Name="RearAntOffsetUpDown" Margin="5" NumberDecimalDigits="0" Minimum="0" Maximum="200" ValueFormat="Numeric" Width="120"
                                        Value="{Binding RearAntOffset, Mode=TwoWay}" FontSize="14" HorizontalAlignment="Right"/>
                 </StackPanel>
-                <!--<StackPanel Orientation="Horizontal" x:Name="DecelDirectSelector" HorizontalAlignment="Right" >
+                <StackPanel Orientation="Horizontal" x:Name="DecelDirectSelector" HorizontalAlignment="Right" >
                     <TextBlock Text="Decel Direction:" Margin="5"/>
                     <telerik:RadComboBox x:Name="DecelDirectCombo" Margin="5" Width="150" SelectedIndex="{Binding DecelDirection, Mode=TwoWay}"/>
-                </StackPanel>-->
+                </StackPanel>
                 <StackPanel Orientation="Horizontal" x:Name="DataloggerSelector" HorizontalAlignment="Right" >
                     <TextBlock Text="Datalogger Device:" Margin="5"/>
                     <telerik:RadComboBox x:Name="DataloggerCombo" Margin="5" Width="150" SelectedIndex="{Binding Datalogger, Mode=TwoWay}"/>
@@ -65,6 +65,9 @@
                 <StackPanel Orientation="Horizontal" x:Name="TachYPPSelector" HorizontalAlignment="Right" >
                     <TextBlock Text="Computed Yards Per Pulse:" Margin="5"/>
                     <TextBlock x:Name="TachYPPUpDown" Margin="5"  Width="140" Text="{Binding TachYPP}" FontSize="14" HorizontalAlignment="Right"/>
+                </StackPanel>
+                <StackPanel Name="ConfigCheckBoxItems">
+                    
                 </StackPanel>
             </StackPanel>
         </ScrollViewer>

@@ -417,7 +417,57 @@ namespace SystemView
                             }
                             else if (radioList[index].ExtraInfo != null)
                             {
-                                addToString(radioList[index], radioBits, data, deesBits, ei, si);
+                                int info = determineNote(radioList[index].ExtraInfo);
+                                bool useBits;
+
+                                switch (info)
+                                {
+                                    case 1: // Active bits
+                                        radioParsed.Add(radioList[index].Name + ": ");
+                                        for (int i = 0; i < (ei - si + 1); i++)
+                                        {
+                                            if (deesBits[i])
+                                            {
+                                                radioList[index].DictList.TryGetValue(i.ToString(), out var active);
+                                                radioParsed.Add(active + " ");
+                                            }
+                                        }
+                                        break;
+                                    case 2: // X * 10
+                                        data = (ushort)(data * 10);
+                                        radioParsed.Add(radioList[index].Name + ": " + data);
+                                        break;
+                                    case 3: // Error 1 2 3
+                                        useBits = checkErrorNum(radioBits, 1, 2, 3, 1, 2, 3, 1, 2);
+                                        if (useBits)
+                                        {
+                                            radioParsed.Add(radioList[index].Name + ": " + data);
+                                        }
+                                        break;
+                                    case 4: // Error 4 5 6 7 8 9 10 11
+                                        useBits = checkErrorNum(radioBits, 4, 5, 6, 7, 8, 9, 10, 11);
+                                        if (useBits)
+                                        {
+                                            radioParsed.Add(radioList[index].Name + ": " + data);
+                                        }
+                                        break;
+                                    case 5: // Error  4 5 6 8 10
+                                        useBits = checkErrorNum(radioBits, 4, 5, 6, 8, 10, 4, 5, 6);
+                                        if (useBits)
+                                        {
+                                            radioParsed.Add(radioList[index].Name + ": " + data);
+                                        }
+                                        break;
+                                    case 6: // Error 5 11
+                                        useBits = checkErrorNum(radioBits, 5, 11, 5, 11, 5, 11, 5, 11);
+                                        if (useBits)
+                                        {
+                                            radioParsed.Add(radioList[index].Name + ": " + data);
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                             else
                             {
@@ -430,7 +480,57 @@ namespace SystemView
                     {
                         if (radioList[index].ExtraInfo != null)
                         {
-                            addToString(radioList[index], radioBits, data, deesBits, ei, si);
+                            int info = determineNote(radioList[index].ExtraInfo);
+                            bool useBits;
+
+                            switch (info)
+                            {
+                                case 1: // Active bits
+                                    radioParsed.Add(radioList[index].Name + ": ");
+                                    for (int i = 0; i < (ei - si + 1); i++)
+                                    {
+                                        if (deesBits[i])
+                                        {
+                                            radioList[index].DictList.TryGetValue(i.ToString(), out var active);
+                                            radioParsed.Add(active + " ");
+                                        }
+                                    }
+                                    break;
+                                case 2: // X * 10
+                                    data = (ushort)(data * 10);
+                                    radioParsed.Add(radioList[index].Name + ": " + data);
+                                    break;
+                                case 3: // Error 1 2 3
+                                    useBits = checkErrorNum(radioBits, 1, 2, 3, 1, 2, 3, 1, 2);
+                                    if (useBits)
+                                    {
+                                        radioParsed.Add(radioList[index].Name + ": " + data);
+                                    }
+                                    break;
+                                case 4: // Error 4 5 6 7 8 9 10 11
+                                    useBits = checkErrorNum(radioBits, 4, 5, 6, 7, 8, 9, 10, 11);
+                                    if (useBits)
+                                    {
+                                        radioParsed.Add(radioList[index].Name + ": " + data);
+                                    }
+                                    break;
+                                case 5: // Error  4 5 6 8 10
+                                    useBits = checkErrorNum(radioBits, 4, 5, 6, 8, 10, 4, 5, 6);
+                                    if (useBits)
+                                    {
+                                        radioParsed.Add(radioList[index].Name + ": " + data);
+                                    }
+                                    break;
+                                case 6: // Error 5 11
+                                    useBits = checkErrorNum(radioBits, 5, 11, 5, 11, 5, 11, 5, 11);
+                                    if (useBits)
+                                    {
+                                        radioParsed.Add(radioList[index].Name + ": " + data);
+                                    }
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                         else
                         {

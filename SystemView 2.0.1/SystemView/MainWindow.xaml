@@ -8,9 +8,10 @@
                 Title="MainWindow" Height="651" Width="868" Icon="Icons/sie-logo-favicon.ico" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
-        <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem">
+        <Style x:Key="DraggableListBoxItem" TargetType="telerik:RadListBoxItem" BasedOn="{StaticResource RadListBoxItemStyle}">
             <Setter Property="telerik:DragDropManager.AllowCapturedDrag" Value="True" />
         </Style>
+        
     </Window.Resources>
     
 
@@ -20,8 +21,12 @@
                 <telerik:RadMenuItem x:Name="nSession" Header="New Session" Click="TabControl_AddSession"/>
                 <telerik:RadMenuItem x:Name="sSession" Header="Save Session" Click="TabControl_SaveSession"/>
                 <telerik:RadMenuItem x:Name="oSession" Header="Open Session" Click="TabControl_OpenSession"/>
+                <telerik:Separator/>
                 <telerik:RadMenuItem x:Name="Download" Header="Download" Click="DisplayControl_AddDatalogDownloadDisplay"/>
                 <telerik:RadMenuItem x:Name="Playback" Header="Playback" Click="DisplayControl_AddPlaybackPresentation"/>
+		<telerik:Separator/>
+                <telerik:RadMenuItem x:Name="AdminLoginBtn" Header="Admin Login" Click="AuthenticateAdmin"/>
+                <telerik:Separator/>
                 <telerik:RadMenuItem x:Name="Exit" Header="Exit"/>
             </telerik:RadMenuItem>
             <telerik:RadMenuItem x:Name="Edit" Header="_Edit">
@@ -32,11 +37,11 @@
             </telerik:RadMenuItem>
             <telerik:RadMenuItem x:Name="View" Header="_View">
                 <telerik:RadMenuItem x:Name="BatLvl" Header="RTC Battery Level" Click="DisplayControl_AddBatLvlDisplay"/>
-                <telerik:RadMenuItem x:Name="Config" Header="Config" Click="DisplayControl_AddConfigDisplay"/>
+                <telerik:RadMenuItem x:Name="Config" Header="Config" Click="DisplayControl_AddConfigDisplay" Visibility="Collapsed"/>
                 <telerik:RadMenuItem x:Name="DPW" Header="Data Presentation" Click="DisplayControl_AddDataPresentation"/>
-                <telerik:RadMenuItem x:Name="QView" Header="Quick View"/>
+                <!--<telerik:RadMenuItem x:Name="QView" Header="Quick View"/>-->
                 <telerik:RadMenuItem x:Name="Revision" Header="Revision" Click="DisplayControl_AddRevision"/>
-                <telerik:RadMenuItem x:Name="RTCSync" Header="Sync RTC" Click="DisplayControl_AddRTCDisplay"/>
+                <telerik:RadMenuItem x:Name="RTCSync" Header="Sync RTC" Click="DisplayControl_AddRTCDisplay" Visibility="Collapsed"/>
                 <telerik:RadMenuItem x:Name="CommTest" Header="Test Communication" Click="DisplayControl_AddCommTestDisplay"/>
             </telerik:RadMenuItem>
             <telerik:RadMenuItem x:Name="Interface" Header="_Interface">
@@ -44,20 +49,20 @@
                 <telerik:RadMenuItem x:Name="RemoteCon" Header="Remote Connection"/>
                 <telerik:RadMenuItem x:Name="ConDiscon" Header="Connect" Click="Connect"/>
             </telerik:RadMenuItem>            
-            <telerik:RadMenuItem x:Name="Monitoring" Header="_Monitoring">
+            <telerik:RadMenuItem x:Name="Monitoring" Header="_Monitoring" Visibility="Collapsed">
                 <telerik:RadMenuItem x:Name="Enable" Header="Enable"/>
                 <telerik:RadMenuItem x:Name="Show" Header="Show Data Monitoring Window"/>
                 <telerik:RadMenuItem x:Name="MonitoringSettings" Header="Settings"/>
             </telerik:RadMenuItem>
-            <telerik:RadMenuItem x:Name="Analytics" Header="_Analytics">
+            <telerik:RadMenuItem x:Name="Analytics" Header="_Analytics" Visibility="Collapsed">
                 <telerik:RadMenuItem x:Name="EnableAnalytics" Header="Enable Analytics"/>
                 <telerik:RadMenuItem x:Name="AnalyticsSettigns" Header="Settings"/>
             </telerik:RadMenuItem>
-            <telerik:RadMenuItem x:Name="AutoTest" Header="Automated _Testing">
+            <telerik:RadMenuItem x:Name="AutoTest" Header="Automated _Testing" Visibility="Collapsed">
                 <telerik:RadMenuItem x:Name="Behvior" Header="Behavioral Analytics"/>
                 <telerik:RadMenuItem x:Name="BehaviorSettings" Header="Settings"/>
             </telerik:RadMenuItem>
-            <telerik:RadMenuItem x:Name="Themes" Header="Themes">
+            <telerik:RadMenuItem x:Name="Themes" Header="Themes" Visibility="Collapsed">
                 <telerik:RadMenuItem x:Name="VS_Light" Header="Standard Light" Click="LightTheme_Click"/>
                 <telerik:RadMenuItem x:Name="VS_Dark" Header="Standard Dark" Click="DarkTheme_Click"/>
                 <telerik:RadMenuItem x:Name="VS_Blue" Header="Standard Blue" Click="BlueTheme_Click"/>
@@ -118,7 +123,7 @@
 
             </telerik:RadToolBar>
             <telerik:RadToolBar Band="0" BandIndex="1">
-                <telerik:RadToggleButton ToolTip="View I/O" Click="ToggleIOView" Margin="2,0,2,0" Padding="4,4,4,4">
+                <telerik:RadToggleButton ToolTip="View I/O" Click="ToggleIOView" Margin="2,0,2,0" Padding="4,4,4,4" IsEnabled="False" Name="IOToggle">
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal">                            
                             <TextBlock Text="View I/O" VerticalAlignment="Center" FontSize="10"/>
@@ -135,10 +140,10 @@
                     <telerik:RadListBox HorizontalAlignment="Stretch" Height="150" ItemContainerStyle="{StaticResource DraggableListBoxItem}" 
                             Visibility="Visible" Name="DisplayedItems" ItemsSource="{Binding DisplayedIndications}">
                         <telerik:RadListBox.ItemTemplate>
-                            <DataTemplate>
-                                <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">                                    
+                            <DataTemplate x:Name="DisplayDataTemplate">
+                                <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">                                    
                                     <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                                    <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                    <local:LEDIndicator Margin="10 0 10 0" HorizontalAlignment="Right" Height="20" DataContext="{Binding DisplayedIndications, diag2:PresentationTraceSources.TraceLevel=High}" State="{Binding Value, diag2:PresentationTraceSources.TraceLevel=High}"/>
                                 </DockPanel>
                             </DataTemplate>
                         </telerik:RadListBox.ItemTemplate>
@@ -164,13 +169,13 @@
                     <StackPanel>
                         <telerik:RadExpander Header="ACSES Status" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
-                            ItemsSource="{Binding SelectableACSESStatusIndications}"  Visibility="Visible" Name="SelectableItems">
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                    ItemsSource="{Binding SelectableACSESStatusIndications}"  Visibility="Visible" Name="SelectableItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                                <local:LEDIndicator Margin="10 0 10 0"  HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
                                         </DataTemplate>
                                     </telerik:RadListBox.ItemTemplate>
@@ -190,13 +195,13 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="ATC Status" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableATCStatusIndications}"  Visibility="Visible" Name="SelectableATCItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                                <local:LEDIndicator Margin="10 0 10 0"  HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
                                         </DataTemplate>
                                     </telerik:RadListBox.ItemTemplate>
@@ -216,13 +221,13 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="AIU Aspects" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableAIUStatusIndications}"  Visibility="Visible" Name="SelectableAIUItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                                <local:LEDIndicator Margin="10 0 10 0"  HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
                                         </DataTemplate>
                                     </telerik:RadListBox.ItemTemplate>
@@ -242,11 +247,11 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="Cab Status" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableCabStatusIndications}"  Visibility="Visible" Name="SelectableCabItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
                                                 <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
@@ -268,13 +273,13 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="Comm Status" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableCommStatusIndications}"  Visibility="Visible" x:Name="SelectableCommItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
-                                                <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
+                                                <local:LEDIndicator Margin="10 0 10 0" HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
                                         </DataTemplate>
                                     </telerik:RadListBox.ItemTemplate>
@@ -294,11 +299,11 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="Departure Test" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableDTStatusIndications}"  Visibility="Visible" x:Name="SelectableDTItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
                                                 <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
@@ -320,11 +325,11 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="Speed Sensor" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableSSStatusIndications}"  Visibility="Visible" x:Name="SelectableSSItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
                                                 <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
@@ -346,11 +351,11 @@
                         </telerik:RadExpander>
                         <telerik:RadExpander Header="Other" Foreground="White">
                             <telerik:RadExpander.Content>
-                                <telerik:RadListBox VerticalAlignment="Stretch" Width="200" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
+                                <telerik:RadListBox VerticalAlignment="Stretch" Width="210" ItemContainerStyle="{StaticResource DraggableListBoxItem}"
                             ItemsSource="{Binding SelectableOtherStatusIndications}"  Visibility="Visible" x:Name="SelectableOtherItems">
                                     <telerik:RadListBox.ItemTemplate>
                                         <DataTemplate>
-                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="165">
+                                            <DockPanel Background="#FF00646E" HorizontalAlignment="Stretch" Width="190">
                                                 <TextBlock Text="{Binding Name}" Foreground="White" Margin="5 5 5 5" HorizontalAlignment="Center"/>
                                                 <local:LEDIndicator Margin="10 0 10 0" State="{Binding Value}" HorizontalAlignment="Right" Height="20"/>
                                             </DockPanel>
@@ -411,9 +416,43 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition/>
+                                    <RowDefinition/>
                                 </Grid.RowDefinitions>
 
-                                <Label Content="PTE Release Notes:" FontSize="18" FontFamily="Segoe UI"  Margin="20 0 0 0" Foreground="#009999" Grid.Column="0" Grid.Row="0"/>
+                                <Label Content="Systemview Release Notes:" FontSize="18" FontFamily="Segoe UI"  Margin="20 0 0 0" Foreground="#009999" Grid.Column="0" Grid.Row="0"/>
+                                <ScrollViewer Margin="10 40 10 0" VerticalAlignment="Stretch">
+                                    <StackPanel VerticalAlignment="Stretch">                                   
+
+                                        <telerik:RadTileView Margin="10 0 0 0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Top" RowsCount="2">
+                                            <telerik:RadTileViewItem  Header="SYSTEMVIEW REV 0 - BETA" Margin="0 0 0 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                <ScrollViewer>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <StackPanel>
+                                                            <Label Content="Build #: 0.00.0001, Date: 10/4/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
+                                                            <TextBlock Text="Notes: SystemView Beta version. This is the first version of software to be made available for internal testing." FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </ScrollViewer>
+
+                                            </telerik:RadTileViewItem>
+                                            <telerik:RadTileViewItem Header="SYSTEMVIEW PRE-RELEASE DEVELOPMENT " Margin="0 30 0 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+                                                <ScrollViewer>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <StackPanel>
+                                                            <Label Content="Build #: 0.00.0000, Date: 10/1/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
+                                                            <TextBlock Text="Notes: Internal development and testing. Demos #1 and #2." FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </ScrollViewer>
+                                            </telerik:RadTileViewItem>
+
+                                        </telerik:RadTileView>
+                                    </StackPanel>
+                                </ScrollViewer>
+                                
+
+                                       
+                                
                             </Grid>
                         </Border>
                     </Grid>
@@ -427,7 +466,7 @@
 
             <StackPanel VerticalAlignment="Bottom" DockPanel.Dock="Bottom" >
                 <StatusBar Height="30" >
-                    <TextBlock Text="Connection:" FontSize="12" FontFamily="Segoe UI" Margin="5 0 0 0" VerticalAlignment="Center"/>
+                    <TextBlock Text="Connection Status:" FontSize="12" FontFamily="Segoe UI" Margin="5 0 0 0" VerticalAlignment="Center"/>
                     <TextBlock Text="{Binding ConnectionStatus}" FontSize="12" FontFamily="Segoe UI" VerticalAlignment="Center"/>
                 </StatusBar>
             </StackPanel>

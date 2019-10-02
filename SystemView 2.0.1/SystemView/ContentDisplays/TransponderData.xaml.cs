@@ -45,10 +45,9 @@ namespace SystemView.ContentDisplays
         }
 
         
-        public void ProcessDetailDisplayOutput(byte[] HexString)
+        public void ProcessDetailDisplayOutput(string Msg)
         {
-            string Converted = HexToString(HexString);
-            this.TPParser = new MainTransponderClass(Converted);
+            this.TPParser = new MainTransponderClass(Msg);
 
             this.TPDetailDisplay.Children.Clear();
 

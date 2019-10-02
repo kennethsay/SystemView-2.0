@@ -41,18 +41,23 @@ namespace SystemView.ContentDisplays
         {
             _myRevision = new Revision();
 
-            foreach (RevisionElement e in _myRevision.GetRevisions())
+            List<string> Apps = Globals.REVISIONAPPS;
+            List<RevisionElement> Revs = _myRevision.GetRevisions();
+
+            var AppRevs = Apps.Zip(Revs, (Name, Rev) => new { Name, Rev});
+
+            foreach (var AR in AppRevs)
             {
 
                 RevisionMember _member;
 
-                if (e.Type == REVISION_TYPE.EXTENDED)
+                if (AR.Rev.Type == REVISION_TYPE.EXTENDED)
                 {
-                    _member = new RevisionMember(e.RevisionData as ExtendedAppRevision);
+                    _member = new RevisionMember(AR.Rev.RevisionData as ExtendedAppRevision, AR.Name);
                 }
-                else if (e.Type == REVISION_TYPE.BASIC)
+                else if (AR.Rev.Type == REVISION_TYPE.BASIC)
                 {
-                    _member = new RevisionMember(e.RevisionData as BasicAppRevision);
+                    _member = new RevisionMember(AR.Rev.RevisionData as BasicAppRevision, AR.Name);
                 }
                 else
                 {
@@ -142,22 +147,22 @@ namespace SystemView.ContentDisplays
 
         }
 
-        public RevisionMember( ExtendedAppRevision DataField)
+        public RevisionMember( ExtendedAppRevision DataField, string Name)
         {
-            _appName = _appName = appNameFromPartNumber(DataField.PartNumber);
-            _partNumber = DataField.PartNumber;
-            _appRev = DataField.Rev;
-            _buildDate = DataField.Date;
-            _build = DataField.Build;
+            _appName = Name;
+            _partNumber = DataField.PartNumber.Split('\0')[0]; 
+            _appRev = DataField.Rev.Split('\0')[0]; 
+            _buildDate = DataField.Date.Split('\0')[0]; 
+            _build = DataField.Build.Split('\0')[0]; 
         }
 
-        public RevisionMember(BasicAppRevision DataField)
+        public RevisionMember(BasicAppRevision DataField, string Name)
         {
 
-            _appName = appNameFromPartNumber(DataField.PartNumber);
-            _partNumber = DataField.PartNumber;
-            _appRev = DataField.Rev;
-            _buildDate = DataField.Date;
+            _appName = Name;
+            _partNumber = DataField.PartNumber.Split('\0')[0];
+            _appRev = DataField.Rev.Split('\0')[0]; 
+            _buildDate = DataField.Date.Split('\0')[0]; 
             _build = null;
 
         }
@@ -170,56 +175,6 @@ namespace SystemView.ContentDisplays
             {
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
-        }
-
-        private string appNameFromPartNumber(string PartNumber)
-        {
-            string AppName = "";
-            try
-            {
-                switch(PartNumber)
-                {
-                    case "A073G01-A01":
-                    case "A073G01-A02":
-                        AppName = "Main";
-                        break;
-
-                    case "A075G03-A02":
-                        AppName = "Ethernet Netburner";
-                        break;
-                    case "A073G03-A92":
-                        AppName = "Tach I/O";
-                        break;
-                    case "A073G03-A91":
-                        AppName = "Decelerometer";
-                        break;
-                    case "A073G03-A94":
-                        AppName = "Ethernet S12";
-                        break;
-                    case "A073G03-A97":
-                        AppName = "AIU";
-                        break;
-                    case "A073G03-A101":
-                        AppName = "CMM";
-                        break;
-                    case "A073G03-A93":
-                        AppName = "Aux I/O";
-                        break;
-                    case "A073G03-A76":
-                        AppName = "TP Reader";
-                        break;
-                    case "A073G03-A107":
-                        AppName = "ARMM";
-                        break;
-                    default:
-                        break;
-                }
-            }
-            catch
-            {
-            }
-
-            return AppName;
-        }
+        }       
     }
 }

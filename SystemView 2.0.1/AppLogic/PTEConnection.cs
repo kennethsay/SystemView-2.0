@@ -43,6 +43,14 @@ namespace AppLogic
     public class PTEConnection
     {
         private static OBCCommunication _comm;
+
+        public OBCCommunication COMM
+        {
+            get
+            {
+                return _comm;
+            }
+        }
         
         /// <summary>
         /// Default Constructor obtains a connection with the OBC
@@ -98,6 +106,14 @@ namespace AppLogic
         public void NewConnection()
         {
             _comm.Connect();
+        }
+
+        /// <summary>
+        /// Closes an open connection with a connected OBC
+        /// </summary>
+        public void EndConnection()
+        {
+            _comm.Disconnect();
         }
 
         /// <summary>

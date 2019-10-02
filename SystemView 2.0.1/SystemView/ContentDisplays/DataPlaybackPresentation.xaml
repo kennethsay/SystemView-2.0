@@ -38,7 +38,7 @@
                     <TextBlock Text="Filter" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button ToolTip="Advanced Filter" Margin="2 0 2 0" Click="modifyAdanvancedTriggers">
+            <!--<Button ToolTip="Advanced Filter" Margin="2 0 2 0" Click="modifyAdanvancedTriggers">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
                         <Image Source="/Icons/icons8-filter-96 (1).png"
@@ -46,7 +46,7 @@
                     </Border>
                     <TextBlock Text="Advanced Filter" VerticalAlignment="Center"/>
                 </StackPanel>
-            </Button>
+            </Button>-->
             <Button ToolTip="Add/Remove Column"  Margin="2 0 2 0" Click="modifyDisplay">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" >

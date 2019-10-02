@@ -15,14 +15,14 @@
     
     <StackPanel Orientation="Vertical">
         <Label Content="OBC Revision Info:" FontSize="20" Margin="10 30 0 0" HorizontalAlignment="Center"/>
-        <DataGrid x:Name="RevisionGrid" Width="500" HorizontalContentAlignment="Center" Margin="25,10,25,0" ItemsSource="{Binding}" 
-                  IsManipulationEnabled="False" IsReadOnly="True" CanUserResizeRows="False" CanUserResizeColumns="False">
+        <DataGrid x:Name="RevisionGrid" Width="520" HorizontalContentAlignment="Center" Margin="25,10,25,0" ItemsSource="{Binding}" 
+                  IsManipulationEnabled="False" IsReadOnly="True" CanUserResizeRows="False" CanUserResizeColumns="False" AutoGenerateColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="App Name" Binding="{Binding AppName}" Width="100" />
-                <DataGridTextColumn Header="Part Number" Binding="{Binding PartNumber}" Width="100" />
-                <DataGridTextColumn Header="Revision" Binding="{Binding AppRev}" Width="100" />
-                <DataGridTextColumn Header="Date Built" Binding="{Binding BuildDate}" Width="100" />
-                <DataGridTextColumn Header="Build Number" Binding="{Binding Build}" Width="100" />
+                <DataGridTextColumn Header="App Name" Binding="{Binding AppName}" Width="*" />
+                <DataGridTextColumn Header="Part Number" Binding="{Binding PartNumber}" Width="*"/>
+                <DataGridTextColumn Header="Revision" Binding="{Binding AppRev}" Width="*" />
+                <DataGridTextColumn Header="Date Built" Binding="{Binding BuildDate}" Width="*" />
+                <DataGridTextColumn Header="Build Number" Binding="{Binding Build}" Width="*" />
             </DataGrid.Columns>
         </DataGrid>
     </StackPanel>        

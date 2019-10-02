@@ -41,9 +41,24 @@ namespace SystemView
         public static MainWindow _appWindow;
         public PTEConnection _myPTEConnection;
         public IOIndicationList _ioIndications;
+
+        public IOIndicationList IOIndications
+        {
+            get
+            {
+                return _ioIndications;
+            }
+            set
+            {
+                _ioIndications = value;
+            }
+        }
+
         private string _connectionStatus;
         public bool _connected;
         public bool _ioEnabled;
+
+        private InNetworkLogin AdminLogin;
         public string ConnectionStatus
         {   get
             {
@@ -273,6 +288,7 @@ namespace SystemView
                 this.SelectableOtherItems.DataContext = _ioIndications;
                 this.DisplayedItems.DataContext = _ioIndications;
 
+                
 
                 //this.SelectableItems.DataContext = _ioIndications;
 
@@ -281,7 +297,16 @@ namespace SystemView
 
                 // Create and start the automatic connection background worker
                 StartAutoConnectManager();
+
                 CardReaderState();
+
+                bool DEBUGSECURITYOVERRIDE = true;
+
+                if (DEBUGSECURITYOVERRIDE)
+                {
+                    EnableAdminFeatures();
+                    EnableKeyUserFeatures();
+                }
             }
             catch
             {
@@ -378,7 +403,7 @@ namespace SystemView
                         {
                             return;
                         }
-
+                        
                         // This thread will execute every 1000 ms
                         threadResult = (SCardErrorCodes)SCardGetStatusChange(this._context, 1000, this._states, this._states.Length);
                         if (threadResult == SCardErrorCodes.Timeout)
@@ -592,8 +617,8 @@ namespace SystemView
                         e.Cancel = true;
                     }
 
-                    // Repeat every 5 seconds. 
-                    Thread.Sleep(5000);
+                    // Repeat every 1 seconds. 
+                    Thread.Sleep(1000);
                 }
             }
             catch (Exception ex)
@@ -625,13 +650,14 @@ namespace SystemView
                     // Evaluate whether the OBC connection is still valid. 
                     if (!_connected)
                     {
+                        _myPTEConnection.EndConnection();
                         // If th connection has dropped then end the thread. This thread just checks to see if we are still
                         // connected to an OBC. If are not connected then there is no point in continuing to check the connection
                         e.Cancel = true;
                     }
 
-                    // Execute every 5 second
-                    Thread.Sleep(5000);
+                    // Execute every 1 second
+                    Thread.Sleep(3000);
                 }
             }
             catch (Exception ex)
@@ -1076,6 +1102,39 @@ namespace SystemView
 
         #endregion
 
-        
+        #region Authentication
+
+        public void AuthenticateAdmin(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                this.AdminLogin = new InNetworkLogin();
+
+                this.AdminLogin.Show();
+
+            }
+            catch
+            {
+
+            }
+        }
+
+        public void EnableAdminFeatures()
+        {
+            this.Config.Visibility = Visibility.Visible;
+            this.RTCSync.Visibility = Visibility.Visible;
+
+        }
+
+        public void EnableKeyUserFeatures()
+        {
+            this.Monitoring.Visibility = Visibility.Visible;
+            this.AutoTest.Visibility = Visibility.Visible;
+            this.Analytics.Visibility = Visibility.Visible;
+            this.Themes.Visibility = Visibility.Visible;
+        }
+
+        #endregion
+
     }
 }

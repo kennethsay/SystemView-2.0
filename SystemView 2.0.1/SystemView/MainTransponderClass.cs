@@ -551,13 +551,77 @@ namespace SystemView
                         {
                             // Check the Note, and parse accordingly
                             int info = determineNote(tpList[index].ExtraInfo);
-                            if(info == 1)
+                            bool useBits;
+                            bool useBits2;
+                            switch (info)
                             {
-                                yy = data;
-                            }
-                            else
-                            {
-                                addToString(tpList[index], tpbits, data, deesBits, ei, si);
+                                case 1: // Y For Chainage
+                                    yy = data;
+                                    break;
+                                case 3: // Check Active bits
+                                    pkgMsg.Add(tpList[index].Name + ": ");
+                                    for (int i = 0; i < (ei - si + 1); i++)
+                                    {
+                                        if (deesBits[i])
+                                        {
+                                            tpList[index].DictList.TryGetValue(i.ToString(), out var active);
+                                            pkgMsg.Add(active + " ");
+                                        }
+                                    }
+                                    break;
+                                case 4: // Function == 7 or Function == 11
+                                    useBits = checkFunctionNum(tpbits, 7);
+                                    useBits2 = checkFunctionNum(tpbits, 11);
+                                    if (useBits || useBits2)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": " + tpData);
+                                    }
+                                    break;
+                                case 5: // Function == 14
+                                    useBits = checkFunctionNum(tpbits, 14);
+                                    if (useBits)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": " + tpData);
+                                    }
+                                    break;
+                                case 6: // Function == 1
+                                    useBits = checkFunctionNum(tpbits, 1);
+                                    if (useBits)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": " + tpData);
+                                    }
+                                    break;
+                                case 7: // Function == 11
+                                    useBits = checkFunctionNum(tpbits, 11);
+                                    if (useBits)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": " + tpData);
+                                    }
+                                    break;
+                                case 8: // Fucntion == 2
+                                    useBits = checkFunctionNum(tpbits, 2);
+                                    if (useBits)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": " + tpData);
+                                    }
+                                    break;
+                                case 9: // Function == 11 & Check AB
+                                    useBits = checkFunctionNum(tpbits, 11);
+                                    if (useBits)
+                                    {
+                                        pkgMsg.Add(tpList[index].Name + ": ");
+                                        for (int i = 0; i < (ei - si + 1); i++)
+                                        {
+                                            if (deesBits[i])
+                                            {
+                                                tpList[index].DictList.TryGetValue(i.ToString(), out var active);
+                                                pkgMsg.Add(active + " ");
+                                            }
+                                        }
+                                    }
+                                    break;
+                                default:
+                                    break;
                             }
                         }
                         else if (tpList[index].ExtraInfo == null && tpList[index].Equation != null)
@@ -593,7 +657,85 @@ namespace SystemView
                             // Determine note and parse accordingly; Each Case checks for Equations for ease
                             if (tpList[index].ExtraInfo != null)
                             {
-                                addToString(tpList[index], tpbits, data, deesBits, ei, si);
+                                int info = determineNote(tpList[index].ExtraInfo);
+                                bool useBits;
+                                bool useBits2;
+                                switch (info)
+                                {
+                                    case 4: // Function == 7 or Function == 11
+                                        useBits = checkFunctionNum(tpbits, 7);
+                                        useBits2 = checkFunctionNum(tpbits, 11);
+                                        if (useBits || useBits2)
+                                        {
+                                            if (tpList[index].Equation != null)
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + findEquation(tpList[index].Equation, data, 0, tpbits));
+                                            }
+                                            else
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + data);
+                                            }
+                                        }
+                                        break;
+                                    case 5: // Function == 14
+                                        useBits = checkFunctionNum(tpbits, 14);
+                                        if (useBits)
+                                        {
+                                            if (tpList[index].Equation != null)
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + findEquation(tpList[index].Equation, data, 0, tpbits));
+                                            }
+                                            else
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + data);
+                                            }
+                                        }
+                                        break;
+                                    case 6: // Function == 1
+                                        useBits = checkFunctionNum(tpbits, 1);
+                                        if (useBits)
+                                        {
+                                            if (tpList[index].Equation != null)
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + findEquation(tpList[index].Equation, data, 0, tpbits));
+                                            }
+                                            else
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + data);
+                                            }
+                                        }
+                                        break;
+                                    case 7: // Function == 11
+                                        useBits = checkFunctionNum(tpbits, 11);
+                                        if (useBits)
+                                        {
+                                            if (tpList[index].Equation != null)
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + findEquation(tpList[index].Equation, data, 0, tpbits));
+                                            }
+                                            else
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + data);
+                                            }
+                                        }
+                                        break;
+                                    case 8: // Fucntion == 2
+                                        useBits = checkFunctionNum(tpbits, 2);
+                                        if (useBits)
+                                        {
+                                            if (tpList[index].Equation != null)
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + findEquation(tpList[index].Equation, data, 0, tpbits));
+                                            }
+                                            else
+                                            {
+                                                pkgMsg.Add(tpList[index].Name + ": " + data);
+                                            }
+                                        }
+                                        break;
+                                    default:
+                                        break;
+                                }
                             }
                             else
                             {

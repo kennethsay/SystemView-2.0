@@ -57,7 +57,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 this._selectedItem = value;
-                _RadioWin.ProcessDetailDisplayOutput((this._selectedItem.GetMessage() as MTA_RR_Radio_Message).Data);
+                _RadioWin.ProcessDetailDisplayOutput((this._selectedItem.GetMessage()));
                 OnPropertyChanged("SelectedItem");
             }
         }
@@ -72,7 +72,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 this._selectedTPItem = value;
-                _TPWin.ProcessDetailDisplayOutput((this._selectedTPItem as TPDataItem).Message.Data);
+                _TPWin.ProcessDetailDisplayOutput((this._selectedTPItem).GetMessage());
                 OnPropertyChanged("SelectedTPItem");
             }
         }
@@ -149,7 +149,6 @@ namespace SystemView.ContentDisplays
             _TPWin = new TransponderData();
             ExtendedData = new DataExtensions();
 
-            RadioMessageList = new ObservableCollection<RadioDataItem>();
 
             myRadioMsgs = new RadioMessages();
 
@@ -167,7 +166,14 @@ namespace SystemView.ContentDisplays
 
             activePresent = this;
 
+            this.Unloaded += UnloadedEvent;
+
             beginPlayback();
+        }
+
+        private void UnloadedEvent(object sender, RoutedEventArgs e)
+        {
+            closeSession();
         }
 
         private void beginPlayback()

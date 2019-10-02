@@ -7,6 +7,7 @@ using System.Security;
 using System.Threading;
 using System.Text;
 
+using SuccessfulSignIn;
 
 namespace SystemView
 {
@@ -166,9 +167,9 @@ namespace SystemView
                             Process processChild = Process.Start(psi);
 
                             ContentDisplays.EmployeeLogin.UserAuthenticated = true;
-                            MainWindow thisCardState = new MainWindow();
-                            thisCardState.CurrentCardState = MainWindow.SmartcardState.Inserted;
-                            thisCardState.CardReaderState();
+                            SystemView.MainWindow._appWindow.EnableKeyUserFeatures();
+                            SystemView.MainWindow._appWindow.CurrentCardState = MainWindow.SmartcardState.Inserted;
+                            SystemView.MainWindow._appWindow.CardReaderState();
                         }
                         catch
                         {
@@ -177,8 +178,8 @@ namespace SystemView
                             ContentDisplays.EmployeeLogin.UserAuthenticated = false;
 
                             MainWindow thisCardState = new MainWindow();
-                            thisCardState.CurrentCardState = MainWindow.SmartcardState.Inserted;
-                            thisCardState.CardReaderState();
+                            SystemView.MainWindow._appWindow.CurrentCardState = MainWindow.SmartcardState.Inserted;
+                            SystemView.MainWindow._appWindow.CardReaderState();
                         }
                     }
                 }

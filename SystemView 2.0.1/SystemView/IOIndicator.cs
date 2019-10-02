@@ -14,6 +14,17 @@ namespace SystemView
 {
     public class IOIndicationList : INotifyPropertyChanged
     {
+        public enum IndicationType
+        {
+            ACSES,
+            ATC, 
+            AIU, 
+            CAB, 
+            COMM,
+            DT, 
+            SS, 
+            OTHER
+        }
 
         private ObservableCollection<IOIndicator> _selectableACSESStatusIndications;
         public ObservableCollection<IOIndicator> SelectableACSESStatusIndications
@@ -191,6 +202,24 @@ namespace SystemView
                 this.SelectableOtherStatusIndications.Add(new IOIndicator(st));
             }
 
+        }
+
+        public void UpdateIOState(string IOParam, LEDIndicator.LEDState eState, IndicationType Type)
+        {         
+
+            FindIndicator(this.DisplayedIndications, IOParam).Value = eState;
+        }
+        private IOIndicator FindIndicator(ObservableCollection<IOIndicator> Collection, string name)
+        {
+            foreach(IOIndicator IO in Collection)
+            {
+                if (IO.Name == name)
+                {
+                    return IO;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>

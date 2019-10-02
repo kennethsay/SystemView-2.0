@@ -38,15 +38,6 @@
                     <TextBlock Text="Filter" VerticalAlignment="Center"/>
                 </StackPanel>
             </Button>
-            <Button ToolTip="Advanced Filter" Margin="2 0 2 0" Click="modifyAdanvancedTriggers">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
-                        <Image Source="/Icons/icons8-filter-96 (1).png"
-                            Width="25" Height="25" VerticalAlignment="Center"/>
-                    </Border>
-                    <TextBlock Text="Advanced Filter" VerticalAlignment="Center"/>
-                </StackPanel>
-            </Button>
             <Button ToolTip="Add/Remove Column"  Margin="2 0 2 0" Click="modifyDisplay">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
@@ -74,7 +65,7 @@
                     <TextBlock Text="Radio Data Viewer" VerticalAlignment="Center" Margin="2 0 0 0"/>
                 </StackPanel>
             </Button>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
+            <!--<StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
                 <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
                     <Image Source="/Icons/icons8-search-100-2.png"
                            Width="25" Height="25" VerticalAlignment="Center"/>
@@ -82,8 +73,8 @@
                 <TextBlock Text="Search" VerticalAlignment="Center"/>
             </StackPanel>
             <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
-                <TextBox Name="SearchBox" Height="22" Width="200"/>
-            </Border>            
+                <TextBox Name="SearchBox" Height="22" Width="200" Text="{Binding SearchText, Mode=TwoWay}"/>
+            </Border>-->
         </telerik:RadToolBar>
         <telerik:RadGridView Name="PresentationGrid" DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding DataBind}" 
                              ScrollViewer.VerticalScrollBarVisibility="Visible"  CanUserGroupColumns="False" ShowGroupPanel="False" IsReadOnly="True"

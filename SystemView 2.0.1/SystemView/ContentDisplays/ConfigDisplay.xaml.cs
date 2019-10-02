@@ -29,6 +29,9 @@ namespace SystemView.ContentDisplays
         private Config.CONFIG_CHANGE_STATE _eState;
         MainWindow AppWindow;
         bool InitComplete = false;
+        int TempFeatureSet1;
+        int TempFeatureSet2;
+        int TempFeatureSet3;
 
         #region Config Properties
 
@@ -58,6 +61,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 _trainType = value;
+                ParameterChanged();
                 OnPropertyChanged("TrainType");
             }
         }
@@ -72,6 +76,7 @@ namespace SystemView.ContentDisplays
             set
             {
                 _vehicleType = value;
+                ParameterChanged();
                 OnPropertyChanged("VehicleType");
             }
         }
@@ -265,6 +270,176 @@ namespace SystemView.ContentDisplays
             }            
         }
 
+        private void InitCheckboxItems()
+        {
+            foreach(string st in Globals.CONFIGCHECKBOXPARAMSMTA)
+            {
+                CheckBox CB = new CheckBox()
+                {
+                    Content = st,
+                    HorizontalAlignment = HorizontalAlignment.Left
+                };
+
+                CB.Click += CheckBoxChecked;
+
+                this.ConfigCheckBoxItems.Children.Add(CB);
+            }
+
+            readFeatureSets();
+        }
+
+        private CheckBox checkboxFromName(string st)
+        {
+            foreach(CheckBox CB in this.ConfigCheckBoxItems.Children)
+            {
+                if (CB.Content == st)
+                {
+                    return CB;
+                }
+            }
+            return null;
+        }
+
+        private void readFeatureSets()
+        {
+            readFeatureSet1();
+            readFeatureSet2();
+            readFeatureSet3();
+        }
+
+        private void readFeatureSet3()
+        {
+            int FS3 = this._myConfig.Find("FeatureSet3").Value;
+            TempFeatureSet3 = FS3;
+
+            checkboxFromName("HST Tilt Bypass").IsChecked = intToBool(FS3, Globals.BIT0);
+            checkboxFromName("DT Antenna Bypass").IsChecked = intToBool(FS3, Globals.BIT1);
+            checkboxFromName("Radio DT Bypass").IsChecked = intToBool(FS3, Globals.BIT2);
+            DecelDirection = ConvertDecelDirection(false, (FS3 & Globals.BIT3));
+            checkboxFromName("Single Cab Vehicle").IsChecked = intToBool(FS3, Globals.BIT4);
+            checkboxFromName("AIU Decel Communications").IsChecked = intToBool(FS3, Globals.BIT5);
+            checkboxFromName("Reverse Operation Allowed").IsChecked = intToBool(FS3, Globals.BIT6);
+            checkboxFromName("Short Hood Forward").IsChecked = intToBool(FS3, Globals.BIT7);
+        }
+
+        private void readFeatureSet2()
+        {
+            int FS2 = this._myConfig.Find("FeatureSet2").Value;
+            TempFeatureSet2 = FS2;
+
+            checkboxFromName("Long Hood Forward").IsChecked = intToBool(FS2, Globals.BIT0);
+            checkboxFromName("Married Pair").IsChecked = intToBool(FS2, Globals.BIT1);
+            checkboxFromName("BA Equipped").IsChecked = intToBool(FS2, Globals.BIT2);
+            checkboxFromName("Pulse Emergency Brake").IsChecked = intToBool(FS2, Globals.BIT3);
+            updateDependentCheckboxes();
+            checkboxFromName("Tunnel Enable").IsChecked = intToBool(FS2, Globals.BIT4);
+            checkboxFromName("3 Second Alarm Delay").IsChecked = intToBool(FS2, Globals.BIT6);
+            checkboxFromName("Slip/Slide Bypass Before Crosscheck").IsChecked = intToBool(FS2, Globals.BIT7);
+        }
+
+        private void readFeatureSet1()
+        {
+            int FS1 = this._myConfig.Find("FeatureSet1").Value;
+            TempFeatureSet1 = FS1;
+
+            checkboxFromName("Total Slip/Slide Bypass").IsChecked = intToBool(FS1, Globals.BIT0);
+            checkboxFromName("2 Second Emergency Brake Pulse").IsChecked = intToBool(FS1, Globals.BIT1);
+        }
+
+        private void CheckBoxChecked(object sender, RoutedEventArgs e)
+        {
+            updateTempFeatureSets();
+            this.CancelConfig.IsEnabled = true;
+            this.UpdateConfig.IsEnabled = true;
+        }
+
+        private void updateTempFeatureSets()
+        {
+            updateTempFeatureSet1();
+            updateTempFeatureSet2();
+            updateTempFeatureSet3();
+        }
+
+        private void updateTempFeatureSet3()
+        {
+            int rc = 0;
+
+            rc += checkBoxCheckedToInt(checkboxFromName("HST Tilt Bypass"), Globals.BIT0);
+            rc += checkBoxCheckedToInt(checkboxFromName("DT Antenna Bypass"), Globals.BIT1);
+            rc += checkBoxCheckedToInt(checkboxFromName("Radio DT Bypass"), Globals.BIT2);
+            rc += ConvertDecelDirection(true, DecelDirection);
+            rc += checkBoxCheckedToInt(checkboxFromName("Single Cab Vehicle"), Globals.BIT4);
+            rc += checkBoxCheckedToInt(checkboxFromName("AIU Decel Communications"), Globals.BIT5);
+            rc += checkBoxCheckedToInt(checkboxFromName("Reverse Operation Allowed"), Globals.BIT6);
+            rc += checkBoxCheckedToInt(checkboxFromName("Short Hood Forward"), Globals.BIT7);
+            
+            TempFeatureSet3 = rc;
+        }
+
+        private void updateTempFeatureSet2()
+        {
+            int rc = 0;
+
+            rc += checkBoxCheckedToInt(checkboxFromName("Long Hood Forward"), Globals.BIT0);
+            rc += checkBoxCheckedToInt(checkboxFromName("Married Pair"), Globals.BIT1);
+            rc += checkBoxCheckedToInt(checkboxFromName("BA Equipped"), Globals.BIT2);
+            rc += checkBoxCheckedToInt(checkboxFromName("Pulse Emergency Brake"), Globals.BIT3);
+            updateDependentCheckboxes();
+            rc += checkBoxCheckedToInt(checkboxFromName("Tunnel Enable"), Globals.BIT4);
+            rc += checkBoxCheckedToInt(checkboxFromName("3 Second Alarm Delay"), Globals.BIT6);
+            rc += checkBoxCheckedToInt(checkboxFromName("Slip/Slide Bypass Before Crosscheck"), Globals.BIT7);
+            
+            TempFeatureSet2 = rc;
+        }
+
+        private void updateTempFeatureSet1()
+        {
+            int rc = 0;
+
+            rc += checkBoxCheckedToInt(checkboxFromName("Total Slip/Slide Bypass"), Globals.BIT0);
+            rc += checkBoxCheckedToInt(checkboxFromName("2 Second Emergency Brake Pulse"), Globals.BIT1);
+
+            TempFeatureSet1 = rc;
+        }
+
+
+        private void updateDependentCheckboxes()
+        {
+            if((bool)checkboxFromName("Pulse Emergency Brake").IsChecked)
+            {
+                checkboxFromName("2 Second Emergency Brake Pulse").IsEnabled = true;
+            }
+            else
+            {
+                checkboxFromName("2 Second Emergency Brake Pulse").IsEnabled = false;
+                checkboxFromName("2 Second Emergency Brake Pulse").IsChecked = false;
+            }
+        }
+
+        private int checkBoxCheckedToInt(CheckBox CB, int check)
+        {
+            if ((bool)CB.IsChecked)
+            {
+                return check;
+            }
+            else
+            {
+                return 0;
+            }
+        }        
+
+        private bool intToBool(int parameter, int check)
+        {
+            if ((parameter & check) == check)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void InitComboBoxItems()
         {
             try
@@ -292,6 +467,7 @@ namespace SystemView.ContentDisplays
                 this.TrainTypesCombo.Items.Clear();
                 this.VehicleTypesCombo.Items.Clear();
                 this.DataloggerCombo.Items.Clear();
+                this.DecelDirectCombo.Items.Clear();
 
                 List<string> VType = new List<string>();
                 List<string> TType = new List<string>();
@@ -342,6 +518,16 @@ namespace SystemView.ContentDisplays
                     this.DataloggerCombo.Items.Add(Item);
                 }
 
+                foreach(string st in Globals.DECELDIRECTION)
+                {
+                    RadComboBoxItem Item = new RadComboBoxItem()
+                    {
+                        Content = st
+                    };
+
+                    this.DecelDirectCombo.Items.Add(Item);
+                }
+
             }
             catch
             {
@@ -354,6 +540,7 @@ namespace SystemView.ContentDisplays
             try
             {
                 InitComboBoxItems();
+                InitCheckboxItems();
             }
             catch (Exception ex)
             {
@@ -375,7 +562,6 @@ namespace SystemView.ContentDisplays
                     UpdateConfig.IsEnabled = true;
                     CancelConfig.IsEnabled = true;
 
-                    UpdateConfigItems();
                 }                
             }
             catch
@@ -409,6 +595,8 @@ namespace SystemView.ContentDisplays
             Datalogger = ConvertDatalogger(false, this._myConfig.Find("DatalogDevice").Value);
             ATCS = this._myConfig.Find("ATCSAddress").Value;
 
+            readFeatureSets();
+
             InitComplete = true;
         }
 
@@ -432,6 +620,9 @@ namespace SystemView.ContentDisplays
             this._myConfig.Find("RearOffset").Value = RearAntOffset;            
             this._myConfig.Find("DatalogDevice").Value = ConvertDatalogger(true, Datalogger);
             this._myConfig.Find("ATCSAddress").Value = ATCS;
+            this._myConfig.Find("FeatureSet1").Value = TempFeatureSet1;
+            this._myConfig.Find("FeatureSet2").Value = TempFeatureSet2;
+            this._myConfig.Find("FeatureSet3").Value = TempFeatureSet3;
         }
 
         private int ConvertDatalogger(bool ToReading, int Value)
@@ -517,12 +708,38 @@ namespace SystemView.ContentDisplays
                 }
                 else
                 {
-                    return (double)(((int)Value) / 100);
+                    return (double)(((int)Value) / 100.0);
                 }
             }
             catch
             {
                 return 0;
+            }
+        }
+
+        private int ConvertDecelDirection(bool ToReading, int Value)
+        {
+            if (ToReading)
+            {
+                if (Value == 1)
+                {
+                    return Globals.BIT3;
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+            else
+            {
+                if (Value == Globals.BIT3)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return 0;
+                }
             }
         }
 
@@ -537,6 +754,8 @@ namespace SystemView.ContentDisplays
                 switch(_eState)
                 {
                     case Config.CONFIG_CHANGE_STATE.NO_ACTION:
+
+                        UpdateConfigItems();
 
                         _eState = Config.CONFIG_CHANGE_STATE.REQUEST_CHANGE;
                         _myConfig.submitRequest(_eState);

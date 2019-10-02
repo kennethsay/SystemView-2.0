@@ -184,6 +184,7 @@ namespace AppLogic
         private bool parseMSG;
         private bool finalACK;
         private int packetLoss;
+        private decimal percentCompleted;
 
         private DateTime _startDateTime;
         private DateTime _endDateTime;
@@ -347,6 +348,8 @@ namespace AppLogic
         {
             try
             {
+                finalACK = false;
+
                 switch (_userSelection)
                 {
                     case DATALOG_TIME_SELECTION.ALL_AVAILABLE:
@@ -389,11 +392,7 @@ namespace AppLogic
                 // Update the amount of bytes read every time a buffer is receieved
                 byteCount = datalogAsyncReceive.BytesRecieved;
 
-                BackgroundWorker _worker = new BackgroundWorker();
-                _worker.WorkerSupportsCancellation = true;
-                _worker.DoWork += writeToDatalogFile;
-                _worker.RunWorkerCompleted += datalogWorkerComplete;
-                _worker.RunWorkerAsync();
+                percentCompleted = 0;
 
             }
             catch (Exception ex)
@@ -444,6 +443,9 @@ namespace AppLogic
                     default:
                         break;
                 }
+
+                percentCompleted = 0;
+
                 fetch();
             }
             catch (Exception ex)
@@ -465,6 +467,9 @@ namespace AppLogic
         {
             try
             {
+                DateTime Now = DateTime.Now;
+                EndDT = Now;
+
                 // Get the Async Client being used from OBCCommunications 
                 AsynchronousClient datalogAsyncReceive = PTEConnection.Comm.GetAsyncClient;
                 InitialDatalogResponse.InitialBuff = (PTEConnection.Comm.RequestUploadByBlockPercent(_percentBlockUpload, (int)_userDatalogSource));
@@ -472,11 +477,7 @@ namespace AppLogic
                 // Update the amount of bytes read every time a buffer is receieved
                 byteCount = datalogAsyncReceive.BytesRecieved;
 
-                BackgroundWorker _worker = new BackgroundWorker();
-                _worker.WorkerSupportsCancellation = true;
-                _worker.DoWork += writeToDatalogFile;
-                _worker.RunWorkerCompleted += datalogWorkerComplete;
-                _worker.RunWorkerAsync();
+                percentCompleted = 0;
             }
             catch (Exception ex)
             {
@@ -547,11 +548,6 @@ namespace AppLogic
                 // Update the amount of bytes read every time a buffer is receieved
                 byteCount = datalogAsyncReceive.BytesRecieved;
 
-                BackgroundWorker _worker = new BackgroundWorker();
-                _worker.WorkerSupportsCancellation = true;
-                _worker.DoWork += writeToDatalogFile;
-                _worker.RunWorkerCompleted += datalogWorkerComplete;
-                _worker.RunWorkerAsync();
             }
             catch (Exception ex)
             {
@@ -730,8 +726,7 @@ namespace AppLogic
         private decimal percentDownloadComplete(TagList currentTagList)
         {
             try
-            {
-                decimal percentCompleted = 0;
+            {                
 
                 // Find where the download currently is
                 DateTime currentDT = bytesToDateTime(currentTagList.Tags.Find(X => X.TagID == 0).Data());
@@ -860,7 +855,7 @@ namespace AppLogic
         /// have all of the data as reference, and re-create the events from the OBC.
         /// </summary>
         /// <param name="allMyTags">The Full List of TagLists</param>
-        private void writeToDatalogFile(object sender, DoWorkEventArgs e)
+        public bool writeToDatalogFile(BackgroundWorker bw)
         {
             try
             {
@@ -887,11 +882,23 @@ namespace AppLogic
                     {
                         bool poppedOff = buffQueue.TryDequeue(out buff);
                         // Retrieves all Datalog Messages from OBC after the initial one
-                        while (!poppedOff)
+                        int count = 0;
+
+                        while (!poppedOff )
                         {
+                            count++;
+                            if (count >= 1000)
+                            {
+                                poppedOff = true;
+                            }
+                            else
+                            {
+                                poppedOff = buffQueue.TryDequeue(out buff);
+                            }
+
                             continueOBCComm();
                             Thread.Sleep(2);
-                            poppedOff = buffQueue.TryDequeue(out buff);
+                            
                         }
                         bytesLeft = buff.Count();
                         msgBase = new PTEMessage(buff);
@@ -968,7 +975,11 @@ namespace AppLogic
                             Array.Clear(buff, 0, buff.Count());
                         }
                     }
+
+                    bw.ReportProgress(0, (int)percentCompleted);
                 }
+                return true;
+                
             }
             catch (Exception ex)
             {
@@ -976,6 +987,7 @@ namespace AppLogic
                 sb.Append(String.Format("Datalog::writeToDatalogFile-threw exception {0}", ex.ToString()));
 
                 Console.WriteLine(sb.ToString());
+                return true;
             }
         }
 

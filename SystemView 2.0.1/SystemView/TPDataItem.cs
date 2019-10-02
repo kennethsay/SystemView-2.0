@@ -59,6 +59,15 @@ namespace SystemView
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public string GetMessage()
+        {
+            return (string)data["Message"];
+        }
+        public string HexToString(byte[] Hex)
+        {
+            return BitConverter.ToString(Hex).Replace("-", string.Empty);
+        }
+
         private void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)

@@ -10,12 +10,12 @@
     <UserControl.Resources>
         <Style TargetType="DataGridColumnHeader">
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
-            <Setter Property="Padding" Value="50 0 130 0"/>
+            <Setter Property="Padding" Value="0 7 0 7"/>
         </Style>
     </UserControl.Resources>
 
     <DockPanel>
-        <telerik:RadToolBar DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Stretch">
+        <!--<telerik:RadToolBar DockPanel.Dock="Top" VerticalAlignment="Top" HorizontalAlignment="Stretch">
             <Button ToolTip="Search"  Margin="10 0 2 0">
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
                     <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
@@ -28,17 +28,19 @@
             <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
                 <TextBox Height="22" Width="200"/>
             </Border>
-        </telerik:RadToolBar>
+        </telerik:RadToolBar>-->
 
-        <Grid Margin="10 5 10 10">
-            <telerik:RadGridView ItemsSource="{Binding TPDataBind}" ScrollViewer.VerticalScrollBarVisibility="Visible"  CanUserGroupColumns="False" 
-                                 ShowGroupPanel="False" HorizontalAlignment="Stretch" Margin="0 0 400 0" SelectedItem="{Binding SelectedTPItem, Mode=TwoWay}"
-                                 RowIndicatorVisibility="Collapsed" ColumnWidth="*" IsReadOnly="True"/>
+        <Grid Margin="10 5 10 10" DockPanel.Dock="Right">
+            <telerik:RadGridView ItemsSource="{Binding TPDataBind}" ScrollViewer.VerticalScrollBarVisibility="Visible" ScrollViewer.HorizontalScrollBarVisibility="Disabled"  CanUserGroupColumns="False" 
+                                 ShowGroupPanel="False" HorizontalAlignment="Stretch" Margin="0 0 400 0" SelectionMode="Single" SelectionUnit="FullRow" RowIndicatorVisibility="Collapsed" ColumnWidth="180"
+                                 SelectedItem="{Binding SelectedTPItem, Mode=TwoWay}" IsReadOnly="True"  IsFilteringAllowed="False" DataLoadMode="Synchronous"/>
 
             <GroupBox HorizontalAlignment="Right" Width="390" Name="MessageContentDisplay" Header="Transponder Contents">
-                <StackPanel Name="TPDetailDisplay" HorizontalAlignment="Left">
+                <ScrollViewer>
+                    <StackPanel Name="TPDetailDisplay" HorizontalAlignment="Left">
 
-                </StackPanel>
+                    </StackPanel>
+                </ScrollViewer>                
             </GroupBox>
         </Grid>
 

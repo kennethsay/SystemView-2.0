@@ -160,8 +160,22 @@ namespace Transport
         public bool Connect()
         {
             bool rc = false;
-            
+
+            myAsyncClient = new AsynchronousClient();
+
             myAsyncClient.Connect();
+            return rc;
+        }
+
+        /// <summary>
+        /// Disconnect from the OBC
+        /// </summary>
+        /// <returns>True is success</returns>
+        public bool Disconnect()
+        {
+            bool rc = false;
+
+            myAsyncClient.Disconnect();
             return rc;
         }
 

@@ -711,7 +711,7 @@ namespace AppLogic
                 Tags.Add(new Tag(72, "Wheel Diameter", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(73, "Decelerometer Value", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(74, "AIU Status", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
-                Tags.Add(new Tag(75, "AUI Aspects", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
+                Tags.Add(new Tag(75, "AIU Aspects", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(76, "SPI Link Status", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(77, "Async Link Status", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(78, "MTA Flags", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));

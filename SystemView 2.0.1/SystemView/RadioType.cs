@@ -20,46 +20,42 @@ namespace SystemView
             {
                 string radioType;
 
-                if (code == 21063)  //5247
+                
+                switch (label)
                 {
-                    switch (label)
-                    {
-                        case 47170: //B842
-                            radioType = "MessageType11";
-                            break;
-                        case 47235: //B883
-                            radioType = "MessageType12";
-                            break;
-                        case 47236: //B884
-                            radioType = "MessageType19";
-                            break;
-                        case 47169: //B841
-                            radioType = "MessageType21";
-                            break;
-                        case 47233: //B881
-                            radioType = "MessageType22";
-                            break;
-                        case 47234: //B882
-                            radioType = "MessageType23";
-                            break;
-                        case 47367: //B907
-                            radioType = "MessageType24";
-                            break;
-                        case 47362: //B902
-                            radioType = "MessageType34";
-                            break;
-                        case 47363: //B903
-                            radioType = "MessageType35";
-                            break;
-                        default:
-                            radioType = "Error";
-                            break;
-                    }
+                    case 47170: //B842
+                        radioType = "MessageType11";
+                        break;
+                    case 47235: //B883
+                        radioType = "MessageType12";
+                        break;
+                    case 47236: //B884
+                        radioType = "MessageType19";
+                        break;
+                    case 47169: //B841
+                        radioType = "MessageType21";
+                        break;
+                    case 47233: //B881
+                        radioType = "MessageType22";
+                        break;
+                    case 47234: //B882
+                        radioType = "MessageType23";
+                        break;
+                    case 47367: //B907
+                        radioType = "MessageType24";
+                        break;
+                    case 47362: //B902
+                        radioType = "MessageType34";
+                        break;
+                    case 47363: //B903
+                        radioType = "MessageType35";
+                        break;
+                    default:
+                        radioType = "Error";
+                        break;
                 }
-                else
-                {
-                    radioType = "Error";
-                }
+                
+                
 
                 return radioType;
             }

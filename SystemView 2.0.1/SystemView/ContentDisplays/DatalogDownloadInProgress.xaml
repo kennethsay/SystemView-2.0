@@ -11,7 +11,7 @@
     
     <StackPanel HorizontalAlignment="Center" Orientation="Vertical" VerticalAlignment="Center">
         <TextBlock Text="Download in Progress" Margin="0 0 0 20" HorizontalAlignment="Center" FontSize="20" FontFamily="Segoe UI Light"/>
-        <telerik:RadProgressBar IsIndeterminate="True"/>
+        <telerik:RadProgressBar Maximum="100" Minimum="0" Name="DownloadProgress"/>
     </StackPanel>        
     
 </UserControl>
