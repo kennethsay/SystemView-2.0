@@ -26,7 +26,7 @@ namespace SystemView
         protected override void OnStartup(StartupEventArgs e)
         {
             // Change this to enable or disable the SplashScreen 
-            Enabled MySplashScreen = Enabled.NO;
+            Enabled MySplashScreen = Enabled.YES;
 
             // Users are not yet authenticated
             ContentDisplays.EmployeeLogin.UserAuthenticated = false;

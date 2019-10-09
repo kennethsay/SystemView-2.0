@@ -363,7 +363,7 @@ namespace AppLogic
                     }
 
                 case TAG_VALUE_TYPES.DATE:
-                    return String.Format("{0}", asDateTime().ToLocalTime().ToString());
+                    return String.Format("{0}", asDateTime().ToLocalTime().ToString("MM/dd/yy hh:mm:ss.fff tt"));
             }
         }
 
@@ -505,7 +505,9 @@ namespace AppLogic
                 ll = _data[3];
 
                 t = (hh << 24) + (h << 16) + (l << 8) + ll;
-                return dtWork.AddSeconds(t);
+                dtWork = dtWork.AddSeconds(t);
+                dtWork = dtWork.AddMilliseconds(_data[4] * 100);
+                return dtWork;
             }
             catch (Exception ex)
             {

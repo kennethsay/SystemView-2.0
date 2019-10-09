@@ -349,6 +349,7 @@ namespace AppLogic
             try
             {
                 finalACK = false;
+                tagIndex = 0;
 
                 switch (_userSelection)
                 {
@@ -697,6 +698,11 @@ namespace AppLogic
                         anotherTag = false;
                         break;
                     }
+
+                    if (msgBase.Data[msgIndex + 1] == 0xFF)
+                    {
+                        anotherTag = false;
+                    }
                 } // End While, read the entire message
 
                 // Only use the Last Tag receieved to find the percent completed
@@ -900,8 +906,16 @@ namespace AppLogic
                             Thread.Sleep(2);
                             
                         }
-                        bytesLeft = buff.Count();
-                        msgBase = new PTEMessage(buff);
+                        if (buff == null)
+                        {
+                            bytesLeft = 0;
+                        }
+                        else
+                        {
+                            bytesLeft = buff.Count();
+                            msgBase = new PTEMessage(buff);
+                        }
+                        
                         // Message may need parsed, but let's make sure the first message does not have a Command ID of ACK, then parsing is not needed
                     }
                     checkPTEmsg(msgBase);
@@ -972,7 +986,11 @@ namespace AppLogic
                             // Don't need to Parse the Buffer, so read next buffer
                             goAgain = false;
                             moreData = true;
-                            Array.Clear(buff, 0, buff.Count());
+
+                            if (tagIndex != 1)
+                            {
+                                Array.Clear(buff, 0, buff.Count());
+                            }                            
                         }
                     }
 
@@ -1235,29 +1253,20 @@ namespace AppLogic
                         // Looking for types of Hex, since C# doesn't define this data type
                         TAG_VALUE_TYPES holder = referenceList.Tags.Find(X => X.TagID == k).TagType; //thisTagList[l]
 
-                        if (holder == TAG_VALUE_TYPES.HEX)
+                        switch (holder)
                         {
-                            int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (byteArrayToStringHex((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
+                            case TAG_VALUE_TYPES.HEX:
+                            case TAG_VALUE_TYPES.BYTES:
+                            case TAG_VALUE_TYPES.DATE:
+                            case TAG_VALUE_TYPES.DECIMAL:
+                                int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
+                                dataArray = (byteArrayToStringHex((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
+                                break;
+                            default:
+                                dataArray = (thisTagList[l].Tags.Find(X => X.TagID == k).Data()).ToString() + ", ";
+                                break;
                         }
-                        else if (holder == TAG_VALUE_TYPES.BYTES)
-                        {
-                            int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (byteArryToString((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
-                        }
-                        else if (holder == TAG_VALUE_TYPES.DATE)
-                        {
-                            dataArray = (bytesToDateTime(thisTagList[l].Tags.Find(X => X.TagID == k).Data())).ToString() + ", ";
-                        }
-                        else if (holder == TAG_VALUE_TYPES.DECIMAL)
-                        {
-                            int byteLength = thisTagList[l].Tags.Find(X => X.TagID == k).Length;
-                            dataArray = (bytesToInt((thisTagList[l].Tags.Find(X => X.TagID == k)).Data(), byteLength)).ToString() + ", ";
-                        }
-                        else
-                        {
-                            dataArray = (thisTagList[l].Tags.Find(X => X.TagID == k).Data()).ToString() + ", ";
-                        }
+                        
                         
                         tagObjectList.Add(dataArray);
                     }
@@ -1413,18 +1422,15 @@ namespace AppLogic
         {
             try
             {
-                if (Length == 1)
+                StringBuilder sb = new StringBuilder();
+
+                for (int i = 0; i < Length; i++)
                 {
-                    return String.Format("0x{0:X2}", byteToHex[0]);
+                    sb.Append(string.Format("{0:X2}", byteToHex[i]));
                 }
-                else if (Length == 2)
-                {
-                    return String.Format("0x{0:X2}{1:X2}", byteToHex[0], byteToHex[1]);
-                }
-                else
-                {
-                    return "Not Supported";
-                }
+
+                return sb.ToString();
+
             }
             catch (Exception ex)
             {

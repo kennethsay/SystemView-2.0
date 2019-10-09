@@ -225,38 +225,15 @@ namespace SystemView.ContentDisplays
                             RTMIndex++;
                         }
 
-                        bool ForceUpdate = false;
                         dynamic RTMData = new DataItem();
 
-                        ForceUpdate = updateDisplayList(UpdatedTags);
                         AdvancedUpdate = updateAdvancedTriggers(UpdatedTags);
 
                         updateRadio(UpdatedTags);
                         updateTP(UpdatedTags);
 
-                        if (ForceUpdate || AdvancedUpdate)
-                        {
-                            updateData(RTMData);
-
-                            if (AdvancedUpdate)
-                            {
-                                int advancedData = 11;
-                                while (advancedData > 0)
-                                {
-                                    Previous.copyData(Result);
-
-                                    Thread.Sleep(250);
-
-                                    Result = _myRTM.CollectRecord();
-
-                                    RTMData = new DataItem();
-
-                                    updateData(RTMData);
-                                    advancedData--;
-                                }
-                                AdvancedUpdate = false;
-                            }
-                        }
+                        updateData(UpdatedTags, RTMData);                            
+                        
 
                         Previous.copyData(Result);                        
 
@@ -345,7 +322,7 @@ namespace SystemView.ContentDisplays
             }
         }
 
-        private void updateData(DataItem Data)
+        private void updateData(List<byte> updated, DataItem Data)
         {
             try
             {
@@ -362,16 +339,25 @@ namespace SystemView.ContentDisplays
                         else
                         {
                             Data[tags.Name] = tags.ValueToString();
-                        }
-                        
+                        }                        
+                    }                   
+                }
+
+                if (!updateDisplayList(updated))
+                {
+                    if (DataBind.Count == 0)
+                    {
+                        DataBind.Insert(0, Data);
                     }
                     else
                     {
-
+                        DataBind[0] = Data;
                     }
                 }
-
-                DataBind.Insert(0, Data);
+                else
+                {
+                    DataBind.Insert(0, Data);
+                }                
             }
             catch (Exception ex)
             {

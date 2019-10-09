@@ -262,17 +262,16 @@ namespace SystemView.ContentDisplays
 
         private void datalogWorkerComplete(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.DownloadObject = new DatalogDownloadCompleted();
-            DownloadTypeContent.Content = this.DownloadObject;
+            (this.DownloadObject as DatalogDownloadInProgress).DownloadText.Text = "Download Complete";
+            (this.DownloadObject as DatalogDownloadInProgress).DownloadProgress.Value = 100;
 
             this.DownloadButton.IsEnabled = true;
             this.CancelBtn.IsEnabled = false;
 
-            Thread.Sleep(3000);
+            RadWindow.Alert("Download Completed!");
 
-            DatalogDownloadType.SelectedIndex = 4;
-
-
+            updateDownloadSelection();
+                                  
         }
 
 

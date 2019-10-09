@@ -9,6 +9,7 @@ using static System.Math;
 using System.Runtime.InteropServices;
 using System.Collections.Concurrent;
 using System.Threading;
+using System.Linq;
 
 namespace AppLogic
 {
@@ -141,25 +142,49 @@ namespace AppLogic
 
         private void readSDFtoTags(object sender, DoWorkEventArgs e)
         {
-            int i = Array.IndexOf(sdfFile, "0,");
+            int i = (Array.FindIndex(sdfFile, row => row.Contains("Index")) + 1);
             while(i < sdfFile.Length)
             {
                 _thisTagList = new TagList();
 
-                for (int k = 0; k < 92; k++)
-                {
-                    _thisTagList.Tags.Find(X => X.TagID == k).AbsoluteDataWrite(Encoding.ASCII.GetBytes(sdfFile[i+k].Trim(',')));
-                }
+                _thisTagList = processRecord(sdfFile[i].Replace(" " , ""));
 
                 TagListQueue.Enqueue(_thisTagList);
-
-                i = i + 93;
+                i++;
             }
         }
 
         private void endSDFfile(object sender, RunWorkerCompletedEventArgs e)
         {
 
+        }
+
+        private TagList processRecord(string st)
+        {
+            try
+            {
+                var records = st.Split(',');
+
+                TagList processed = new TagList();
+
+                for (int k = 0; k < 93; k++)
+                {
+                    byte[] dataB = Enumerable.Range(0, records[k + 1].Length).Where(x => x % 2 == 0).Select(x => Convert.ToByte(records[k + 1].Substring(x, 2), 16)).ToArray();
+                    processed.GetTag((byte)k).AbsoluteDataWrite(dataB);
+                }
+
+                return processed;
+            }         
+
+            catch (Exception ex)
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.Append(String.Format("DataPlayback::33333333333-threw exception {0}", ex.ToString()));
+
+                Console.WriteLine(sb.ToString());
+                return null;
+                // error message if another program is usin
+            }
         }
 
 

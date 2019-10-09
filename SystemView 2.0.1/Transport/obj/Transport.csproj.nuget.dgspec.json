@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {}
+    "C:\\PTE 2.0\\SystemView\\Code\\Repository\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {}
   },
   "projects": {
-    "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+    "C:\\PTE 2.0\\SystemView\\Code\\Repository\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "projectUniqueName": "C:\\PTE 2.0\\SystemView\\Code\\Repository\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
         "projectName": "Transport",
-        "projectPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
-        "packagesPath": "C:\\Users\\z00433tp\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\z00433tp\\Desktop\\SystemView 2.0\\SystemView 2.0\\SystemView 2.0.1\\Transport\\obj\\",
+        "projectPath": "C:\\PTE 2.0\\SystemView\\Code\\Repository\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "packagesPath": "C:\\Users\\z003nhjc\\.nuget\\packages\\",
+        "outputPath": "C:\\PTE 2.0\\SystemView\\Code\\Repository\\SystemView-2.0\\SystemView 2.0.1\\Transport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\z00433tp\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\z003nhjc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -43,6 +41,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.Office.Interop.Excel": {
+              "target": "Package",
+              "version": "[15.0.4795.1000, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

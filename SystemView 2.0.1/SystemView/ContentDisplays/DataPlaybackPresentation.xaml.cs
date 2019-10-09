@@ -142,6 +142,7 @@ namespace SystemView.ContentDisplays
 
             DataBind = new ObservableCollection<DataItem>();
             TPDataBind = new ObservableCollection<TPDataItem>();
+            RadioMessageList = new ObservableCollection<RadioDataItem>();
             TriggerList = new DataPresentationTriggers();
             AdvancedTriggers = new DataPresentationAdvancedTriggers();
             DisplayList = new DataPresentationDisplays();
@@ -221,47 +222,43 @@ namespace SystemView.ContentDisplays
 
                         while(!gotList)
                         {
-                            Thread.Sleep(10);
+                            Thread.Sleep(1);
                             gotList = _myPlayback.TagListQueue.TryDequeue(out Result);
                         }
 
                         List<Byte> UpdatedTags = Previous.CompareDifferences(Result);
-                        bool ForceUpdate = false;
 
                         dynamic tagData = new DataItem();
 
-                        ForceUpdate = updateDisplayList(UpdatedTags);
+                        
                         //AdvancedUpdate = updateAdvancedTriggers(UpdatedTags);
                         
 
                         updateRadio(UpdatedTags, Result);
                         updateTP(UpdatedTags, Result);
+                        updateData(UpdatedTags, tagData);
+                        
 
-                        if (ForceUpdate) // || AdvancedUpdate
+                        /*
+                        if (AdvancedUpdate)
                         {
-                            Thread.Sleep(5);
-                            updateData(tagData);
-
-                            /*
-                            if (AdvancedUpdate)
+                            int advancedData = 11;
+                            while (advancedData > 0)
                             {
-                                int advancedData = 11;
-                                while (advancedData > 0)
-                                {
-                                    Previous.copyData(Result);
+                                Previous.copyData(Result);
 
-                                    Thread.Sleep(20);
+                                Thread.Sleep(20);
 
-                                    _myPlayback.TagListQueue.TryDequeue(out Result);
+                                _myPlayback.TagListQueue.TryDequeue(out Result);
 
-                                    tagData = new DataItem();
+                                tagData = new DataItem();
 
-                                    updateData(tagData);
-                                    advancedData--;
-                                }
-                                AdvancedUpdate = false;
-                            }*/
-                        }
+                                updateData(tagData);
+                                advancedData--;
+                            }
+                            AdvancedUpdate = false;
+                        }*/
+                        
 
                         Previous.copyData(Result);
 
@@ -351,7 +348,7 @@ namespace SystemView.ContentDisplays
             }
         }
 
-        private void updateData(DataItem Data)
+        private void updateData(List<byte> updated, DataItem Data)
         {
             try
             {
@@ -378,7 +375,23 @@ namespace SystemView.ContentDisplays
                         }
                     }
                 }
-                DataBind.Insert(0, Data);
+
+                
+                if (!updateDisplayList(updated))
+                {
+                    if (DataBind.Count == 0)
+                    {
+                        DataBind.Insert(0, Data);
+                    }
+                    else
+                    {
+                        DataBind[0] = Data;
+                    }                    
+                }
+                else
+                {
+                    DataBind.Insert(0, Data);
+                }               
             }
             catch (Exception ex)
             {
