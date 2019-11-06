@@ -7977,4 +7977,165 @@
     </TPEntry>
   </Package42>
 
+  <Package44>
+      <LengthOfPackage>56</LengthOfPackage>
+      <Description>Announced Line Change</Description>
+      <TPEntry>
+        <Name>Type of Package</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>0</Start>
+        <End>3</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Direction of Travel</Name>
+        <Note>0</Note>
+        <DateType>string</DateType>
+        <Start>4</Start>
+        <End>4</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Up</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Down</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Package Size</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>5</Start>
+        <End>7</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Announced Line Number</Name>
+        <Note>0</Note>
+        <DataType>UInt16</DataType>
+        <Start>8</Start>
+        <End>15</End>
+        <Dict>
+          <Key>NA</Key>
+          <Value>0</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+      <Name>Announced Line Chaining (10s of yards)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>16</Start>
+      <End>31</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+    <TPEntry>
+        <Name>Approach Tracks</Name>
+        <Note>ActiveBits</Note>
+        <DateType>string</DateType>
+        <Start>32</Start>
+        <End>39</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Track 1</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Track 2</Value>
+        </Dict>
+        <Dict>
+          <Key>2</Key>
+          <Value>Track 3</Value>
+        </Dict>
+        <Dict>
+          <Key>3</Key>
+          <Value>Track 4</Value>
+        </Dict>
+        <Dict>
+          <Key>4</Key>
+          <Value>Track 5</Value>
+        </Dict>
+        <Dict>
+          <Key>5</Key>
+          <Value>Track 6</Value>
+        </Dict>
+        <Dict>
+          <Key>6</Key>
+          <Value>Track 7</Value>
+        </Dict>
+        <Dict>
+          <Key>7</Key>
+          <Value>Track 8</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+    <TPEntry>
+        <Name>New Line Direction</Name>
+        <Note>0</Note>
+        <DateType>string</DateType>
+        <Start>40</Start>
+        <End>40</End>
+        <Dict>
+          <Key>0</Key>
+          <Value>Up</Value>
+        </Dict>
+        <Dict>
+          <Key>1</Key>
+          <Value>Down</Value>
+        </Dict>
+        <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+        <Name>Associated Interlocking</Name>
+        <Note>0</Note>
+        <DataType>string</DataType>
+        <Start>41</Start>
+       <End>42</End>
+       <Dict>
+         <Key>0</Key>
+         <Value>Current Approach</Value>
+       </Dict>
+       <Dict>
+         <Key>1</Key>
+         <Value>Second Approach</Value>
+       </Dict>
+       <Dict>
+         <Key>2</Key>
+         <Value>Third Approach</Value>
+         </Dict>
+         <Dict>
+           <Key>3</Key>
+           <Value>Fourth Approach</Value>
+         </Dict>
+         <Equation>0</Equation>
+      </TPEntry>
+      <TPEntry>
+      <Name>Distance to Announced Line Boundary (10s of yards)</Name>
+      <Note>0</Note>
+      <DataType>UInt16</DataType>
+      <Start>45</Start>
+      <End>55</End>
+      <Dict>
+        <Key>NA</Key>
+        <Value>0</Value>
+      </Dict>
+      <Equation>Value Range: [1-(X-2)] Distance: X*10</Equation>
+    </TPEntry>
+  </Package44>
+
 </TPPackage>

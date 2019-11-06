@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\obj\x86\Release\
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Release\
 SystemView
 none
 false
 TRACE
-C:\PTE 2.0\SystemView\Code\SystemView 1.5\SystemView\App.xaml
-17230980928
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\App.xaml
+23995642643
 
-301130506832
-1541264319624
-ContentDisplays\BattLvlDisplay.xaml;ContentDisplays\CommTestDisplay.xaml;ContentDisplays\ConfigDisplay.xaml;ContentDisplays\DatalogDownloadBySize.xaml;ContentDisplays\DatalogDownload.xaml;ContentDisplays\DataLogDownloadByTime.xaml;ContentDisplays\DatalogDownloadTimeRange.xaml;ContentDisplays\DataPresentation.xaml;ContentDisplays\DataPresentationDisplays.xaml;ContentDisplays\DataPresentationTriggers.xaml;ContentDisplays\DownloadDatalogAllAvailable.xaml;ContentDisplays\RadioData.xaml;ContentDisplays\RevisionDisplay.xaml;ContentDisplays\RTCDisplay.xaml;ContentDisplays\TransponderData.xaml;MainWindow.xaml;SplashScreen.xaml;
+46551462791
+157-2005221938
+ContentDisplays\BattLvlDisplay.xaml;ContentDisplays\CommTestDisplay.xaml;ContentDisplays\ConfigDisplay.xaml;ContentDisplays\DatalogDownloadBySize.xaml;ContentDisplays\DatalogDownload.xaml;ContentDisplays\DataLogDownloadByTime.xaml;ContentDisplays\DatalogDownloadInProgress.xaml;ContentDisplays\DatalogDownloadTimeRange.xaml;ContentDisplays\DataPlaybackPresentation.xaml;ContentDisplays\DataPresentation.xaml;ContentDisplays\DataPresentationAdvancedTriggers.xaml;ContentDisplays\DataPresentationDisplays.xaml;ContentDisplays\DataPresentationTriggers.xaml;ContentDisplays\DownloadDatalogAllAvailable.xaml;ContentDisplays\EmployeeLogin.xaml;ContentDisplays\InNetworkLogin.xaml;ContentDisplays\RadioData.xaml;ContentDisplays\RevisionDisplay.xaml;ContentDisplays\RTCDisplay.xaml;ContentDisplays\TransponderData.xaml;LEDIndicator.xaml;MainWindow.xaml;SplashScreen.xaml;
 
 False
 

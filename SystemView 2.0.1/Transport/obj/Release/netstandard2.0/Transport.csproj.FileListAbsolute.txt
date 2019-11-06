@@ -1,0 +1,8 @@
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\bin\Release\netstandard2.0\Transport.deps.json
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\bin\Release\netstandard2.0\Transport.dll
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\bin\Release\netstandard2.0\Transport.pdb
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Release\netstandard2.0\Transport.csproj.CoreCompileInputs.cache
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Release\netstandard2.0\Transport.AssemblyInfoInputs.cache
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Release\netstandard2.0\Transport.AssemblyInfo.cs
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Release\netstandard2.0\Transport.dll
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Release\netstandard2.0\Transport.pdb

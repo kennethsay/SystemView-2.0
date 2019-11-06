@@ -47,6 +47,13 @@ namespace SystemView.ContentDisplays
         private RadioMessages myRadioMsgs;
         public DataPresentation activePresent;
 
+        // needed for TRACKLIMIT
+        private int lastDash = 0;
+        private int tempDash = 0;
+        private int tempTrackSpeed = 0;
+        private int altDash = 0;
+        private int initDDFlag = 0;
+
         private RadioDataItem _selectedItem;
         public RadioDataItem SelectedRadioItem
         {
@@ -168,6 +175,13 @@ namespace SystemView.ContentDisplays
 
             SystemView.MainWindow._appWindow.IOToggle.IsEnabled = true;
             this.Unloaded += UnloadedEvent;
+
+            // needed for TRACKLIMIT
+            lastDash = 0;
+            tempDash = 0;
+            tempTrackSpeed = 0;
+            altDash = 0;
+            initDDFlag = 0;
 
             startRTM();    
         }        
@@ -338,7 +352,16 @@ namespace SystemView.ContentDisplays
                         }
                         else
                         {
-                            Data[tags.Name] = tags.ValueToString();
+                            // these parameters must be processed/formatted
+                            if (tags.TagID == 1 | tags.TagID == 2 | tags.TagID == 21 | tags.TagID == 23 | tags.TagID == 39)
+                            {
+                                Data[tags.Name] = dataNotRaw(tags.TagID, tags);
+                            }
+
+                            else
+                            {
+                                Data[tags.Name] = tags.ValueToString();
+                            }
                         }                        
                     }                   
                 }
@@ -362,6 +385,270 @@ namespace SystemView.ContentDisplays
             catch (Exception ex)
             {
 
+            }
+        }
+
+        private string dataNotRaw(int tagID, Tag tag)
+        {
+            switch (tagID)
+            {
+                case 1:
+                    return getMilePost(tag);
+
+                case 2:
+                    return getChainage(tag);
+
+                case 21:
+                    return getTrackLimit(tag);
+
+                case 23:
+                    return getTrainType(tag);
+
+                case 39:
+                    return getSignalStatus(tag);
+
+                // should never happen
+                default:
+                    return "error in DataPlaybackPresentation.xaml.cs : method dataNotRaw";
+            }
+        }
+
+        private string getMilePost(Tag tag)
+        {
+            float loc = (float)Datalog.bytesToInt(tag.Data(), 2) / 176;
+            return (Math.Truncate(loc * 10) / 10).ToString();
+        }
+
+        private string getChainage(Tag tag)
+        {
+            int chainage = Datalog.bytesToInt(tag.Data(), 2) * 10;
+            return chainage.ToString();
+        }
+
+        private string getTrackLimit(Tag tag)
+        {
+            byte[] dashBytes = Result.Tags.Find(X => X.TagID == 30).Data();
+            byte dashByte = dashBytes[0];
+            bool dash;
+            bool tsrListOK;
+
+
+            int trackSpeed = Datalog.bytesToInt(tag.Data(), 1);
+            bool mbs;
+            byte[] mbsBytes = Result.Tags.Find(X => X.TagID == 78).Data();
+
+            if ((byte)(mbsBytes[1] & 0x04) == 0x04)
+            {
+                mbs = true;
+            }
+            else
+            {
+                mbs = false;
+            }
+
+            dashByte = (byte)(dashByte & 0x80);
+
+            if (dashByte == 0x80)
+            {
+                dash = true;
+            }
+            else
+            {
+                dash = false;
+            }
+
+            byte[] tsrListBytes = Result.Tags.Find(X => X.TagID == 38).Data();
+            byte tsrListByte = tsrListBytes[0];
+
+            tsrListByte = (byte)((tsrListByte >> 7) & 0x01);
+
+            if (tsrListByte == 0x01)
+            {
+                tsrListOK = false;
+            }
+            else
+            {
+                tsrListOK = true;
+            }
+
+            if ((byte)(tsrListBytes[0] & 0x3f) > 0)
+            {
+                altDash = 0;
+            }
+            else
+            {
+                altDash = 1;
+            }
+
+            if (dash)
+            {
+                if ((!tsrListOK) & (altDash > 0))
+                {
+                    if (mbs & trackSpeed != 0)
+                    {
+                        if (lastDash == 0)
+                        {
+                            lastDash = 1;
+                        }
+
+                        return "--";
+                    }
+
+                    else if (mbs & trackSpeed == 0)
+                    {
+                        lastDash = 0;
+                        return trackSpeed.ToString();
+                    }
+
+                    else
+                    {
+                        if (tempDash == 0)
+                        {
+                            tempDash = 1;
+                            lastDash = 0;
+                            return "--";
+                        }
+
+                        else
+                        {
+                            tempDash = 0;
+                            lastDash = 0;
+                            initDDFlag = 1;
+                            return trackSpeed.ToString();
+                        }
+                    }
+                }
+
+                else if (trackSpeed != 0)
+                {
+                    tempDash = 1;
+                    lastDash = 1;
+                    return "--";
+                }
+
+                else
+                {
+                    tempDash = 0;
+                    lastDash = 0;
+                    return trackSpeed.ToString();
+                }
+            }
+
+            else if (tempTrackSpeed != trackSpeed | (tsrListOK & lastDash == 1))
+            {
+                tempTrackSpeed = trackSpeed;
+                lastDash = 0;
+                initDDFlag = 1;
+                return trackSpeed.ToString();
+            }
+
+            else if (tsrListOK & lastDash == 0 & initDDFlag == 0)
+            {
+                tempTrackSpeed = trackSpeed;
+                lastDash = 0;
+                initDDFlag = 1;
+                return trackSpeed.ToString();
+            }
+
+            else
+            {
+                tempTrackSpeed = trackSpeed;
+                lastDash = 0;
+                return trackSpeed.ToString();
+            }
+        }
+
+        private string getTrainType(Tag tag)
+        {
+            int trainType = Datalog.bytesToInt(tag.Data(), 1);
+
+            if (trainType == 0)
+            {
+                return "0";
+            }
+            else if (trainType == 1)
+            {
+                return "A";
+            }
+            else if (trainType == 2)
+            {
+                return "B";
+            }
+            else if (trainType == 3)
+            {
+                return "C";
+            }
+            else if (trainType == 4)
+            {
+                return "D";
+            }
+            else if (trainType == 5)
+            {
+                return "E";
+            }
+            else
+            {
+                return "x";
+            }
+
+        }
+
+        private string getSignalStatus(Tag tag)
+        {
+            int sigStat = Datalog.bytesToInt(tag.Data(), 1);
+
+            switch (sigStat)
+            {
+                case 0:
+                    return "STOP";
+
+                case 1:
+                    return "10";
+
+                case 2:
+                    return "15";
+
+                case 3:
+                    return "20";
+
+                case 4:
+                    return "25";
+
+                case 5:
+                    return "30";
+
+                case 6:
+                    return "35";
+
+                case 7:
+                    return "40";
+
+                case 8:
+                    return "45";
+
+                case 9:
+                    return "50";
+
+                case 10:
+                    return "60";
+
+                case 11:
+                    return "70";
+
+                case 12:
+                    return "80";
+
+                case 13:
+                    return "NA";
+
+                case 14:
+                    return "NA";
+
+                case 15:
+                    return "STOP";
+
+                default:
+                    return "error in DataPlaybackPresentation.xaml.cs : method getSignalStatus";
             }
         }
 

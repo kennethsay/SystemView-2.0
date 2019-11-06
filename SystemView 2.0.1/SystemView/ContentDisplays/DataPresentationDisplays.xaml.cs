@@ -42,26 +42,29 @@ namespace SystemView.ContentDisplays
 
             foreach (var tag in displayTagList.Tags)
             {
-                CheckBox display = new CheckBox
+                //these tag IDs correspond to tags that are not used as data parameters
+                if (!(tag.TagID == 13 | tag.TagID == 14 | tag.TagID == 15 | tag.TagID == 32 | tag.TagID == 63 | tag.TagID == 64 | tag.TagID == 70))
                 {
-                    Content = tag.Name,
-                    Margin = new Thickness(5),
-                };
+                    CheckBox display = new CheckBox
+                    {
+                        Content = tag.Name,
+                        Margin = new Thickness(5),
+                    };
 
-                display.Checked += displaySelect;
-                display.Unchecked += displayDeSelect;
+                    display.Checked += displaySelect;
+                    display.Unchecked += displayDeSelect;
 
+                    if ((ActiveDisplays.Contains(displayTagList.TagIDByName(tag.Name))))
+                    {
+                        display.IsChecked = true;
+                    }
+                    else
+                    {
+                        display.IsChecked = false;
+                    }
 
-                if ((ActiveDisplays.Contains(displayTagList.TagIDByName(tag.Name))))
-                {
-                    display.IsChecked = true;
+                    DisplayPanel.Children.Add(display);
                 }
-                else
-                {
-                    display.IsChecked = false;
-                }
-
-                DisplayPanel.Children.Add(display);
             }            
         }
   
@@ -101,6 +104,7 @@ namespace SystemView.ContentDisplays
         {
             try
             {
+               
                 // Convert the sender object to the Checkbox type. This lets us get to the content property of the control. 
                 CheckBox display = sender as CheckBox;
 
@@ -112,6 +116,7 @@ namespace SystemView.ContentDisplays
                 }
                 else
                 {
+                   
                     // Otherwise, add the trigger to the active trigger list. This change will be reflected in the next RTM update. 
                     ActiveDisplays.Add(displayTagList.TagIDByName(display.Content.ToString()));
                 }

@@ -32,8 +32,11 @@ namespace AppLogic
         const int RADIO_LENGTH = 39;
         private static int _railroadID;
         private static int passCounter;
+        private static int _numEvents;
 
         int dataLengthIndex;
+        int msgIndex;
+        int DATrecordIndex;
         int dataEnd;
         byte[] data;
         byte[] datFile;
@@ -50,6 +53,15 @@ namespace AppLogic
             }
         }
 
+        public int NumEvents
+        {
+            get { return _numEvents;  }
+            set
+            {
+                _numEvents = value;
+            }
+        }
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -57,6 +69,7 @@ namespace AppLogic
         {
             referenceList = new TagList();
             dataLengthIndex = 0;
+            
             sdfFile = null;
             datFile = null;
         }
@@ -69,6 +82,7 @@ namespace AppLogic
             try
             {
                 OpenDATFile = new OpenFileDialog();
+                OpenDATFile.Filter = "data files | *.dat; *.sdf";
                 OpenDATFile.ShowDialog();
                 DATFileName = OpenDATFile.FileName;
 
@@ -108,7 +122,8 @@ namespace AppLogic
             }
             else if (sdfFile == null && datFile != null)
             {
-                readDATFile();
+                //readDATFile();
+                openDATFile();
             }
             else
             {
@@ -185,6 +200,241 @@ namespace AppLogic
                 return null;
                 // error message if another program is usin
             }
+        }
+
+        private void openDATFile()
+        {
+            _railroadID = (int)(datFile[27]);
+            int dataSize = (datFile.Length - 736);
+            NumEvents = getNumEvents();
+            data = new byte[dataSize];
+            Buffer.BlockCopy(datFile, 736, data, 0, dataSize);
+            DATrecordIndex = 0;
+            passCounter = 0;
+            dataEnd = getDataEnd(data);
+        }
+
+        private int getNumEvents()
+        {
+            int numEvents = 0;
+
+            numEvents += datFile[703] << 24;
+            numEvents += datFile[702] << 16;
+            numEvents += datFile[701] << 8;
+            numEvents += datFile[700];
+
+            return numEvents;
+        }
+
+        public void queueOneRecord(int eventNum)
+        {
+            if (DATrecordIndex < eventNum)
+            {
+                while (DATrecordIndex < eventNum)
+                {
+                    while (data[dataLengthIndex] != 0xFF)
+                    {
+                        dataLengthIndex++;
+                    }
+
+                    dataLengthIndex++;
+                    DATrecordIndex++;
+                }
+            }
+
+            else if (DATrecordIndex > eventNum)
+            {
+                while (DATrecordIndex > eventNum)
+                {
+                    while (data[dataLengthIndex] != 0xFF)
+                    {
+                        dataLengthIndex--;
+                    }
+
+                    DATrecordIndex--;
+                }
+            }
+
+            //dataLengthIndex++;
+            //Console.WriteLine(dataLengthIndex);
+
+            TagList Tags = new TagList();
+            _thisTagList = new TagList();
+
+            int tagIDindex;
+            int lengthOfTag;
+            int recordsBacktracked = 0;
+            msgIndex = dataLengthIndex;
+
+            do
+            {
+                Tags = new TagList();
+
+                while (data[msgIndex] != 0xFF)
+                {
+                    try
+                    {
+                        tagIDindex = data[msgIndex];
+                        msgIndex++;
+
+                        lengthOfTag = Tags.Tags.Find(X => X.TagID == tagIDindex).Length;
+
+                        byte[] dataToAdd = new byte[lengthOfTag];
+
+                        for (int i = 0; i < lengthOfTag; i++)
+                        {
+                            if (data[msgIndex] == 0xFF)
+                            {
+                                break;
+                            }
+                            else if (data[msgIndex] == 0xF0)
+                            {
+                                byte highNibble = (byte)(data[msgIndex] & 0xF0);
+                                msgIndex++;
+                                byte lowNibble = (byte)(data[msgIndex] & 0x0F);
+                                msgIndex++;
+                                // Conjoin the nibbles to form byte of data
+                                dataToAdd[i] = (byte)(highNibble | lowNibble);
+                            }
+                            else
+                            {
+                                dataToAdd[i] = data[msgIndex];
+                                msgIndex++;
+                            }
+                        }
+
+                        Tags.Tags.Find(X => X.TagID == tagIDindex).Data(dataToAdd);
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        //Console.WriteLine(dataLengthIndex);
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append(String.Format("DataPlayback::BLAHHHHH-threw exception {0}", ex.ToString()));
+
+                        Console.WriteLine(sb.ToString());
+                        // Skip over bad datHeader
+                        while (data[msgIndex] != 0xFF)
+                        {
+                            msgIndex++;
+                        }
+                    }
+                } // End While for each Tag message read until 0xFF!!
+
+                if (!fullRecord(Tags) & msgIndex != 0)
+                {
+                    recordsBacktracked++;
+                    msgIndex--;
+
+                    while (data[msgIndex] != 0xFF & msgIndex != 0)
+                    {
+                        msgIndex--;
+                    }
+
+                    if (msgIndex != 0)
+                    {
+                        msgIndex--;
+                    }
+                  
+
+                    while (data[msgIndex] != 0xFF & msgIndex != 0)
+                    {
+                        msgIndex--;
+                    }
+
+                    if (msgIndex != 0)
+                    {
+                        msgIndex++;
+                    }
+                }
+            } while (!fullRecord(Tags) & msgIndex != 0);
+
+            TagList nextRecord = new TagList();
+            msgIndex++;
+
+            for (int i = 0; i < recordsBacktracked; i++)
+            {
+                while (data[msgIndex] != 0xFF)
+                {
+                    try
+                    {
+                        tagIDindex = data[msgIndex];
+                        msgIndex++;
+
+                        lengthOfTag = nextRecord.Tags.Find(X => X.TagID == tagIDindex).Length;
+
+                        byte[] dataToAdd = new byte[lengthOfTag];
+
+                        for (int j = 0; j < lengthOfTag; j++)
+                        {
+                            if (data[msgIndex] == 0xFF)
+                            {
+                                break;
+                            }
+                            else if (data[msgIndex] == 0xF0)
+                            {
+                                byte highNibble = (byte)(data[msgIndex] & 0xF0);
+                                msgIndex++;
+                                byte lowNibble = (byte)(data[msgIndex] & 0x0F);
+                                msgIndex++;
+                                // Conjoin the nibbles to form byte of data
+                                dataToAdd[j] = (byte)(highNibble | lowNibble);
+                            }
+                            else
+                            {
+                                dataToAdd[j] = data[msgIndex];
+                                msgIndex++;
+                            }
+                        }
+
+                        nextRecord.Tags.Find(X => X.TagID == tagIDindex).Data(dataToAdd);
+                    }
+                    catch (NullReferenceException ex)
+                    {
+                        //Console.WriteLine(dataLengthIndex);
+                        StringBuilder sb = new StringBuilder();
+                        sb.Append(String.Format("DataPlayback::BLAHHHHH-threw exception {0}", ex.ToString()));
+
+                        Console.WriteLine(sb.ToString());
+                        // Skip over bad datHeader
+                        while (data[msgIndex] != 0xFF)
+                        {
+                            msgIndex++;
+                        }
+                    }
+                } // End While for each Tag message read until 0xFF!!
+
+                for (int k = 0; k < 92; k++)
+                {
+                    if (nextRecord.Tags.Find(X => X.TagID == k).HasData)
+                    {
+                        // UPDATE DATA IF DATA EXISTS
+                        Tags.Tags.Find(X => X.TagID == k).AbsoluteDataWrite(nextRecord.Tags.Find(X => X.TagID == k).Data());
+                    }
+                }
+
+                nextRecord = new TagList();
+            }
+
+            Console.WriteLine("Should Enqueue");   
+            TagListQueue.Enqueue(Tags);
+        }
+
+        private bool fullRecord(TagList record)
+        {
+            for (int i = 0; i < 90; i++)
+            {
+                if (!(i == 13 | i == 14 | i == 15 | i == 32 | i == 55 | i == 63 | i == 64 | i == 70))
+                {
+                    if (!record.Tags.Find(X => X.TagID == i).HasData)
+                    {
+                        Console.WriteLine(i);
+
+                        return false;
+                    }
+                } 
+            }
+
+            return true;
         }
 
 
@@ -298,7 +548,7 @@ namespace AppLogic
                     }
                     else if (secondTag)
                     {
-                        firstTagInList.Tags.Find(X => X.TagID == 90).Data(Tags.Tags.Find(X => X.TagID == 91).Data());
+                        firstTagInList.Tags.Find(X => X.TagID == 90).Data(Tags.Tags.Find(X => X.TagID == 90).Data());
                         firstTagInList.Tags.Find(X => X.TagID == 91).Data(Tags.Tags.Find(X => X.TagID == 91).Data());
                         secondTag = false;
                         TagListQueue.Enqueue(firstTagInList);

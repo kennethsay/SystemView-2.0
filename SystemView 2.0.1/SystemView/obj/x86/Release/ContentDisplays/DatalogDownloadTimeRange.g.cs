@@ -43,6 +43,7 @@ using Telerik.Windows.Controls.Legend;
 using Telerik.Windows.Controls.MultiColumnComboBox;
 using Telerik.Windows.Controls.Primitives;
 using Telerik.Windows.Controls.RadialMenu;
+using Telerik.Windows.Controls.RibbonView;
 using Telerik.Windows.Controls.TransitionEffects;
 using Telerik.Windows.Controls.TreeListView;
 using Telerik.Windows.Controls.TreeView;

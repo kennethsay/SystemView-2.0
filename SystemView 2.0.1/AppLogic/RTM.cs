@@ -200,7 +200,7 @@ namespace AppLogic
                                 msgIndex++;
                                 for (int i = 0; i < lengthOfTag; i++)
                                 {
-                                    //If 0xF0 Escape character is encountered, the next two bytes collide nibbles
+                                    // If 0xF0 Escape character is encountered, the next two bytes collide nibbles
                                     if (msgBase.Data[(msgIndex)] == 0xF0)
                                     {
                                         Byte High = (byte)(msgBase.Data[(msgIndex)]);

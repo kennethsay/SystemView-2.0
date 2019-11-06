@@ -1309,7 +1309,7 @@ namespace AppLogic
         /// <param name="byteInt">Byte Array</param>
         /// <param name="Length">Length of Byte Array</param>
         /// <returns>Integer</returns>
-        private static int bytesToInt(byte[] byteInt, int Length)
+        public static int bytesToInt(byte[] byteInt, int Length)
         {
             try
             {

@@ -78,22 +78,22 @@ namespace SystemView
 
                                 if (frontCab == 0x02)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("FRONT CAB ACTIVE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("FRONT CAB ACTIVE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
                                     return "F";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("FRONT CAB ACTIVE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("FRONT CAB ACTIVE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
                                 }
 
                                 if (rearCab == 0x08)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("REAR CAB ACTIVE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("REAR CAB ACTIVE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
                                     return "R";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("REAR CAB ACTIVE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("REAR CAB ACTIVE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
                                 }
 
                                 return " ";
@@ -108,12 +108,12 @@ namespace SystemView
 
                                 if (paramByte == 0x80)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
                                     return "B";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
                                     return " ";
                                 }
                             }
@@ -140,12 +140,12 @@ namespace SystemView
                                 if (hw == 0x80 | phw1 == 0x02 | phw2 == 0x02)
                                 {
                                     
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTIN VIA ADU", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTIN VIA ADU", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
                                     return "CI";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTIN VIA ADU", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTIN VIA ADU", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
                                     return " ";
                                 }
 
@@ -165,19 +165,19 @@ namespace SystemView
 
                                 if (hw == 0x80 | phw1 == 0x02 | phw2 == 0x02)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTOUT VIA ADU", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC HARDWIRE CUTOUT", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTOUT VIA ADU", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC HARDWIRE CUTOUT", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ATC);
                                     return " ";
                                 }
                                 else
                                 {
                                     if (hw == 0x80)
                                     {
-                                        SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC HARDWIRE CUTOUT", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
+                                       // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC HARDWIRE CUTOUT", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
                                     }
                                     else
                                     {
-                                        SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTOUT VIA ADU", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
+                                       // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ATC CUTOUT VIA ADU", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ATC);
                                     }                                   
                                     
                                     return "CO";
@@ -200,13 +200,13 @@ namespace SystemView
 
                                 if ((paramByte & 0x02) == 0x02)
                                 {                                    
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ACSES CUTIN/OPR", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ACSES CUTIN/OPR", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
                                     return "CI";
                                 }
 
                                 else
                                 {                                    
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ACSES CUTIN/OPR", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ACSES CUTIN/OPR", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
                                     return " ";
                                 }
                             }
@@ -264,47 +264,47 @@ namespace SystemView
 
                                 if ((paramByte & 0x80) == 0x80)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLD", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
+                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLD", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLD", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
+                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLD", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
                                 }
 
                                 if ((paramByte & 0x40) == 0x40)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLP", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
+                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLP", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLP", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
+                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("SLP", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
                                 }
 
                                 if ((paramByte & 0x20) == 0x20)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
                                 }
 
                                 if ((paramByte & 0x10) == 0x10)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
                                 }
 
                                 if ((paramByte & 0x08) == 0x08)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("WE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
+                                   // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("WE", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.SS);
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("WE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("WE", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.SS);
                                 }
                                 if (paramByte > 0)
                                 {
@@ -592,12 +592,12 @@ namespace SystemView
 
                                 if (paramByte == 0x01)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TRAILING", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TRAILING", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
                                     return "T";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TRAILING", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("TRAILING", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
                                     return "L";
                                 }
 
@@ -1393,12 +1393,12 @@ namespace SystemView
 
                                 if (paramByte == 0x01)
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
                                     return "P";
                                 }
                                 else
                                 {
-                                    SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
                                     return " ";
                                 }
                             }
@@ -1500,8 +1500,8 @@ namespace SystemView
                             {
 
 
-                                return " ";
-                                //return BCPNUM(record);
+                                BCPNum BCPnum = new BCPNum();
+                                return BCPnum.getBCPNum(record);
 
                             }
 

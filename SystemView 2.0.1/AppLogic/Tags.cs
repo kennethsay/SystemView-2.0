@@ -675,7 +675,7 @@ namespace AppLogic
                 Tags.Add(new Tag(34, "Radio Link Status", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(35, "Decelerometer Control", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(36, "PTS Alert Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(37, "PTE Brake Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(37, "PTS Brake Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(38, "Dash-Dash Control", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(39, "Signal Status", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(40, "HS Exit Track", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
