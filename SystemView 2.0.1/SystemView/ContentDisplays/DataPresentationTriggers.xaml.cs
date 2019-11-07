@@ -75,9 +75,10 @@ namespace SystemView.ContentDisplays
             {
                 ActiveTriggers = new List<byte>();
 
-                ActiveTriggers.Add(triggerTagList.TagIDByName("Milepost"));
-                ActiveTriggers.Add(triggerTagList.TagIDByName("Chainage"));
-                ActiveTriggers.Add(triggerTagList.TagIDByName("Speed"));                
+                ActiveTriggers.Add(triggerTagList.TagIDByName("LOCATION"));
+                ActiveTriggers.Add(triggerTagList.TagIDByName("CHAINAGE"));
+                ActiveTriggers.Add(triggerTagList.TagIDByName("SPEED"));
+                ActiveTriggers.Add(triggerTagList.TagIDByName("DATETIME"));
             }
             catch
             {

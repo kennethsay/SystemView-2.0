@@ -79,20 +79,20 @@ namespace SystemView.ContentDisplays
             {
                 ActiveDisplays = new List<byte>();
 
-                ActiveDisplays.Add(displayTagList.TagIDByName("Date Time"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Milepost"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Chainage"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Speed"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Governing Alert Speed"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Governing Brake Speed"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES Mode"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Vehicle Max Speed"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("RR Line #"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Track #"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Linking Distance Actual"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Track Limit"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PTS Alert Speed"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PTS Brake Speed"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("DATETIME"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("LOCATION"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("CHAINAGE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("SPEED"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ALERT CURVE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("BRAKE CURVE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES MODE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("VEHICLE MAX SPEED"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("RR LINE #"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TRACK #"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("LINK TARGET"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TRACK LIMIT"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PTS ALERT CURVE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PTS BRAKE CURVE"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("PTSZONE"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACTIVECAB"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ALARM"));
@@ -111,6 +111,8 @@ namespace SystemView.ContentDisplays
                 ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXENC"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXTSR"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("TSRLISTOK"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("SERVICE PEN"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("EM PENALTY"));
             }
             catch
             {

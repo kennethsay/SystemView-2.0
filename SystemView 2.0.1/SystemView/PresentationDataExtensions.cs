@@ -441,8 +441,8 @@ namespace SystemView
                         case 1:
                             {
                                 // if LIRR
-                                /*if (railRoad == 1)
-                                {
+                                //if (railRoad == 1)
+                               // {
                                     byte[] data = record.Tags.Find(X => X.TagID == id).Data();
                                     byte paramByte = data[0];
 
@@ -456,13 +456,13 @@ namespace SystemView
                                     {
                                         return " ";
                                     }
-                                }
+                                /*}
                                 else
                                 {
                                     return " ";
                                 }*/
 
-                                return " ";
+                               // return " ";
                             }
                         default:
                             return "error";

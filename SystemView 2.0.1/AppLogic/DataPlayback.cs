@@ -416,7 +416,8 @@ namespace AppLogic
                 nextRecord = new TagList();
             }
 
-            Console.WriteLine("Should Enqueue");   
+            // Console.WriteLine("
+               
             TagListQueue.Enqueue(Tags);
         }
 
@@ -428,7 +429,7 @@ namespace AppLogic
                 {
                     if (!record.Tags.Find(X => X.TagID == i).HasData)
                     {
-                        Console.WriteLine(i);
+                        //Console.WriteLine(i);
 
                         return false;
                     }
