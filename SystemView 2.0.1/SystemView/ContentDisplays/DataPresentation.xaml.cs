@@ -645,7 +645,7 @@ namespace SystemView.ContentDisplays
                     return "NA";
 
                 case 15:
-                    return "STOP";
+                    return "CLS";
 
                 default:
                     return "error in DataPlaybackPresentation.xaml.cs : method getSignalStatus";

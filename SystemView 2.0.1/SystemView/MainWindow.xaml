@@ -428,6 +428,24 @@
                                                 <ScrollViewer>
                                                     <StackPanel Orientation="Horizontal">
                                                         <StackPanel>
+                                                            <Label Content="Build #: 0.00.0002, Date: 11/6/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
+                                                            <TextBlock Text="Notes: Fixed certain incorrect parameters. 
+                                                                       Fixed freezing caused by certain parameters. 
+                                                                       Removed unused tags from display menus.
+                                                                       Added BCPNum class to dat file playback.
+                                                                       Changed file playback to start on pause.
+                                                                       Restructured playback logic to support jumping to event numbers
+                                                                       (Not yet fully implemented on UI side)" FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </ScrollViewer>
+
+                                            </telerik:RadTileViewItem>
+
+                                            <telerik:RadTileViewItem  Header="SYSTEMVIEW REV 0 - BETA" Margin="0 0 0 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                <ScrollViewer>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <StackPanel>
                                                             <Label Content="Build #: 0.00.0001, Date: 10/4/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
                                                             <TextBlock Text="Notes: SystemView Beta version. This is the first version of software to be made available for internal testing." FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
                                                         </StackPanel>

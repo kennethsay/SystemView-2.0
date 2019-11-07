@@ -395,6 +395,8 @@ namespace AppLogic
 
                 percentCompleted = 0;
 
+                EndDT = DateTime.Now;
+
             }
             catch (Exception ex)
             {

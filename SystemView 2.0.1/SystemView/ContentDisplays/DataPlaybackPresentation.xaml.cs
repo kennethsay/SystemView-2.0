@@ -736,7 +736,7 @@ namespace SystemView.ContentDisplays
                     return "NA";
 
                 case 15:
-                    return "STOP";
+                    return "CLS";
 
                 default:
                     return "error in DataPlaybackPresentation.xaml.cs : method getSignalStatus";
@@ -955,7 +955,6 @@ namespace SystemView.ContentDisplays
 
         private void resumeDoWork(object sender, DoWorkEventArgs e)
         {
-           // currentEventNum = 100000;
             while (currentEventNum < _myPlayback.NumEvents & !pausePlayback)
             {  
                 _myPlayback.queueOneRecord(currentEventNum);
@@ -974,7 +973,7 @@ namespace SystemView.ContentDisplays
             playbackIndex = 0;
             _init = true;
             pausePlayback = false;
-            //newPlaybackWorker();
+
         }
 
         /// <summary>

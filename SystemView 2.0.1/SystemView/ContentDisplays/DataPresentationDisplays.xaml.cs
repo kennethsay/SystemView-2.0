@@ -87,6 +87,30 @@ namespace SystemView.ContentDisplays
                 ActiveDisplays.Add(displayTagList.TagIDByName("Governing Brake Speed"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACSES Mode"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("Vehicle Max Speed"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("RR Line #"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("Track #"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("Linking Distance Actual"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("Track Limit"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PTS Alert Speed"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PTS Brake Speed"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PTSZONE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ACTIVECAB"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ALARM"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ACKNOWLEDGE"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("OVERSPEED"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("Signal Status"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("Decel Value"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CIO"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CO OUT"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ATC CIO"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("ATC CO"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("PERMSUPPR"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TPFOUND"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TPMISSING"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TPOUTOFWIN"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXENC"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXTSR"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("TSRLISTOK"));
             }
             catch
             {

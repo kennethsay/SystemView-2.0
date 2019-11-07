@@ -346,6 +346,7 @@ namespace AppLogic
                         msgIndex++;
                     }
                 }
+
             } while (!fullRecord(Tags) & msgIndex != 0);
 
             TagList nextRecord = new TagList();

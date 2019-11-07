@@ -642,8 +642,8 @@ namespace AppLogic
                 Tags.Add(new Tag(1, "Milepost", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(2, "Chainage", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(3, "Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(4, "Railroad Number", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(5, "Track Number", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(4, "RR Line #", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(5, "Track #", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(6, "Aux IO Input 1", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(7, "Aux IO Input 2", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(8, "Tach IO Input 1", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
@@ -659,7 +659,7 @@ namespace AppLogic
                 Tags.Add(new Tag(18, "Departure Test Status", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(19, "Departure Test Events", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(20, "Line Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(21, "Track Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(21, "Track Limit", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(22, "Mag Valve State", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(23, "Train Type", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(24, "Vehicle Type", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
@@ -667,7 +667,7 @@ namespace AppLogic
                 Tags.Add(new Tag(26, "Governing Alert Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(27, "Governing Brake Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(28, "Transponder Entry Count", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(29, "Absolute (Transponder) Direction", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(29, "TP Direction", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(30, "Trigger Status", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(31, "Vehicle Max Speed", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(32, "Unused 32", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
@@ -711,7 +711,7 @@ namespace AppLogic
                 Tags.Add(new Tag(70, "Unused 70", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(71, "Pulse Count", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(72, "Wheel Diameter", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.DECIMAL));
-                Tags.Add(new Tag(73, "Decelerometer Value", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
+                Tags.Add(new Tag(73, "Decel Value", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(74, "AIU Status", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(75, "AIU Aspects", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(76, "SPI Link Status", TAG_LEN.TWO_BYTES, TAG_VALUE_TYPES.HEX));
