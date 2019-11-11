@@ -59,7 +59,7 @@
                 Background="Transparent"
                 BorderBrush="Transparent"
                 Padding="5"/>
-            <TextBox Text="Revision 0.00.0002 (Beta)" 
+            <TextBox Text="Revision 0.00.0003 (Beta)" 
                 HorizontalAlignment="Left" 
                 Height="27"
                 Width="194" 

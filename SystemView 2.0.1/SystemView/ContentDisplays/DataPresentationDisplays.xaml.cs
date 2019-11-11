@@ -98,7 +98,7 @@ namespace SystemView.ContentDisplays
                 ActiveDisplays.Add(displayTagList.TagIDByName("ALARM"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACKNOWLEDGE"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("OVERSPEED"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Signal Status"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("SIGNAL STATUS"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("Decel Value"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CIO"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CO OUT"));

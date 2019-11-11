@@ -541,6 +541,30 @@ namespace SystemView
                         default:
                             return "error";
                     }
+
+                case 28:
+                    switch (paramNum)
+                    {
+                        case 0:
+                            {
+                                byte[] data = record.Tags.Find(X => X.TagID == id).Data();
+                                byte paramByte = data[0];
+
+                                if (paramByte == 0x00)
+                                {
+                                    return "L";
+                                }
+                                else
+                                {
+                                    return " ";
+                                }
+                            }
+
+                        default:
+                            return "error";
+                    }
+
+
                 case 30:
                     switch (paramNum)
                     {

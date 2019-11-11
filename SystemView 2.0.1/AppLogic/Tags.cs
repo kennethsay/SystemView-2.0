@@ -806,6 +806,7 @@ namespace AppLogic
                 Tags.Add(new ExtendedTag(165, "RADIOTXRXMTA", 91, 8));
                 Tags.Add(new ExtendedTag(166, "SERVICE PEN", 17, 0));
                 Tags.Add(new ExtendedTag(167, "EM PENALTY", 17, 1));
+                Tags.Add(new ExtendedTag(168, "LINK ACTUAL", 28, 0));
             }
             catch (Exception ex)
             {

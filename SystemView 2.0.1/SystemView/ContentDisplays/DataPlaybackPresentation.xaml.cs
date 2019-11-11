@@ -442,7 +442,7 @@ namespace SystemView.ContentDisplays
                             //if (tags.HasData)
                           //  {
                                 // these parameters must be processed/formatted
-                                if (tags.TagID == 1 | tags.TagID == 2 | tags.TagID == 21 | tags.TagID == 23 | tags.TagID == 39)
+                                if (tags.TagID == 1 | tags.TagID == 2 | tags.TagID == 21 | tags.TagID == 23 | tags.TagID == 29 | tags.TagID == 39 | tags.TagID == 72 | tags.TagID == 73)
                                 {
                                     Data[tags.Name] = dataNotRaw(tags.TagID, tags); 
                                 }
@@ -495,8 +495,17 @@ namespace SystemView.ContentDisplays
                 case 23:
                     return getTrainType(tag);
 
+                case 29:
+                    return getTPDir(tag);
+
                 case 39:
                     return getSignalStatus(tag);
+
+                case 72:
+                    return getWheelDiam(tag);
+
+                case 73:
+                    return getDecelValue(tag);
 
                 // should never happen
                 default:
@@ -741,6 +750,35 @@ namespace SystemView.ContentDisplays
                 default:
                     return "error in DataPlaybackPresentation.xaml.cs : method getSignalStatus";
             }
+        }
+
+        private string getTPDir(Tag tag)
+        {
+            int TPDir = Datalog.bytesToInt(tag.Data(), 1);
+
+            if (TPDir == 1)
+            {
+                return "U";
+            }
+
+            else
+            {
+                return "D";
+            }
+        }
+
+        private string getWheelDiam(Tag tag)
+        {
+            double wheelDiam = (double)Datalog.bytesToInt(tag.Data(), 2) / 100;
+            StringBuilder wheelDiamSB = new StringBuilder();
+            wheelDiamSB.Append(Math.Round(wheelDiam, 2).ToString() + " in.");
+            return wheelDiamSB.ToString();
+        }
+
+        private string getDecelValue(Tag tag)
+        {
+            double decelValue = (double)Datalog.bytesToInt(tag.Data(), 2) * 0.005361;
+            return Math.Round(decelValue, 2).ToString();
         }
 
         private bool updateDisplayList(List<Byte> Tags)
