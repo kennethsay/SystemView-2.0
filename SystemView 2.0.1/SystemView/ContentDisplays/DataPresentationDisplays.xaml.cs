@@ -99,7 +99,7 @@ namespace SystemView.ContentDisplays
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACKNOWLEDGE"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("OVERSPEED"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("SIGNAL STATUS"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("Decel Value"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("DECEL VALUE"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CIO"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CO OUT"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("ATC CIO"));
@@ -113,6 +113,7 @@ namespace SystemView.ContentDisplays
                 ActiveDisplays.Add(displayTagList.TagIDByName("TSRLISTOK"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("SERVICE PEN"));
                 ActiveDisplays.Add(displayTagList.TagIDByName("EM PENALTY"));
+                ActiveDisplays.Add(displayTagList.TagIDByName("REVHANDLE"));
             }
             catch
             {

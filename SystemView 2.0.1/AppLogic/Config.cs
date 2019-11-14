@@ -508,5 +508,32 @@ namespace AppLogic
                 return null;
             }
         }
+
+        // checks that permanent suppression and vzero are set before allowing user to access config screen
+        public bool permSuppVZCheck()
+        {
+            RTM rtm = new RTM();
+
+            if (!rtm.RTMStarted)
+            {
+                return false;
+            }
+
+            TagList record = rtm.CollectRecord();
+
+            byte[] tachin2 = record.Tags.Find(X => X.TagID == 9).Data();
+            byte[] tach1Stat = record.Tags.Find(X => X.TagID == 10).Data();
+            byte[] aduOut1 = record.Tags.Find(X => X.TagID == 84).Data();
+
+            if (((tachin2[0] & 0x04) == 0x04) & !(((tach1Stat[0] & 0x01) == 0x01) | ((aduOut1[0] >> 3) & 0x01) == 0x01))
+            {
+                return true;
+            }
+
+            else
+            {
+                return false;
+            }
+        }
     }
 }

@@ -105,8 +105,17 @@ namespace SystemView
                             {
                                 byte[] data = record.Tags.Find(X => X.TagID == id).Data();
                                 byte paramByte = (byte)(data[0] & 0x80);
+                                byte rearCab = (byte)(data[0] & 0x08);
 
-                                if (paramByte == 0x80)
+                                byte[] tach1 = record.Tags.Find(X => X.TagID == 8).Data();
+                                byte frontCab = (byte)(tach1[0] & 0x02);
+
+
+                                byte[] tach2 = record.Tags.Find(X => X.TagID == 9).Data();
+                                byte fsb = (byte)(tach2[0] & 0x01);
+
+                                if ((rearCab == 0x08 & paramByte == 0x80) | (frontCab == 0x02 & fsb == 0x01))
+
                                 {
                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.CAB);
                                     return "B";
@@ -116,6 +125,110 @@ namespace SystemView
                                    // SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("ASB", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.CAB);
                                     return " ";
                                 }
+                            }
+
+                        // REVHANDLE
+                        case 3:
+                            {
+                                 byte[] aux1 = record.Tags.Find(X => X.TagID == id).Data();
+                                 byte rearCab = (byte)(aux1[0] & 0x08);
+                                 byte rCabF = (byte)(aux1[0] & 0x02);
+                                 byte rCabR = (byte)(aux1[0] & 0x01);
+                                 byte rCabN = (byte)(aux1[0] & 0x04);
+
+                                 byte[] tach1 = record.Tags.Find(X => X.TagID == 8).Data();
+                                 byte frontCab = (byte)(tach1[0] & 0x02);
+                                 byte fCabF = (byte)(tach1[0] & 0x10);
+                                 byte fCabR = (byte)(tach1[0] & 0x20);
+
+                                 byte[] tach2 = record.Tags.Find(X => X.TagID == 9).Data();
+                                 byte fCabN = (byte)(tach1[0] & 0x80);
+
+                                 int revHandle = 0;
+
+                                
+
+                                 if ((frontCab == 0x02 & rearCab == 0x08) | ((frontCab != 0x02) & (rearCab != 0x08)))
+                                 {
+                                     revHandle = 0;
+                                 }
+
+                                 else if (frontCab == 0x02)
+                                 {
+                                     if (fCabF == 0x10)
+                                     {
+                                         revHandle = 1;
+                                     }
+
+                                     else if (fCabR == 0x20)
+                                     {
+                                         revHandle = 2;
+                                     }
+
+                                     else if (fCabN == 0x80)
+                                     {
+                                         revHandle = 3;
+                                     }
+
+                                     else
+                                     {
+                                         revHandle = 0;
+                                     }
+
+                                     if (fCabF == 0x10 & fCabR == 0x20)
+                                     {
+                                         revHandle = 0;
+                                     }
+                                 }
+
+                                 else if (rearCab == 0x08)
+                                 {
+                                     if (rCabF == 0x02)
+                                     {
+                                         revHandle = 1;
+                                     }
+
+                                     else if (rCabR == 0x01)
+                                     {
+                                         revHandle = 2;
+                                     }
+
+                                     else if (rCabN == 0x04)
+                                     {
+                                         revHandle = 3;
+                                     }
+
+                                     else
+                                     {
+                                         revHandle = 0;
+                                     }
+
+                                     if (rCabF == 0x02 & rCabR == 0x01)
+                                     {
+                                         revHandle = 0;
+                                     }
+                                 }
+
+                                 switch (revHandle)
+                                 {
+                                     case 0:
+                                         return " ";
+
+                                     case 1:
+                                         return "F";
+
+                                     case 2:
+                                         return "R";
+
+                                     case 3:
+                                         return "N";
+
+                                     default:
+                                         return "error";
+                                 }
+
+                                //return " ";
+
                             }
 
                         default:
@@ -978,7 +1091,7 @@ namespace SystemView
                         case 0:
                             {
                                 byte[] data = record.Tags.Find(X => X.TagID == id).Data();
-                                byte paramByte = data[1];
+                                byte paramByte = data[0];
 
                                 paramByte = (byte)((paramByte >> 1) & 0x01);
 
@@ -1417,13 +1530,13 @@ namespace SystemView
 
                                 if (paramByte == 0x01)
                                 {
-                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
-                                    return "P";
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
+                                    return " ";
                                 }
                                 else
                                 {
-                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.OFF, IOIndicationList.IndicationType.ACSES);
-                                    return " ";
+                                  //  SystemView.MainWindow._appWindow._ioIndications.UpdateIOState("PTS (ABS. STOP REQ)", LEDIndicator.LEDState.ON, IOIndicationList.IndicationType.ACSES);
+                                    return "P ";
                                 }
                             }
 

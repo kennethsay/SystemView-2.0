@@ -866,7 +866,25 @@ namespace SystemView
         }
         public void DisplayControl_AddConfigDisplay(object Sender, RoutedEventArgs e)
         {
-            _mySessionMgr.AddDisplay(DISPLAY_TYPE.CONFIG);
+            CommTest commTest = new CommTest();
+            Config config = new Config();
+            
+           /* if (!commTest.ConnectionEstablished)
+            {
+                MessageBox.Show("SystemView must be connected to an OBC to access train configuration settings. Check the connection status and try again.",
+                                    "Config Error", MessageBoxButton.OK);
+            }*/
+
+            /*else*/ if (!config.permSuppVZCheck()) // TODO: FIX COMMTEST ISSUE (ONLY WORKS FIRST TIME AFTER STARTUP
+            {
+                MessageBox.Show("Permanent Suppression and VZero must be active to configure vehicle. Check operator settings and try again.",
+                                    "Config Error", MessageBoxButton.OK);
+            }
+
+            else
+            {
+                _mySessionMgr.AddDisplay(DISPLAY_TYPE.CONFIG);
+            } 
         }
         public void DisplayControl_AddCommTestDisplay(object Sender, RoutedEventArgs e)
         {
@@ -1135,6 +1153,5 @@ namespace SystemView
         }
 
         #endregion
-
     }
 }

@@ -686,7 +686,7 @@ namespace AppLogic
                 Tags.Add(new Tag(45, "FAULT CODE", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(46, "FAULT ARG", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(47, "X|PTS STATUS", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
-                Tags.Add(new Tag(48, "ACSES ACK REQUESTED", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
+                Tags.Add(new Tag(48, "ACSES ACK REQUIRED", TAG_LEN.BYTE, TAG_VALUE_TYPES.HEX));
                 Tags.Add(new Tag(49, "ACSES ACK DONE", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(50, "CONFIG STATUS", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
                 Tags.Add(new Tag(51, "TARGET SPEED", TAG_LEN.BYTE, TAG_VALUE_TYPES.DECIMAL));
@@ -807,6 +807,7 @@ namespace AppLogic
                 Tags.Add(new ExtendedTag(166, "SERVICE PEN", 17, 0));
                 Tags.Add(new ExtendedTag(167, "EM PENALTY", 17, 1));
                 Tags.Add(new ExtendedTag(168, "LINK ACTUAL", 28, 0));
+                Tags.Add(new ExtendedTag(169, "REVHANDLE", 6, 3));
             }
             catch (Exception ex)
             {
