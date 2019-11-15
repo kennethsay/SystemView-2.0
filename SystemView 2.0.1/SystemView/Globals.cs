@@ -171,8 +171,18 @@ namespace SystemView
 
         public static readonly List<string> VEHICLETYPESLIRR = new List<string>()
         {
+            "M7",
+            "TC-82",
+            "C3",
+            "DE30AC",
+            "DM30AC",
+            "LIRR MP15",
+            "NYAR MP15",
+            "NYAR GP 38-2",
+            "M9",
+            "NYAR PR20B",
             "M3",
-            "M7"
+            
         };
 
         public static readonly List<string> DATALOGDEVICESMNR = new List<string>()
@@ -185,7 +195,10 @@ namespace SystemView
 
         public static readonly List<string> DATALOGDEVICESLIRR = new List<string>()
         {
-            "CHMM"
+            "NONE",
+            "ARMM",
+            "CHMM",
+            "BOTH FOR M9"
         };
 
         public static readonly List<string> DECELDIRECTION = new List<string>()
