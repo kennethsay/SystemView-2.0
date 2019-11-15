@@ -867,7 +867,7 @@ namespace SystemView
         public void DisplayControl_AddConfigDisplay(object Sender, RoutedEventArgs e)
         {
             CommTest commTest = new CommTest();
-            Config config = new Config();
+            //Config config = new Config();
             
            /* if (!commTest.ConnectionEstablished)
             {
@@ -875,16 +875,16 @@ namespace SystemView
                                     "Config Error", MessageBoxButton.OK);
             }*/
 
-            /*else*/ if (!config.permSuppVZCheck()) // TODO: FIX COMMTEST ISSUE (ONLY WORKS FIRST TIME AFTER STARTUP
+            /*else*/ /*if (!config.permSuppVZCheck()) // TODO: FIX COMMTEST ISSUE (ONLY WORKS FIRST TIME AFTER STARTUP
             {
                 MessageBox.Show("Permanent Suppression and VZero must be active to configure vehicle. Check operator settings and try again.",
                                     "Config Error", MessageBoxButton.OK);
             }
 
             else
-            {
+            {*/
                 _mySessionMgr.AddDisplay(DISPLAY_TYPE.CONFIG);
-            } 
+            //} 
         }
         public void DisplayControl_AddCommTestDisplay(object Sender, RoutedEventArgs e)
         {

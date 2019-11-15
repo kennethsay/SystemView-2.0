@@ -121,3 +121,9 @@ C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\AppLogic\ob
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CopyComplete
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csprojAssemblyReference.cache
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.csproj.CoreCompileInputs.cache
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfoInputs.cache
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.AssemblyInfo.cs
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.dll
+D:\SystemView 2.0.1\AppLogic\obj\Debug\netstandard2.0\AppLogic.pdb

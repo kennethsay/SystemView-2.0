@@ -6002,35 +6002,37 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\z0042d8y\\.nuget\\packages\\": {},
+    "C:\\Users\\WIN10TESTPC\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+      "projectUniqueName": "D:\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
       "projectName": "AppLogic",
-      "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
-      "packagesPath": "C:\\Users\\z0042d8y\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\obj\\",
+      "projectPath": "D:\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+      "packagesPath": "C:\\Users\\WIN10TESTPC\\.nuget\\packages\\",
+      "outputPath": "D:\\SystemView 2.0.1\\AppLogic\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\z0042d8y\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\WIN10TESTPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
-              "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj"
+            "D:\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+              "projectPath": "D:\\SystemView 2.0.1\\Transport\\Transport.csproj"
             }
           }
         }
