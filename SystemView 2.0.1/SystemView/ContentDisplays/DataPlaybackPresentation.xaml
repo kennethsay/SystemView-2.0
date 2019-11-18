@@ -10,7 +10,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
 
     <DockPanel>
-        <telerik:RadToolBar Height="40" Margin="0" DockPanel.Dock="Top">
+        <telerik:RadToolBar Height="40" Margin="0,0,-36,0" DockPanel.Dock="Top">
             <Button ToolTip="Play"  Margin="2 0 2 0" Click="Resume" x:Name="PlayData">
                 <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
                     <Image Source="/Icons/icons8-play-100.png"
@@ -74,15 +74,28 @@
                     <TextBlock Text="Radio Data Viewer" VerticalAlignment="Center" Margin="2 0 0 0"/>
                 </StackPanel>
             </Button>
-            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
+            <Button ToolTip="Jump to a specific event number"  Margin="2 0 2 0" Click="changeEventNum">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
                 <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
                     <Image Source="/Icons/icons8-search-100-2.png"
                            Width="25" Height="25" VerticalAlignment="Center"/>
                 </Border>
-                <TextBlock Text="Search" VerticalAlignment="Center"/>
+                <TextBlock Text="Jump to Event:" VerticalAlignment="Center"/>
             </StackPanel>
-            <Border BorderBrush="Black" BorderThickness="1" Width="200" Height="22" Margin="2 0 2 0">
-                <TextBox Name="SearchBox" Height="22" Width="200"/>
+            </Button>
+            <Border BorderBrush="Black" BorderThickness="1" Width="100" Height="22" Margin="2 0 2 0">
+                <TextBox Name="JumpBox"  Height="22" Width="100">
+                    <TextBox.Text>
+                        <Binding Path="EventNumText" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"></Binding>
+                    </TextBox.Text>
+                </TextBox>
+            </Border>
+            <Border BorderBrush="Black" BorderThickness="1" Width="150" Height="22" Margin="2 0 2 0">
+                <TextBox Name="FileInfoBox"  Height="22" Width="150" IsReadOnly="True">
+                    <TextBox.Text>
+                        <Binding Path="NumEventsText" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"></Binding>
+                    </TextBox.Text>
+                </TextBox>
             </Border>
         </telerik:RadToolBar>
         <telerik:RadGridView Name="PresentationGrid" DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding DataBind}" 

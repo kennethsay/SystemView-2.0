@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "D:\\SystemView 2.0.1\\Transport\\Transport.csproj": {}
+    "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {}
   },
   "projects": {
-    "D:\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+    "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "projectUniqueName": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
         "projectName": "Transport",
-        "projectPath": "D:\\SystemView 2.0.1\\Transport\\Transport.csproj",
-        "packagesPath": "C:\\Users\\WIN10TESTPC\\.nuget\\packages\\",
-        "outputPath": "D:\\SystemView 2.0.1\\Transport\\obj\\",
+        "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "packagesPath": "C:\\Users\\z0042d8y\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\WIN10TESTPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\z0042d8y\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

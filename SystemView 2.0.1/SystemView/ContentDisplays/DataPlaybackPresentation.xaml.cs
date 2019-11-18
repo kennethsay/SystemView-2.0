@@ -56,6 +56,8 @@ namespace SystemView.ContentDisplays
         private int _initDDFlag;
 
         private int currentEventNum;
+        private string _eventNumText;
+        private string _totalEvents;
 
         // used to signal display of first record on startup
         private bool _init;
@@ -147,6 +149,26 @@ namespace SystemView.ContentDisplays
             set
             {
                 _playbackBCPnum = value;
+            }
+        }
+
+        public  string EventNumText
+        {
+            get { return _eventNumText; }
+            set
+            {
+                _eventNumText = value;
+                OnPropertyChanged("EventNumText");
+            }
+        }
+
+        public string NumEventsText
+        {
+            get { return _totalEvents; }
+            set
+            {
+                _totalEvents = value;
+                OnPropertyChanged("NumEventsText");
             }
         }
 
@@ -256,6 +278,7 @@ namespace SystemView.ContentDisplays
             try
             {
                 _myPlayback.FileToReadAndPresent();
+                NumEventsText = "Total Events: " + _myPlayback.NumEvents.ToString();
 
                 Result = new TagList();
                 Previous = new TagList();
@@ -833,7 +856,7 @@ namespace SystemView.ContentDisplays
             {
                 this.PresentationGrid.ShowSearchPanel = false;
                 var searchPanel = this.PresentationGrid.ChildrenOfType<GridViewSearchPanel>().FirstOrDefault();
-                this.SearchBox.SetBinding(TextBox.TextProperty, new Binding("SearchText") { Source = searchPanel.DataContext, Mode = BindingMode.TwoWay });
+                //this.SearchBox.SetBinding(TextBox.TextProperty, new Binding("SearchText") { Source = searchPanel.DataContext, Mode = BindingMode.TwoWay });
             }
             catch
             {
@@ -970,6 +993,12 @@ namespace SystemView.ContentDisplays
             {
 
             }
+        }
+
+        private void changeEventNum(object sender, RoutedEventArgs e)
+        {
+            Int32.TryParse(EventNumText, out currentEventNum);
+            Thread.Sleep(10);
         }
 
         public void Pause(object sender, RoutedEventArgs e)

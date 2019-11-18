@@ -502,7 +502,6 @@ C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\bin\Release\it\Telerik.Windows.Controls.resources.dll
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\bin\Release\nl\Telerik.Windows.Controls.resources.dll
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\bin\Release\tr\Telerik.Windows.Controls.resources.dll
-C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Release\SystemView.csprojAssemblyReference.cache
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Release\SystemView.exe.config
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Release\App.baml
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Release\ContentDisplays\BattLvlDisplay.g.cs
