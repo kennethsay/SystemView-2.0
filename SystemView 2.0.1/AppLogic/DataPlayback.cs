@@ -246,13 +246,24 @@ namespace AppLogic
             {
                 while (DATrecordIndex > eventNum)
                 {
-                    while (data[dataLengthIndex] != 0xFF)
+                    while (data[dataLengthIndex] != 0xFF & dataLengthIndex != 0)
                     {
                         dataLengthIndex--;
                     }
 
-                    DATrecordIndex--;
+                    if (dataLengthIndex != 0)
+                    {
+                        dataLengthIndex--;
+                        DATrecordIndex--;
+                    }
                 }
+
+                while (data[dataLengthIndex] != 0xFF & dataLengthIndex != 0)
+                {
+                    dataLengthIndex--;
+                }
+
+                dataLengthIndex++;
             }
 
             //dataLengthIndex++;

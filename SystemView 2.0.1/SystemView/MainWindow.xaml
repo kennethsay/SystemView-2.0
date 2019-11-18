@@ -429,7 +429,7 @@
                                                 <ScrollViewer>
                                                     <StackPanel Orientation="Horizontal">
                                                         <StackPanel>
-                                                            <Label Content="Build #: 0.01.000, Date: 11/15/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
+                                                            <Label Content="Build #: 00.01.000, Date: 11/15/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
                                                             <TextBlock Text="Notes: Added REVHANDLE, Fixed STOPBYPASS, ACSES ACK REQUIRED, ROLLAWAY PEN.
                                                                        Added Jump to Event UI control and total events display to playback.
                                                                        Fixed config issue preventing user from configuring Vehicle Type, Train Type, and external datalogger parameters in configuration for LIRR vehicles. " FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
