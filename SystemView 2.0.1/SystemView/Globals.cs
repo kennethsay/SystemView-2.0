@@ -153,6 +153,19 @@ namespace SystemView
             "D - Freight",
         };
 
+        public static readonly List<int> LIRRTRAINTYPEINDEXLOOKUP = new List<int>()
+        {
+            2, 
+            5
+        };
+
+        public static readonly List<int> MNRTRAINTYPEINDEXLOOKUP = new List<int>()
+        {
+            2,
+            3,
+            4
+        };
+
         public static readonly List<string> VEHICLETYPESMNR = new List<string>()
         {
             "M7A",

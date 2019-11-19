@@ -664,31 +664,24 @@ namespace SystemView.ContentDisplays
             {
                 if (ToReading)
                 {
-
-                    switch(Value)
+                    if (Railroad == 0)
                     {
-                        case 0:
-                            return 2;
-                        case 1:
-                            return 3;
-                        case 2:
-                            return 5;
-                        default:
-                            return 0;
+                        return Globals.LIRRTRAINTYPEINDEXLOOKUP[Value];
+                    }
+                    else
+                    {
+                        return Globals.MNRTRAINTYPEINDEXLOOKUP[Value];
                     }
                 }
                 else
                 {
-                    switch (Value)
+                    if (Railroad == 0)
                     {
-                        case 2:
-                            return 0;
-                        case 3:
-                            return 1;
-                        case 5:
-                            return 2;
-                        default:
-                            return 0;
+                        return Globals.LIRRTRAINTYPEINDEXLOOKUP.IndexOf(Value);
+                    }
+                    else
+                    {
+                        return Globals.MNRTRAINTYPEINDEXLOOKUP.IndexOf(Value);
                     }
                 }
             }
