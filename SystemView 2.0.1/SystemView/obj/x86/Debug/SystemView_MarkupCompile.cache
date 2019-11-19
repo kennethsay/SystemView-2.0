@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\PTE 2.0\SystemView\Code\SystemView Development Repo\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\
 SystemView
 none
 false
 DEBUG;TRACE
-C:\PTE 2.0\SystemView\Code\SystemView Development Repo\SystemView-2.0\SystemView 2.0.1\SystemView\App.xaml
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\App.xaml
 23995642643
 
-46551462791
-157304230655
+47-1546038585
+157-1874506969
 ContentDisplays\BattLvlDisplay.xaml;ContentDisplays\CommTestDisplay.xaml;ContentDisplays\ConfigDisplay.xaml;ContentDisplays\DatalogDownloadBySize.xaml;ContentDisplays\DatalogDownload.xaml;ContentDisplays\DataLogDownloadByTime.xaml;ContentDisplays\DatalogDownloadInProgress.xaml;ContentDisplays\DatalogDownloadTimeRange.xaml;ContentDisplays\DataPlaybackPresentation.xaml;ContentDisplays\DataPresentation.xaml;ContentDisplays\DataPresentationAdvancedTriggers.xaml;ContentDisplays\DataPresentationDisplays.xaml;ContentDisplays\DataPresentationTriggers.xaml;ContentDisplays\DownloadDatalogAllAvailable.xaml;ContentDisplays\EmployeeLogin.xaml;ContentDisplays\InNetworkLogin.xaml;ContentDisplays\RadioData.xaml;ContentDisplays\RevisionDisplay.xaml;ContentDisplays\RTCDisplay.xaml;ContentDisplays\TransponderData.xaml;LEDIndicator.xaml;MainWindow.xaml;SplashScreen.xaml;
 
-False
+True
 

@@ -1,37 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj": {}
+    "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj": {}
   },
   "projects": {
-    "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj": {
+    "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+        "projectUniqueName": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
         "projectName": "AppLogic",
-        "projectPath": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
-        "packagesPath": "C:\\Users\\z003nhjc\\.nuget\\packages\\",
-        "outputPath": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\obj\\",
+        "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\AppLogic.csproj",
+        "packagesPath": "C:\\Users\\z0042d8y\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\AppLogic\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\z003nhjc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\z0042d8y\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
-                "projectPath": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj"
+              "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+                "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj"
               }
             }
           }
@@ -76,27 +74,25 @@
         }
       }
     },
-    "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
+    "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "projectUniqueName": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
         "projectName": "Transport",
-        "projectPath": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
-        "packagesPath": "C:\\Users\\z003nhjc\\.nuget\\packages\\",
-        "outputPath": "C:\\PTE 2.0\\SystemView\\Code\\SystemView Development Repo\\SystemView-2.0\\SystemView 2.0.1\\Transport\\obj\\",
+        "projectPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\Transport.csproj",
+        "packagesPath": "C:\\Users\\z0042d8y\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\z0042d8y\\Desktop\\SystemView\\SystemView-2.0\\SystemView 2.0.1\\Transport\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\z003nhjc\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\z0042d8y\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

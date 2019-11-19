@@ -47,6 +47,7 @@ namespace SystemView.ContentDisplays
         private TagList Previous;
         private RadioMessages myRadioMsgs;
         public DataPlaybackPresentation activePresent;
+        private BackgroundWorker playworker;
 
         // needed for TRACKLIMIT
         private int _lastDash;
@@ -152,6 +153,27 @@ namespace SystemView.ContentDisplays
             }
         }
 
+        public int CurrentEventNum
+        {
+            get { return currentEventNum; }
+            set
+            {
+                currentEventNum = value;
+                if (pausePlayback)
+                {
+                    pausePlayback = false;
+
+                    _myPlayback.queueOneRecord(currentEventNum);
+                    Thread.Sleep(60);
+                    showRecord();
+
+                    pausePlayback = true;
+                }
+
+                OnPropertyChanged("CurrentEventNum");
+            }
+        }
+
         public  string EventNumText
         {
             get { return _eventNumText; }
@@ -199,6 +221,7 @@ namespace SystemView.ContentDisplays
             _RadioWin = new RadioData();
             _TPWin = new TransponderData();
             ExtendedData = new DataExtensions();
+           
 
             myRadioMsgs = new RadioMessages();
 
@@ -342,7 +365,7 @@ namespace SystemView.ContentDisplays
 
             dynamic tagData = new DataItem();
 
-
+            
             //AdvancedUpdate = updateAdvancedTriggers(UpdatedTags);
 
 
@@ -443,7 +466,7 @@ namespace SystemView.ContentDisplays
         {
             try
             {
-                Data["Index"] = currentEventNum;
+                Data["Index"] = CurrentEventNum;
                // playbackIndex++;
 
                 foreach (var tags in Result.Tags)
@@ -999,13 +1022,45 @@ namespace SystemView.ContentDisplays
         {
             Int32.TryParse(EventNumText, out currentEventNum);
             Thread.Sleep(10);
+
+            if (pausePlayback)
+            {
+                pausePlayback = false;
+
+                _myPlayback.queueOneRecord(CurrentEventNum);
+                Thread.Sleep(60);
+                showRecord();
+                CurrentEventNum++;
+
+                pausePlayback = true;
+            }
         }
+
+       /* private void changeEventNum(object sender, RoutedEventArgs e)
+        {
+            Int32.TryParse(EventNumText, out currentEventNum);
+            Thread.Sleep(10);
+
+            if (pausePlayback)
+            {
+                pausePlayback = false;
+
+                _myPlayback.queueOneRecord(currentEventNum);
+                Thread.Sleep(60);
+                showRecord();
+                currentEventNum++;
+
+                pausePlayback = true;
+            }
+        }*/
 
         public void Pause(object sender, RoutedEventArgs e)
         {
             pausePlayback = true;
             PlayData.IsEnabled = true;
             PauseData.IsEnabled = false;
+            playworker.CancelAsync();
+            
         }
         public void Resume(object sender, RoutedEventArgs e)
         {
@@ -1013,7 +1068,7 @@ namespace SystemView.ContentDisplays
             PlayData.IsEnabled = false;
             PauseData.IsEnabled = true;
 
-            BackgroundWorker playworker = new BackgroundWorker();
+            playworker = new BackgroundWorker();
             playworker.WorkerSupportsCancellation = true;
             playworker.DoWork += resumeDoWork;
             playworker.RunWorkerCompleted += runWorkerCompletedMethod;
@@ -1022,15 +1077,15 @@ namespace SystemView.ContentDisplays
 
         private void resumeDoWork(object sender, DoWorkEventArgs e)
         {
-            while (currentEventNum < _myPlayback.NumEvents & !pausePlayback)
+            while (CurrentEventNum < _myPlayback.NumEvents & !pausePlayback)
             {  
-                _myPlayback.queueOneRecord(currentEventNum);
+                _myPlayback.queueOneRecord(CurrentEventNum);
 
                 Thread.Sleep(60);
 
                 showRecord();
 
-                currentEventNum++;
+                CurrentEventNum++;
             }
         }
 
