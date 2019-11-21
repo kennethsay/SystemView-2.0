@@ -71,3 +71,4 @@ D:\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfoInp
 D:\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.AssemblyInfo.cs
 D:\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.dll
 D:\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.pdb
+C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\Transport\obj\Debug\netstandard2.0\Transport.csprojAssemblyReference.cache

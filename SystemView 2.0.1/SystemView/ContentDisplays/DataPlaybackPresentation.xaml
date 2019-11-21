@@ -77,7 +77,7 @@
 
             <StackPanel Orientation="Horizontal" x:Name="WheelDiameterSelector" HorizontalAlignment="Right" >
                 <TextBlock Text="Event Number:" FontSize="12" Margin="5 11 0 0"/>
-                <telerik:RadNumericUpDown x:Name="EventNumUpDown" Margin="5" NumberDecimalDigits="0" Minimum="1" Maximum="{Binding NumEventsText, Mode=TwoWay}"  ValueFormat="Numeric" Width="120"
+                <telerik:RadNumericUpDown x:Name="EventNumUpDown" Margin="5" NumberDecimalDigits="0" Minimum="1"   ValueFormat="Numeric" Width="120"
                                        Value="{Binding CurrentEventNum, Mode=TwoWay}" FontSize="14" HorizontalAlignment="Right" SmallChange="1"/>
             </StackPanel>
 
@@ -97,22 +97,18 @@
                     </TextBox.Text>
                 </TextBox>
             </Border-->
-            <Border BorderBrush="Black" BorderThickness="1" Width="150" Height="22" Margin="2 0 2 0">
-                <TextBox Name="FileInfoBox"  Height="22" Width="150" IsReadOnly="True">
-                    <TextBox.Text>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" >
+                <TextBlock Text="Total Events:" FontSize="12" Margin="5 11 0 0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" >
+                <TextBlock  FontSize="12" Margin="5 11 0 0">
+                    <TextBlock.Text>
                         <Binding Path="NumEventsText" Mode="TwoWay" UpdateSourceTrigger="PropertyChanged"></Binding>
-                    </TextBox.Text>
-                </TextBox>
-            </Border>
-            <!--Button x:Name ="Increment" ToolTip="Increment event number"  Margin="2 0 2 0" Click="incrementEventNum">
-                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0 0 5 0">
-                    <Border HorizontalAlignment="Center" VerticalAlignment="Center" >
-                        <Image Source="/Icons/icons8-Healthy.png"
-                           Width="25" Height="25" VerticalAlignment="Center"/>
-                    </Border>
-                    <TextBlock Text="Jump to Event:" VerticalAlignment="Center"/>
-                </StackPanel>
-            </-->
+                    </TextBlock.Text>
+                </TextBlock>
+            </StackPanel>
+            
+           
         </telerik:RadToolBar>
         <telerik:RadGridView Name="PresentationGrid" DockPanel.Dock="Top" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" ItemsSource="{Binding DataBind}" 
                              ScrollViewer.VerticalScrollBarVisibility="Visible"  CanUserGroupColumns="False" ShowGroupPanel="False" IsReadOnly="True"

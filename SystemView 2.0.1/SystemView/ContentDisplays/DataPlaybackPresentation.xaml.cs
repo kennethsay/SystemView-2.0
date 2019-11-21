@@ -58,7 +58,8 @@ namespace SystemView.ContentDisplays
 
         private int currentEventNum;
         private string _eventNumText;
-        private string _totalEvents;
+        private string _totalEventsText;
+        private int _totalEvents;
 
         // used to signal display of first record on startup
         private bool _init;
@@ -67,7 +68,15 @@ namespace SystemView.ContentDisplays
 
         private static int _playbackBCPnum;
 
+        struct FileType
+        {
+            public bool DAT;
+            public bool SDF;
+        }
 
+        FileType fileType;
+
+        #region Accessor Methods
 
         private RadioDataItem _selectedItem;
         public RadioDataItem SelectedRadioItem
@@ -153,6 +162,15 @@ namespace SystemView.ContentDisplays
             }
         }
 
+        public int TotalEvents
+        {
+            get { return _totalEvents; }
+            set
+            {
+                _totalEvents = value;
+            }
+        }
+
         public int CurrentEventNum
         {
             get { return currentEventNum; }
@@ -163,7 +181,16 @@ namespace SystemView.ContentDisplays
                 {
                     pausePlayback = false;
 
-                    _myPlayback.queueOneRecord(currentEventNum);
+                    if (fileType.DAT)
+                    {
+                        _myPlayback.queueOneDATRecord(CurrentEventNum);
+                    }
+
+                    else if (fileType.SDF)
+                    {
+                        _myPlayback.queueOneSDFRecord(CurrentEventNum);
+                    }
+
                     Thread.Sleep(60);
                     showRecord();
 
@@ -186,10 +213,10 @@ namespace SystemView.ContentDisplays
 
         public string NumEventsText
         {
-            get { return _totalEvents; }
+            get { return _totalEventsText; }
             set
             {
-                _totalEvents = value;
+                _totalEventsText = value;
                 OnPropertyChanged("NumEventsText");
             }
         }
@@ -208,6 +235,7 @@ namespace SystemView.ContentDisplays
             }
         }
 
+        #endregion
 
         public DataPlaybackPresentation()
         {
@@ -251,8 +279,9 @@ namespace SystemView.ContentDisplays
              _initDDFlag = 0;
 
              PlaybackBCPNum = 0;
-            currentEventNum = 0;
+            currentEventNum = 1;
 
+            fileType = new FileType();
 
             _init = true;
             newFile = true;
@@ -271,9 +300,12 @@ namespace SystemView.ContentDisplays
             {
                 _myPlayback = new DataPlayback();
 
+                fileType.DAT = false;
+                fileType.SDF = false;
+
                 if (_myPlayback.selectFile())
                 {
-                    openFile();
+                    determineFileType();
                 }
             }
 
@@ -296,35 +328,23 @@ namespace SystemView.ContentDisplays
             _worker.RunWorkerAsync();
         }*/
 
-        private void openFile()
+        private void determineFileType()
         {
             try
             {
-                _myPlayback.FileToReadAndPresent();
-                NumEventsText = "Total Events: " + _myPlayback.NumEvents.ToString();
+                int getType = _myPlayback.FileToReadAndPresent();
 
-                Result = new TagList();
-                Previous = new TagList();
-                // bool AdvancedUpdate = false;
-
-                Thread.Sleep(60);
-
-                _myPlayback.queueOneRecord(currentEventNum);
-                currentEventNum++;
-
-                Thread.Sleep(60);
-
-                showRecord();
-
-                /* while (!e.Cancel)
-                 {
-                     if (!pausePlayback)
-                     {
-                         showRecord();
-                     }
-
-                     Thread.Sleep(10);
-                 }*/
+                if (getType == 1)
+                {
+                    fileType.SDF = true;
+                    initSDFfile();
+                }
+                else if (getType == 0)
+                {
+                    fileType.DAT = true;
+                    initDatFile();
+                }
+          
             }
             catch (Exception ex)
             {
@@ -333,6 +353,52 @@ namespace SystemView.ContentDisplays
 
                 Console.WriteLine(sb.ToString());
             }
+        }
+
+        private void initSDFfile()
+        {
+            NumEventsText = _myPlayback.NumEvents.ToString();
+            TotalEvents = _myPlayback.NumEvents;
+
+            Result = new TagList();
+            Previous = new TagList();
+
+            Thread.Sleep(60);
+            _myPlayback.queueOneSDFRecord(currentEventNum);
+            currentEventNum++;
+
+            Thread.Sleep(60);
+
+            showRecord();
+        }
+
+        private void initDatFile()
+        {
+            NumEventsText = _myPlayback.NumEvents.ToString();
+            TotalEvents = _myPlayback.NumEvents;
+
+            Result = new TagList();
+            Previous = new TagList();
+            // bool AdvancedUpdate = false;
+
+            Thread.Sleep(60);
+
+            _myPlayback.queueOneDATRecord(currentEventNum);
+            currentEventNum++;
+
+            Thread.Sleep(60);
+
+            showRecord();
+
+            /* while (!e.Cancel)
+             {
+                 if (!pausePlayback)
+                 {
+                     showRecord();
+                 }
+
+                 Thread.Sleep(10);
+             }*/
         }
 
         private void runWorkerCompletedMethod(object sender, RunWorkerCompletedEventArgs e)
@@ -1018,7 +1084,7 @@ namespace SystemView.ContentDisplays
             }
         }
 
-        private void changeEventNum(object sender, RoutedEventArgs e)
+       /* private void changeEventNum(object sender, RoutedEventArgs e)
         {
             Int32.TryParse(EventNumText, out currentEventNum);
             Thread.Sleep(10);
@@ -1027,7 +1093,7 @@ namespace SystemView.ContentDisplays
             {
                 pausePlayback = false;
 
-                _myPlayback.queueOneRecord(CurrentEventNum);
+                _myPlayback.queueOneDATRecord(CurrentEventNum);
                 Thread.Sleep(60);
                 showRecord();
                 CurrentEventNum++;
@@ -1078,9 +1144,17 @@ namespace SystemView.ContentDisplays
         private void resumeDoWork(object sender, DoWorkEventArgs e)
         {
             while (CurrentEventNum < _myPlayback.NumEvents & !pausePlayback)
-            {  
-                _myPlayback.queueOneRecord(CurrentEventNum);
+            {
+                if (fileType.DAT)
+                {
+                    _myPlayback.queueOneDATRecord(CurrentEventNum);
+                }
 
+                else if (fileType.SDF)
+                {
+                    _myPlayback.queueOneSDFRecord(CurrentEventNum);
+                }
+               
                 Thread.Sleep(60);
 
                 showRecord();

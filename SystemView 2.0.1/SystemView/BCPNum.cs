@@ -65,7 +65,7 @@ namespace SystemView
             else if (TPmsg[0] != 0)
             {
                 int pkgBase = 60;
-                int TP_PKG = TP_PKG = DecodeBits(TPmsg, pkgBase, 4);
+                int TP_PKG = DecodeBits(TPmsg, pkgBase, 4);
 
                 while (TP_PKG != 0)
                 {

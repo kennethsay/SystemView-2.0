@@ -1352,7 +1352,6 @@ C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\SystemView.csproj.CopyComplete
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\SystemView.exe
 C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\SystemView.pdb
-C:\Users\z0042d8y\Desktop\SystemView\SystemView-2.0\SystemView 2.0.1\SystemView\obj\x86\Debug\SystemView.csprojAssemblyReference.cache
 D:\SystemView 2.0.1\SystemView\bin\Debug\SystemView.exe.config
 D:\SystemView 2.0.1\SystemView\bin\Debug\SystemView.exe
 D:\SystemView 2.0.1\SystemView\bin\Debug\SystemView.pdb

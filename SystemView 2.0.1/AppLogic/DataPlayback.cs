@@ -33,6 +33,8 @@ namespace AppLogic
         private static int _railroadID;
         private static int passCounter;
         private static int _numEvents;
+    
+
 
         int dataLengthIndex;
         int msgIndex;
@@ -58,10 +60,11 @@ namespace AppLogic
             get { return _numEvents;  }
             set
             {
-                _numEvents = value;
+                _numEvents= value;
             }
         }
 
+     
         /// <summary>
         /// Constructor
         /// </summary>
@@ -114,25 +117,28 @@ namespace AppLogic
             }
         }
 
-        public void FileToReadAndPresent()
+        public int FileToReadAndPresent()
         {
             if (sdfFile != null && datFile == null)
             {
-                readSDFFile();
+                openSDFfile();
+                return 1;
             }
             else if (sdfFile == null && datFile != null)
             {
                 //readDATFile();
                 openDATFile();
+                return 0;
             }
             else
             {
-                Console.WriteLine("Something went wrong.");
+                Console.WriteLine("Something went wrong in FileToReadAndPresent.");
+                return -1;
             }
 
         }
 
-        private void readSDFFile()
+        private void openSDFfile()
         {
             sdfHeader = new List<string>();
 
@@ -147,6 +153,14 @@ namespace AppLogic
                     sdfHeader.Add(line);
                 }
             }
+
+            NumEvents = sdfFile.Length - 38;
+            
+        }
+
+        private void readSDFFile()
+        {
+           
 
             BackgroundWorker _worker = new BackgroundWorker();
             _worker.WorkerSupportsCancellation = true;
@@ -169,9 +183,21 @@ namespace AppLogic
             }
         }
 
+        public void queueOneSDFRecord(int eventNum)
+        {
+            int i = (Array.FindIndex(sdfFile, row => row.Contains("Index")) + eventNum);
+
+            _thisTagList = new TagList();
+
+            _thisTagList = processRecord(sdfFile[i].Replace(" ", ""));
+
+            TagListQueue.Enqueue(_thisTagList);
+        }
+            
+
         private void endSDFfile(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            
         }
 
         private TagList processRecord(string st)
@@ -206,7 +232,7 @@ namespace AppLogic
         {
             _railroadID = (int)(datFile[27]);
             int dataSize = (datFile.Length - 736);
-            NumEvents = getNumEvents();
+            NumEvents = getNumEventsDAT();
             data = new byte[dataSize];
             Buffer.BlockCopy(datFile, 736, data, 0, dataSize);
             DATrecordIndex = 0;
@@ -214,7 +240,7 @@ namespace AppLogic
             dataEnd = getDataEnd(data);
         }
 
-        private int getNumEvents()
+        private int getNumEventsDAT()
         {
             int numEvents = 0;
 
@@ -226,7 +252,7 @@ namespace AppLogic
             return numEvents;
         }
 
-        public void queueOneRecord(int eventNum)
+        public void queueOneDATRecord(int eventNum)
         {
             if (DATrecordIndex < eventNum)
             {
