@@ -279,7 +279,7 @@ namespace SystemView.ContentDisplays
              _initDDFlag = 0;
 
              PlaybackBCPNum = 0;
-            currentEventNum = 1;
+            currentEventNum = 0;
 
             fileType = new FileType();
 
@@ -1165,11 +1165,29 @@ namespace SystemView.ContentDisplays
 
         public void ClearPlayback(object sender, RoutedEventArgs e)
         {
-            this._dataBind.Clear();
-            playbackIndex = 0;
-            _init = true;
-            pausePlayback = false;
+            pausePlayback = true;
+            PlayData.IsEnabled = true;
+            PauseData.IsEnabled = false;
+            playworker.CancelAsync();
 
+            this._dataBind.Clear();
+            CurrentEventNum = 0;
+
+            if (fileType.DAT)
+            {
+                _myPlayback.queueOneDATRecord(CurrentEventNum);
+            }
+
+            else if (fileType.SDF)
+            {
+                _myPlayback.queueOneSDFRecord(CurrentEventNum);
+            }
+
+            Thread.Sleep(60);
+
+            showRecord();
+
+            CurrentEventNum++;
         }
 
         /// <summary>

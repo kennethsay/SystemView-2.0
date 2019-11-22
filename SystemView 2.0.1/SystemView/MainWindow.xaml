@@ -429,6 +429,20 @@
                                                 <ScrollViewer>
                                                     <StackPanel Orientation="Horizontal">
                                                         <StackPanel>
+                                                            <Label Content="Build #: 00.01.001, Date: 11/22/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
+                                                            <TextBlock Text="Notes: Fixed LIRR Configuration issues.
+                                                                        Playback jumping/incrementing fully implemented for both DAT and SDF files." FontFamily="Segoe UI Light" FontSize="20" Margin="10 5 0 0 " TextWrapping="Wrap" Width="400"/>
+                                                        </StackPanel>
+                                                    </StackPanel>
+                                                </ScrollViewer>
+
+                                            </telerik:RadTileViewItem>
+
+
+                                            <telerik:RadTileViewItem  Header="SYSTEMVIEW REV 0 - BETA" Margin="0 0 0 0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                                                <ScrollViewer>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <StackPanel>
                                                             <Label Content="Build #: 00.01.000, Date: 11/15/2019" FontFamily="Segoe UI Light" FontSize="20" Margin="5 0 0 0" FontWeight="ExtraBlack"/>
                                                             <TextBlock Text="Notes: Added REVHANDLE, Fixed STOPBYPASS, ACSES ACK REQUIRED, ROLLAWAY PEN.
                                                                        Added Jump to Event UI control and total events display to playback.
