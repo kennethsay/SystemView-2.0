@@ -199,17 +199,14 @@
     <Compile Include="ContentDisplays\DataPresentation.xaml.cs">
       <DependentUpon>DataPresentation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ContentDisplays\DataPresentationAdvancedTriggers.xaml.cs">
-      <DependentUpon>DataPresentationAdvancedTriggers.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ContentDisplays\DataPresentationDisplays.xaml.cs">
       <DependentUpon>DataPresentationDisplays.xaml</DependentUpon>
     </Compile>
     <Compile Include="ContentDisplays\DataPresentationTriggers.xaml.cs">
       <DependentUpon>DataPresentationTriggers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ContentDisplays\DownloadDatalogAllAvailable.xaml.cs">
-      <DependentUpon>DownloadDatalogAllAvailable.xaml</DependentUpon>
+    <Compile Include="ContentDisplays\DatalogDownloadAllAvailable.xaml.cs">
+      <DependentUpon>DatalogDownloadAllAvailable.xaml</DependentUpon>
     </Compile>
     <Compile Include="ContentDisplays\EmployeeLogin.xaml.cs">
       <DependentUpon>EmployeeLogin.xaml</DependentUpon>
@@ -291,10 +288,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ContentDisplays\DataPresentationAdvancedTriggers.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="ContentDisplays\DataPresentationDisplays.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -303,7 +296,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ContentDisplays\DownloadDatalogAllAvailable.xaml">
+    <Page Include="ContentDisplays\DatalogDownloadAllAvailable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
