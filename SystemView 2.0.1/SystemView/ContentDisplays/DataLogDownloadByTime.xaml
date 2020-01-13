@@ -7,12 +7,12 @@
              mc:Ignorable="d" 
              d:DesignHeight="255" d:DesignWidth="375">
     <StackPanel Margin="0 75 0 0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-        <RadioButton Content="48 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" IsChecked="True" Checked="TimeChangeCommand" CommandParameter="48HR"/>
-        <RadioButton Content="24 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="24HR"/>
-        <RadioButton Content="8 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="8HR"/>
-        <RadioButton Content="4 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="4HR"/>
-        <RadioButton Content="1 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="1HR"/>
-        <RadioButton Content="30 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand" CommandParameter="30MIN"/>
-        <RadioButton Content="15 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="TimeChangeCommand"  CommandParameter="15MIN"/>
+        <RadioButton Content="48 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" IsChecked="True" Checked="timeChangeCommand" CommandParameter="48HR"/>
+        <RadioButton Content="24 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand"  CommandParameter="24HR"/>
+        <RadioButton Content="8 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand"  CommandParameter="8HR"/>
+        <RadioButton Content="4 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand"  CommandParameter="4HR"/>
+        <RadioButton Content="1 Hr" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand"  CommandParameter="1HR"/>
+        <RadioButton Content="30 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand" CommandParameter="30MIN"/>
+        <RadioButton Content="15 Min" Margin="2 0 0 0" VerticalContentAlignment="Center" FontSize="10" Checked="timeChangeCommand"  CommandParameter="15MIN"/>
     </StackPanel>
 </UserControl>

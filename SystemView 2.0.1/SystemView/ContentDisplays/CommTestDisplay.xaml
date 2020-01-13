@@ -27,7 +27,7 @@
             <TextBlock x:Name="TimeDisplay" HorizontalAlignment="Center" Margin="95,58,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="80" />
 
             <Button Content="Test Communication" HorizontalAlignment="Center" Margin="0,195,0,60" Width="161" FontSize="16" 
-                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="CommTest_Start"/>
+                HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Click="commTestStart"/>
         </Grid>
     </Grid>
 </UserControl>

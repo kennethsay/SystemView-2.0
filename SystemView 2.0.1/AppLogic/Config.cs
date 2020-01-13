@@ -175,9 +175,24 @@ namespace AppLogic
 
     public class Config
     {
-        // TODO - XML FILE!!!!!
+        private List<ConfigElement> _elements;
+
+                       // TODO - XML FILE!!!!!
         // List of configuration elements
-        public List<ConfigElement> Elements;
+        public List<ConfigElement> Elements
+        {
+            get
+            {
+                return _elements;
+            }
+            set
+            {
+                _elements = value;
+            }
+        }
+
+
+
         // Extra Permissions for Siemens' employees
         private bool _canChangeConfig;
         // Public accessor for being able to change the configurations
@@ -232,6 +247,7 @@ namespace AppLogic
             Elements.Add(new ConfigElement("FeatureSet3", CONFIG_DATA_TYPES.SINGLE_BYTE, 21));
 
                 fetch();
+
             }
             catch (Exception ex)
             {

@@ -18,18 +18,54 @@ using AppLogic;
 
 namespace SystemView.ContentDisplays
 {
-    /// <summary>
-    /// Interaction logic for DataPresentationTriggers.xaml
-    /// </summary>
+    // To call DataPresentationDisplays = new DataPresentationDisplays();
+    //
+    // CLASS: DataPresentationDisplays
+    //
+    // Description: This class implements UI and back-end logic for the DataPresentation parameter filtering function of the PTE. This class initializes a WPF 
+    //              component that builds the front end display of the DataPresentation parameter filter. The class is instanciated from a DisplayView instance that places
+    //              this WPF display inside the Session Docking mechanism. This class is instanciated by the DataPresentation object when the user selects the option to modify
+    //              the list of parameters shown. The UI for this class presents the user with a list of DataPresentation parameters that can be selected via a checkbox. 
+    //              Each parameter can be added/removed from the DataPresentation screen by checking/unchecking the checkbox associated with the
+    //              parameter.
+    //
+    // Private Data:
+    //      TagList _displayTagList                                 - Variable containing a reference TagList to aid in generating the Display parameter selection screen
+    //      List<byte> _activeDisplays                              - List containing the Tag ID of the currently selected Data Presentation parameters to be displayed in the
+    //                                                                Data Presentation window.
+    //
+    // Public Get/Set Accessors:
+    //      List<byte> ActiveDisplays                               - Accessor method for _activeDisplays variable 
+    //
+    // Public Methods:
+    //      string ToString()                                       - Override of ToString method for DatalogDownloadBySize Class
+    //
+    // Private Methods:
+    //
+    // Constructors:
+    //      DatalogDownloadBySize()
+    //
+    // Other DataTypes:
+    //
     public partial class DataPresentationDisplays : UserControl
     {
-        private TagList displayTagList;
-        private List<byte> ActiveDisplays;
+        #region PrivateMembers
+        private TagList _displayTagList;
+        private List<byte> _activeDisplays;
+        #endregion
+
+        public List<byte> ActiveDisplays
+        {
+            get
+            {
+                return _activeDisplays;
+            }            
+        }
 
         public DataPresentationDisplays()
         {
             InitializeComponent();
-            displayTagList = new TagList();
+            _displayTagList = new TagList();
 
             activateDefaultDisplays();
             addDisplaySelectors();
@@ -38,9 +74,9 @@ namespace SystemView.ContentDisplays
         private void addDisplaySelectors()
         {          
 
-            displayTagList.Tags.Sort((x, y) => x.Name.CompareTo(y.Name));
+            _displayTagList.Tags.Sort((x, y) => x.Name.CompareTo(y.Name));
 
-            foreach (var tag in displayTagList.Tags)
+            foreach (var tag in _displayTagList.Tags)
             {
                 //these tag IDs correspond to tags that are not used as data parameters
                 if (!(tag.TagID == 13 | tag.TagID == 14 | tag.TagID == 15 | tag.TagID == 32 | tag.TagID == 63 | tag.TagID == 64 | tag.TagID == 70))
@@ -54,7 +90,7 @@ namespace SystemView.ContentDisplays
                     display.Checked += displaySelect;
                     display.Unchecked += displayDeSelect;
 
-                    if ((ActiveDisplays.Contains(displayTagList.TagIDByName(tag.Name))))
+                    if ((_activeDisplays.Contains(_displayTagList.TagIDByName(tag.Name))))
                     {
                         display.IsChecked = true;
                     }
@@ -70,60 +106,60 @@ namespace SystemView.ContentDisplays
   
 
         /// <summary>
-        /// Activates the default presentation view
+        /// Activates the default presentation view od the Data Presentation window.
+        /// This places the selected default tags in the write 
         /// </summary>
         private void activateDefaultDisplays()
         {
 
             try
             {
-                ActiveDisplays = new List<byte>();
+                _activeDisplays = new List<byte>();
 
-                ActiveDisplays.Add(displayTagList.TagIDByName("DATETIME"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("LOCATION"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("CHAINAGE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("SPEED"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ALERT CURVE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("BRAKE CURVE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES MODE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("VEHICLE MAX SPEED"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("RR LINE #"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TRACK #"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("LINK TARGET"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TRACK LIMIT"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PTS ALERT CURVE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PTS BRAKE CURVE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PTSZONE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACTIVECAB"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ALARM"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACKNOWLEDGE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("OVERSPEED"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("SIGNAL STATUS"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("DECEL VALUE"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CIO"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ACSES CO OUT"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ATC CIO"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("ATC CO"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("PERMSUPPR"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TPFOUND"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TPMISSING"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TPOUTOFWIN"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXENC"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("RADIOTXRXTSR"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("TSRLISTOK"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("SERVICE PEN"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("EM PENALTY"));
-                ActiveDisplays.Add(displayTagList.TagIDByName("REVHANDLE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("DATETIME"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("LOCATION"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("CHAINAGE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("SPEED"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ALERT CURVE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("BRAKE CURVE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ACSES MODE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("VEHICLE MAX SPEED"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("RR LINE #"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TRACK #"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("LINK TARGET"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TRACK LIMIT"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("PTS ALERT CURVE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("PTS BRAKE CURVE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("PTSZONE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ACTIVECAB"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ALARM"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ACKNOWLEDGE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("OVERSPEED"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("SIGNAL STATUS"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("DECEL VALUE"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ACSES CIO"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ACSES CO OUT"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ATC CIO"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("ATC CO"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("PERMSUPPR"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TPFOUND"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TPMISSING"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TPOUTOFWIN"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("RADIOTXRXENC"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("RADIOTXRXTSR"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("TSRLISTOK"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("SERVICE PEN"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("EM PENALTY"));
+                _activeDisplays.Add(_displayTagList.TagIDByName("REVHANDLE"));
             }
             catch
             {
 
             }
-
         }
 
         /// <summary>
-        /// Event handler for trigger selection checked event. 
+        /// Event handler for Display selection checked event. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -135,29 +171,29 @@ namespace SystemView.ContentDisplays
                 // Convert the sender object to the Checkbox type. This lets us get to the content property of the control. 
                 CheckBox display = sender as CheckBox;
 
-                // Check to see if this checkbox has already been checked by the user. If so it will show up in ActiveTriggers. 
-                if (ActiveDisplays.Contains(displayTagList.TagIDByName(display.Content.ToString())))
+                // Check to see if this checkbox has already been checked by the user. If so it will show up in ActiveDisplays. 
+                if (_activeDisplays.Contains(_displayTagList.TagIDByName(display.Content.ToString())))
                 {
-                    // Write an error to console stating that the trigger has already been selected by the user.
+                    // Write an error to console stating that the Display has already been selected by the user.
                     Console.WriteLine("The selected trigger: {0} is already active!", display.Content);
                 }
                 else
                 {
                    
-                    // Otherwise, add the trigger to the active trigger list. This change will be reflected in the next RTM update. 
-                    ActiveDisplays.Add(displayTagList.TagIDByName(display.Content.ToString()));
+                    // Otherwise, add the display to the active display list. This change will be reflected in the next RTM update. 
+                    _activeDisplays.Add(_displayTagList.TagIDByName(display.Content.ToString()));
                 }
             }
             catch (Exception ex)
             {
                 StringBuilder sb = new StringBuilder();
-                sb.Append(string.Format("DataPresentationTriggers::triggerSelect method threw exception: {0}", ex.ToString()));
+                sb.Append(string.Format("DataPresentationDisplays::displaySelect method threw exception: {0}", ex.ToString()));
                 Console.WriteLine(sb.ToString());
             }
         }
 
         /// <summary>
-        /// Event handler for trigger selection unchecked event. 
+        /// Event handler for display selection unchecked event. 
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -168,29 +204,24 @@ namespace SystemView.ContentDisplays
                 // Convert the sender object to the Checkbox type. This lets us get to the content property of the control. 
                 CheckBox display = sender as CheckBox;
 
-                // Check to see if this checkbox has already been checked by the user. If so it will show up in ActiveTriggers. 
-                if (ActiveDisplays.Contains(displayTagList.TagIDByName(display.Content.ToString())))
+                // Check to see if this checkbox has already been checked by the user. If so it will show up in ActiveDisplays. 
+                if (_activeDisplays.Contains(_displayTagList.TagIDByName(display.Content.ToString())))
                 {
-                    // Otherwise, remove the trigger from the active trigger list. This change will be reflected in the next RTM update. 
-                    ActiveDisplays.Remove(displayTagList.TagIDByName(display.Content.ToString()));
+                    // Otherwise, remove the Display from the active Display list. This change will be reflected in the next RTM update. 
+                    _activeDisplays.Remove(_displayTagList.TagIDByName(display.Content.ToString()));
                 }
                 else
                 {
-                    // Write an error to console stating that the trigger has not been selected by the user.
+                    // Write an error to console stating that the Display has not been selected by the user.
                     Console.WriteLine("The selected trigger: {0} is already active!", display.Content);
                 }
             }
             catch (Exception ex)
             {
                 StringBuilder sb = new StringBuilder();
-                sb.Append(string.Format("DataPresentationTriggers::triggerSelect method threw exception: {0}", ex.ToString()));
+                sb.Append(string.Format("DataPresentationDisplays::DisplayDeSelect method threw exception: {0}", ex.ToString()));
                 Console.WriteLine(sb.ToString());
             }
-        }
-
-        public List<byte> GetDisplays()
-        {
-            return ActiveDisplays;
-        }
+        }        
     }
 }
